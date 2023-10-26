@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Freezer
+  - Fruit
   layers:
   - Default
   - TransparentFX
@@ -40,4 +42,25 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4144964401
+    locked: 0
+  - name: Akuru
+    uniqueID: 2475619581
+    locked: 0
+  - name: Desk
+    uniqueID: 3012097463
+    locked: 0
+  - name: Plate
+    uniqueID: 117069945
+    locked: 0
+  - name: Pot
+    uniqueID: 3809482025
+    locked: 0
+  - name: Freezer
+    uniqueID: 1198753253
+    locked: 0
+  - name: Fruit
+    uniqueID: 252648107
     locked: 0
