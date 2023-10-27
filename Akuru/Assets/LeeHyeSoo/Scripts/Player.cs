@@ -7,10 +7,10 @@ public class Player : MonoBehaviour
 {
     public List<Fruit> fruits; //과일을 담을 리스트 
 
-    public float akuruMakingTime;
+    public float akuruMakingTime; //아쿠루 손질 시간
     public Text timeText;
     
-    public Slider akuruSlider;
+    public Slider akuruSlider; //아쿠루 과일 손질 슬라이더
     float sliderMax;
     float sliderNow;
 
@@ -38,26 +38,24 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        //potInventory.IsPotEmpty(); //수정하기
         if (!isMaking && !potInventory.isPotFull)
         {
-            akuruSlider.gameObject.SetActive(true);
+
             RandomSelectTangfuru();
             isMaking = true;
+
         }
         else if(isMaking && !potInventory.isPotFull)
         {
             AkuruMakingTangfuru();
 
         }
-        else if (potInventory.isPotFull)
-        {
-            Debug.Log("냄비가 가득참");
-            akuruSlider.gameObject.SetActive(false);
-        }
+        
     }
 
     //랜덤 과일 인덱스 선택
-    public void RandomSelectTangfuru() 
+    void RandomSelectTangfuru() 
     {
         //랜덤한 과일선택
         i = Random.Range(0, fruits.Count);
@@ -74,8 +72,10 @@ public class Player : MonoBehaviour
 
         if (akuruMakingTime >= fruits[i].making_time)
         {
+            
+            Debug.Log("손질완료");
             GoToPot();
-            Debug.Log("손질완료 / 걸린 손질시간" + fruits[i].making_time);
+            //potInventory.RandomSelectPotNum(); //과일이 들어갈 냄비 랜덤위치 선택
             akuruMakingTime = 0;
             isMaking = false;
         }
@@ -84,10 +84,7 @@ public class Player : MonoBehaviour
     //작성중
     void GoToPot()
     {
-        //potInventory.AddFruit(fruits[i]);
-
-
-        if (potInventory.fruits.Count <= potInventory.slots.Length) //냄비인벤토리가 차지 않았다면
+        if (!potInventory.isPotFull) //냄비인벤토리가 차지 않았다면
         {
             Debug.Log("냄비로 이동" + fruits[i]);
             potInventory.AddFruit(fruits[i]);

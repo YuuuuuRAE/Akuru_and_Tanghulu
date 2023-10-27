@@ -3436,7 +3436,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8de6b5b8d965b46b3213e8aac11590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruits: []
+  fruits:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   slotParent: {fileID: 8296217880408537914}
   slots:
   - {fileID: 2268121437968286425}
@@ -3459,6 +3479,8 @@ MonoBehaviour:
   - {fileID: 4459619744996720448}
   - {fileID: 6284590378424824562}
   - {fileID: 5412606119423358026}
+  isPotFull: 0
+  potInventoryNum: 0
 --- !u!1 &3153592831050951060
 GameObject:
   m_ObjectHideFlags: 0
@@ -5441,7 +5463,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2320953109694112828}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4099221169644983865}
+        m_TargetAssemblyTypeName: BoostMakeTangfuru, Assembly-CSharp
+        m_MethodName: ClickBoostButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4344087792736910034
 GameObject:
   m_ObjectHideFlags: 0
@@ -5843,6 +5877,7 @@ GameObject:
   - component: {fileID: 2488480219440554138}
   - component: {fileID: 4149132142092507896}
   - component: {fileID: 7902685757019542386}
+  - component: {fileID: 4099221169644983865}
   m_Layer: 5
   m_Name: AT_200 Canvas
   m_TagString: Untagged
@@ -5970,6 +6005,18 @@ MonoBehaviour:
   fullMessage: {fileID: 8626865291687397358}
   recipePopUp: {fileID: 342818459768545452}
   freezerPopUp: {fileID: 8303720444840591899}
+--- !u!114 &4099221169644983865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4540587161006762004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131207d6cf8530940ac260b9cb2bccae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4594205573788330492
 GameObject:
   m_ObjectHideFlags: 0
@@ -11136,6 +11183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2388169680563571172}
   - component: {fileID: 445991440967722657}
+  - component: {fileID: 4721682265757046146}
   m_Layer: 5
   m_Name: AkuruSlider
   m_TagString: Untagged
@@ -11217,6 +11265,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4721682265757046146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7854631742512043898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16050cbb7bc341247ad95fbbcd0af3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7895208447258381998
 GameObject:
   m_ObjectHideFlags: 0

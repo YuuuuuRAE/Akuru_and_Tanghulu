@@ -1839,7 +1839,6 @@ MonoBehaviour:
   timeText: {fileID: 1789330076}
   akuruSlider: {fileID: 1667274795}
   isMaking: 0
-  testTime: 0
   potInventory: {fileID: 341241676}
   i: 0
 --- !u!1660057539 &9223372036854775807
