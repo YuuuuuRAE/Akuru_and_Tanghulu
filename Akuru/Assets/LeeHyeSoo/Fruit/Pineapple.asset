@@ -14,5 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruitName: "\uD30C\uC778\uC560\uD50C"
   fruitImage: {fileID: 21300000, guid: 01c83904c2579624db4407dc81315c9c, type: 3}
+  tangfuruImage: {fileID: 21300000, guid: 44064dce7039ead40847be1e4db3c191, type: 3}
   making_time: 36
   fruitAmount: 0
+  fruitInPotTime: 3
+  rcpLevel: 0
+  price: 0
+  exp: 0
+  rqQuantity: 0
+  rqCoin: 0
+  rqRuby: 0

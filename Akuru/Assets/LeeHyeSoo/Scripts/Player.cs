@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public List<Fruit> fruits; //과일을 담을 리스트 
+    public List<Fruit> fruits; //과일을 정보 담을 리스트 
 
     public float akuruMakingTime; //아쿠루 손질 시간
     public Text timeText;

@@ -7,6 +7,7 @@ using static UnityEditor.Progress;
 public class Slot : MonoBehaviour
 {
     [SerializeField] Image image;
+    
 
     private Fruit __fruit; //이미지 컴포넌트 담을 곳
     public Fruit fruit

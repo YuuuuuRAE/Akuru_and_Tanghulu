@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
-
+using UnityEngine.UI;
+using System.Runtime.CompilerServices;
 
 public class PotInventory : MonoBehaviour
 {
@@ -14,9 +15,13 @@ public class PotInventory : MonoBehaviour
     public Slot[] slots; //potGroup의 하위에 등록된 slot 담을 곳
 
     Player player;
-    public bool isPotFull;
-    public int potInventoryNum = 0;
-    public bool isPotEmpty;
+    public bool isPotFull; //과일이 냄비에 가득 찼는지
+    public int potInventoryNum = 0; //냄비 위치 인덱스
+    public bool isPotEmpty; //냄비가 비어있는지
+
+    [Header("과일 끓이는 중")]
+    public List<bool> isBoil;
+    public List<float> startBoil;
 
 #if UNITY_EDITOR
     private void OnValidate() //OnValidate는 유니티 에디터에서 바로 작동을 하는 역할
@@ -34,10 +39,37 @@ public class PotInventory : MonoBehaviour
         FreshSlot(); //게임이 시작되면 fruit에 들어있는 아이템을 potinventoy에 넣어준다 
     }
 
+    private void Update()
+    {
+        BoilFruit();
+    }
+
+    void BoilFruit() //과일 냄비조리 확인
+    {
+        for (int i = 0; i < slots.Length; i++)
+        {
+            if (isBoil[i] == true) // 해당인덱스의 isBoil이 true면
+            {
+                startBoil[i] += Time.deltaTime; //타이머 시작
+                if (startBoil[i] >= fruits[i].fruitInPotTime) //타이머 값이 조리시간에 도달했다면
+                {
+                    Debug.Log(fruits[i] + "조리완료");
+                    //탕후루 이미지 setactive true하기 ((수정하기))
+                    //fruits[i].fruitImage = fruits[i].tangfuruImage; //해당 인덱스의 과일탕후루 이미지를 담기
+                    isBoil[i] = false;
+                }
+            }
+            else if (isBoil[i] == false)// 해당인덱스의 isBoil이 false면
+            {
+                startBoil[i] = 0;
+                //탕후루 이미지 setactive false하기 ((수정하기))
+            }
+        }
+
+
+    }
+
     
-
-
-
     
     public void IsPotEmpty() // ((수정하기))
     {
@@ -85,8 +117,8 @@ public class PotInventory : MonoBehaviour
 
     public void FreshSlot() //아이템이 들어오거나 나가면 Slot의 내용을 다시 정리하여 화면에 보여 주는 기능
     {
-        int i = 0;
-        for (;i < slots.Length; i++) // i의 값이 items와 slots 두 개의 값 보다 작아야만((수정하기))
+        
+        for (int i = 0; i < slots.Length; i++) // i의 값이 items와 slots 두 개의 값 보다 작아야만((수정하기))
         {
             slots[i].fruit = fruits[i];
         }
@@ -99,6 +131,7 @@ public class PotInventory : MonoBehaviour
         if (fruits[potInventoryNum] == null && !isPotFull) //냄비에 빈공간이 있다면
         {
             fruits[potInventoryNum] = _fruit; //냄비안에 과일 넣음
+
         }
         else if (fruits[potInventoryNum] != null && !isPotFull)//t선택된 냄비에 빈공간이 없다면
         {
@@ -118,8 +151,11 @@ public class PotInventory : MonoBehaviour
             fruits[potInventoryNum] = _fruit; //냄비안에 과일 넣음
             Debug.Log("냄비 재랜덤위치:" + potInventoryNum);
 
-
+            
         }
+
+        //냄비조리
+        isBoil[potInventoryNum] = true; // 선택된 인덱스의 끓기 true
 
         FreshSlot();
 

@@ -11,7 +11,7 @@ public class PopupMessage : MonoBehaviour
     public GameObject fullMessage; // 굳히소가 가득찼을때 메세지
     public GameObject recipePopUp; //레시피 팝업창
     public GameObject freezerPopUp; //굳히소 구매 팝업창
-
+    public GameObject AT_2A1PopUp;
     //[Header("상단UI")]
     //public GameObject attendancePopUp; //출석 팝업창
     //public GameObject questPopUp; //퀘스트 팝업창
@@ -25,8 +25,9 @@ public class PopupMessage : MonoBehaviour
         fullMessage.SetActive(false);
         recipePopUp.SetActive(false);
         freezerPopUp.SetActive(false);
+        AT_2A1PopUp.SetActive(false);
 
-        
+
     }
 
     private void Update()
@@ -60,6 +61,18 @@ public class PopupMessage : MonoBehaviour
     public void ClickRecipePopUp_X() //레시피 팝업창의 x를 눌렀을때
     {
         recipePopUp.SetActive(false);
+
+    }
+
+    public void ClickAT_2A1PopUp() //레시피 팝업창을 열었을때 
+    {
+        AT_2A1PopUp.SetActive(true);
+
+    }
+
+    public void ClickAT_2A1PopUp_X() //레시피 팝업창의 x를 눌렀을때
+    {
+        AT_2A1PopUp.SetActive(false);
 
     }
 
