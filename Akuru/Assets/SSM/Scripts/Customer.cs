@@ -31,7 +31,7 @@ public class Customer : MonoBehaviour
             isCounterEnter = true;
             payDelay = 5;
             pay();
-            Destroy(gameObject, payDelay);
+            Invoke("CustomerOut", payDelay);
             return;
         }
         else if (other.tag == "Customer")
@@ -67,6 +67,11 @@ public class Customer : MonoBehaviour
     private void RestoreVelocity()
     {
         customerRB.velocity = savedVelocity;
+    }
+
+    private void CustomerOut()
+    {
+        gameObject.SetActive(false);
     }
 
     // 손님 계산 관련

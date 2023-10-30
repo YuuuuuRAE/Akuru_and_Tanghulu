@@ -20,8 +20,8 @@ public class GameManager : MonoBehaviour
     // 손님 리스트
     public GameObject[] customers;
     private int currentCustomersNum;
-    public Button listLeft;
-    public Button listRight;
+    //public Button listLeft;
+    //public Button listRight;
     public Text customerName;
     public Text customerInst;
     public Text likeability;
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PayCheck()
+    public void PayCheck() // 여긴 고쳐야 할듯...
     {
         GameObject[] tanghulus = instance.tanghuluSpawner.tanghulus;
 

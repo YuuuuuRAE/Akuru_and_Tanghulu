@@ -2478,8 +2478,6 @@ MonoBehaviour:
   - {fileID: 2106667274}
   - {fileID: 505364981}
   - {fileID: 1534304580}
-  listLeft: {fileID: 571019983}
-  listRight: {fileID: 45324096}
   customerName: {fileID: 1977685404}
   customerInst: {fileID: 521462737}
   likeability: {fileID: 1233245668}
@@ -4973,12 +4971,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97ab93e0045973a4b83d44bbe7b348c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customers:
+  customerPrefab:
   - {fileID: 881204719223727058, guid: 3201c902438e56c42b0d26be4c5385d4, type: 3}
   - {fileID: 2013077795533956959, guid: 0468195c9926dcc4cb6a8c1387bb1b5b, type: 3}
   - {fileID: 320315273061655522, guid: 186751a61d317734fafa79732cfe2cae, type: 3}
   - {fileID: 5192627925452743125, guid: 569b892db45af4543b1dcce664c9c564, type: 3}
   - {fileID: 8921578362088013243, guid: 7c8eba8ea2d928742a9b63593c5c3aff, type: 3}
+  poolSize: 10
   spawnRateMin: 5
   spawnRateMax: 10
 --- !u!1 &966445549
