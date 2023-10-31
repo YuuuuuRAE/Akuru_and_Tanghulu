@@ -67,6 +67,7 @@ public class Level : MonoBehaviour
         LV_in_Main.text = PlayerLevel.ToString();
     }
 
+    //현재 경험치 상태 관리 함수
     private void ShowCurXP()
     {
         XP.text = curXP.ToString() + " / " + maxXP.ToString();
