@@ -321,9 +321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 316958844}
   Off: {fileID: 1474422590}
-  isBGM: 1
-  isSound: 1
-  isVibrate: 1
 --- !u!1 &156691543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,9 +1190,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 967806458}
   Off: {fileID: 1324943930}
-  isBGM: 1
-  isSound: 1
-  isVibrate: 1
 --- !u!1 &570522256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1724,7 +1718,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3301887, g: 0.1552175, b: 0, a: 1}
   m_FlipX: 0
@@ -2120,9 +2114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 1623372880}
   Off: {fileID: 1178044346}
-  isBGM: 1
-  isSound: 1
-  isVibrate: 1
 --- !u!1 &764261995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,8 +4819,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 911414019}
   - {fileID: 667688917}
+  - {fileID: 911414019}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1723205022
