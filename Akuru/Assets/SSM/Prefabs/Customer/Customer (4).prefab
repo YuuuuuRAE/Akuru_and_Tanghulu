@@ -101,8 +101,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   customerRB: {fileID: 0}
-  payDelay: 5
-  favorite: 3
 --- !u!50 &5369590958518304601
 Rigidbody2D:
   serializedVersion: 4

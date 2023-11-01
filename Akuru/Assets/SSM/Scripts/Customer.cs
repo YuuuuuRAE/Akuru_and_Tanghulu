@@ -1,25 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Customer : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed;
     public Rigidbody2D customerRB;
     private Vector2 savedVelocity;
-    public float payDelay;
 
     bool isCounterEnter = false;
 
-    // 손님 각자 탕후루 취향 인스턴스로 각각 작성
-    // 0 딸기, 1 청포도, 2 귤, 3 파인애플, 4 블루베리
-    public int favorite;
-
-    void Start()
+    void Awake()
     {
         customerRB = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        // 활성화될 때 초기 속도 설정
         customerRB.velocity = new Vector3(0, speed, 0);
     }
+
 
     // 손님 이동 관련
     public void OnTriggerEnter2D(Collider2D other)
@@ -29,15 +31,11 @@ public class Customer : MonoBehaviour
             customerRB.velocity = Vector2.zero;
             savedVelocity = Vector2.zero;
             isCounterEnter = true;
-            payDelay = 5;
-            pay();
-            Invoke("CustomerOut", payDelay);
             return;
         }
         else if (other.tag == "Customer")
         {
             customerRB.velocity = Vector2.zero;
-            Invoke("RestoreVelocity", 1.6f);
         }
         else if (other.tag == "BlockLine1")
         {
@@ -51,7 +49,7 @@ public class Customer : MonoBehaviour
         }
         else if (other.tag == "Wall")
         {
-            customerRB.velocity = new Vector2(0, speed);
+            customerRB.velocity = new Vector2(0, (speed / 2));
             savedVelocity = customerRB.velocity;
         }
     }
@@ -64,27 +62,9 @@ public class Customer : MonoBehaviour
         }
     }
 
+    // 멈추기 전 저장된 속도 복구
     private void RestoreVelocity()
     {
         customerRB.velocity = savedVelocity;
-    }
-
-    private void CustomerOut()
-    {
-        gameObject.SetActive(false);
-    }
-
-    // 손님 계산 관련
-    public void pay()
-    {
-        GameManager.instance.favorite = favorite;
-        GameManager.instance.PayCheck();
-    }
-
-
-
-    void Update()
-    {
-
     }
 }

@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class CustomerSpawner : MonoBehaviour
 {
-    public GameObject[] customerPrefab; // 단일 손님 프리팹을 사용
-    public int poolSize = 10; // 오브젝트 풀 크기
-    public float spawnRateMin = 3f;
-    public float spawnRateMax = 5f;
+    public GameObject[] customerPrefab;
+    public int poolSize = 20;
+
+    // 인스턴스로 설정
+    public float spawnRateMin;
+    public float spawnRateMax;
 
     private List<GameObject> customerPool;
     private float spawnRate;
     private float timeAfterSpawn;
+    private int currentCustomerIndex = 0;
 
     void Start()
     {
@@ -30,8 +33,8 @@ public class CustomerSpawner : MonoBehaviour
         {
             timeAfterSpawn = 0f;
 
-            // 오브젝트 풀에서 비활성화된 손님 찾기
-            GameObject customer = GetInactiveCustomer();
+            // 오브젝트 풀에서 다음 순서의 손님 가져오기
+            GameObject customer = GetNextCustomer();
             if (customer != null)
             {
                 // 활성화 상태로 만들고 위치, 회전 설정
@@ -51,24 +54,24 @@ public class CustomerSpawner : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            int customerType = Random.Range(0, customerPrefab.Length);
+            int customerType = Random.Range(0, customerPrefab.Length); // 랜덤한 손님 타입 선택
             GameObject customer = Instantiate(customerPrefab[customerType], transform.position, transform.rotation);
             customer.SetActive(false); // 초기에는 비활성화 상태로 설정
             customerPool.Add(customer);
         }
     }
 
-    // 비활성화된 손님 오브젝트 찾기
-    GameObject GetInactiveCustomer()
+    // 다음 순서의 손님 오브젝트 가져오기
+    GameObject GetNextCustomer()
     {
-        foreach (GameObject customer in customerPool)
+        if (customerPool.Count == 0)
         {
-            if (!customer.activeInHierarchy)
-            {
-                return customer;
-            }
+            return null; // 풀이 비어있으면 null 반환
         }
 
-        return null;
+        GameObject customer = customerPool[currentCustomerIndex];
+        currentCustomerIndex = (currentCustomerIndex + 1) % customerPool.Count; // 다음 순서 계산
+
+        return customer;
     }
 }

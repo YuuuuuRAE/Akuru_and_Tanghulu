@@ -17,7 +17,7 @@ public class TanghuluSpawner : MonoBehaviour
 
     HashSet<Vector3> spawnedLocations = new HashSet<Vector3>();
 
-    void Update()
+    void Update() // 이 부분은 사실상 임시(혜수님 파트랑 연계해야함)
     {
         if (Input.GetButtonDown("Jump"))
         {

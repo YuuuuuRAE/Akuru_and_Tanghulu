@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
     // 손님 리스트
     public GameObject[] customers;
     private int currentCustomersNum;
-    //public Button listLeft;
-    //public Button listRight;
     public Text customerName;
     public Text customerInst;
     public Text likeability;
@@ -31,14 +29,12 @@ public class GameManager : MonoBehaviour
     public Text coin;
 
     // 현재 재화 보유량
-    public int currentRuby;
-    public int currentCoin;
-
-    // 계산 시간 슬라이더
-    public Slider progress;
+    public float currentRuby;
+    public float currentCoin;
 
     // 게임 가속버튼 판정
-    public bool doubleSpeed = false;
+    public bool isdoubleSpeed;
+    public float doubleSpeed;
 
     // 손님, 탕후루 인자값 가져오기
     public CustomerSpawner customerSpawner;
@@ -49,6 +45,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake()
     {
+        doubleSpeed = 1;
+
         customerSpawner = FindObjectOfType<CustomerSpawner>();
         tanghuluSpawner = FindObjectOfType<TanghuluSpawner>();
 
@@ -67,7 +65,8 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         currentRuby = 99999;
-        currentCoin = 700;
+        currentCoin = 3000;
+        isdoubleSpeed = false;
     }
 
 
@@ -76,37 +75,6 @@ public class GameManager : MonoBehaviour
         // 현재 재화
         ruby.text = "루비 : " + currentRuby;
         coin.text = "코인 : " + currentCoin;
-
-        // 계산 시간
-        {
-
-        }
-    }
-
-    public void PayCheck() // 여긴 고쳐야 할듯...
-    {
-        GameObject[] tanghulus = instance.tanghuluSpawner.tanghulus;
-
-        GameObject tanghuluWithFavorite = null;
-
-        for (int i = 0; i < tanghulus.Length; i++)
-        {
-            if (tanghulus[i] != null)
-            {
-                GameObject tanghuluComponent = tanghulus[i].GetComponent<GameObject>();
-
-                if (tanghuluComponent != null && i == favorite)
-                {
-                    tanghuluWithFavorite = tanghuluComponent;
-                    tanghuluWithFavorite.SetActive(false);
-
-                    Debug.Log(favorite);
-                    break; // 원하는 컴포넌트를 찾았으므로 루프 종료
-                }
-            }
-        }
-
-
     }
 
     // 진열장 관련
@@ -147,14 +115,6 @@ public class GameManager : MonoBehaviour
     {
         purchaseStand.SetActive(false);
     }
-
-
-    // 계산 가속버튼
-    public void Acceleration()
-    {
-        Debug.Log("계산 가속");
-    }
-
 
     // 상점 버튼
     public void Shop()
@@ -257,16 +217,16 @@ public class GameManager : MonoBehaviour
     {
         // 아쿠루 생성속도, 아쿠루 이동속도, 계산속도 변경
         // 기본속도일 때
-        if (!doubleSpeed)
+        if (!isdoubleSpeed)
         {
+            Time.timeScale = 2.0f;
             Debug.Log("게임 2배속");
-            doubleSpeed = true;
         }
         // 두배속일 때
-        else if (doubleSpeed)
+        else if (isdoubleSpeed)
         {
+            Time.timeScale = 1.0f;
             Debug.Log("게임 정상 배속");
-            doubleSpeed = false;
         }
     }
 

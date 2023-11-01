@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2835550492399155918}
   - component: {fileID: 6547271034762856532}
   - component: {fileID: 5007463218266420118}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tanghulu (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,5 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959b66b3d1ede5843877de094a1e5bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 40
+  price: 400
   payDelay: 5
+  flavor: "\uADE4"
