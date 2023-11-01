@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 960025313567724835}
   - component: {fileID: 3539632246995005599}
   - component: {fileID: 4999751008201594319}
+  - component: {fileID: 7147273186940297793}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (12)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &960025313567724835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3539632246995005599
 CanvasRenderer:
@@ -58,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -75,6 +76,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7147273186940297793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111253944803012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4999751008201594319}
 --- !u!1 &74287389938264735
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,13 +265,14 @@ GameObject:
   - component: {fileID: 7388248043689876362}
   - component: {fileID: 5156100791873137039}
   - component: {fileID: 4159792815270166896}
+  - component: {fileID: 4139231961550424122}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (15)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7388248043689876362
 RectTransform:
   m_ObjectHideFlags: 0
@@ -275,7 +290,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5156100791873137039
 CanvasRenderer:
@@ -298,7 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -315,6 +330,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4139231961550424122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105654101480908434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4159792815270166896}
 --- !u!1 &184495381701641572
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +546,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -1000}
+  m_SizeDelta: {x: -200, y: -1440}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4688977821818300581
 CanvasRenderer:
@@ -846,13 +874,14 @@ GameObject:
   - component: {fileID: 4777577646175748419}
   - component: {fileID: 3147968097338033262}
   - component: {fileID: 7390689623836670342}
+  - component: {fileID: 237296388495550260}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (3)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4777577646175748419
 RectTransform:
   m_ObjectHideFlags: 0
@@ -870,7 +899,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3147968097338033262
 CanvasRenderer:
@@ -893,7 +922,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -910,6 +939,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &237296388495550260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372461651354195922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 7390689623836670342}
 --- !u!1 &375262106244838040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1119,7 +1161,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5541685056818403790}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6338894313022064358}
+        m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
+        m_MethodName: ClickFreezerPopUp_X
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &550403001859853149
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,7 +1436,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 211037462088681663}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3224045375406051295}
+        m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
+        m_MethodName: PurchaseFreezer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &715046480573625735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1540,7 @@ GameObject:
   - component: {fileID: 2462433296720133917}
   - component: {fileID: 8528043965316068882}
   m_Layer: 5
-  m_Name: FullFreezer (1)
+  m_Name: FullFreezer (0)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1494,9 +1560,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7141765230983813860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108, y: -118.61705}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 185, y: 254.2301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3933271444308235263
@@ -1967,13 +2033,14 @@ GameObject:
   - component: {fileID: 895971459061972346}
   - component: {fileID: 4554687903782806810}
   - component: {fileID: 3651911183968417757}
+  - component: {fileID: 4430410413982166745}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (10)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &895971459061972346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1991,7 +2058,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4554687903782806810
 CanvasRenderer:
@@ -2014,7 +2081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2031,6 +2098,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4430410413982166745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978982156644260137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 3651911183968417757}
 --- !u!1 &1009822097479600267
 GameObject:
   m_ObjectHideFlags: 0
@@ -2374,7 +2454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -220}
+  m_AnchoredPosition: {x: -50, y: -350}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &3258395103853950379
@@ -2482,13 +2562,14 @@ GameObject:
   - component: {fileID: 2484405108289447781}
   - component: {fileID: 8784187179836807385}
   - component: {fileID: 9167015909559771626}
+  - component: {fileID: 7456818807751706932}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (13)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2484405108289447781
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2506,7 +2587,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8784187179836807385
 CanvasRenderer:
@@ -2529,7 +2610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2546,6 +2627,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7456818807751706932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329647509398663876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 9167015909559771626}
 --- !u!1 &1371891270527350807
 GameObject:
   m_ObjectHideFlags: 0
@@ -2559,7 +2653,7 @@ GameObject:
   - component: {fileID: 6768389250883766447}
   - component: {fileID: 6341190571984782933}
   m_Layer: 5
-  m_Name: NoFreezer (3)
+  m_Name: FreezeComplete (2)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,13 +2772,14 @@ GameObject:
   - component: {fileID: 5194983657947017070}
   - component: {fileID: 3172500601602132819}
   - component: {fileID: 1943210757333219468}
+  - component: {fileID: 633717883959950480}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (16)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5194983657947017070
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2702,7 +2797,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3172500601602132819
 CanvasRenderer:
@@ -2725,7 +2820,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2742,6 +2837,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &633717883959950480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399739259105260931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1943210757333219468}
 --- !u!1 &1442540150028443458
 GameObject:
   m_ObjectHideFlags: 0
@@ -2830,13 +2938,14 @@ GameObject:
   - component: {fileID: 7014262079925117338}
   - component: {fileID: 7384796964089746780}
   - component: {fileID: 4227162108387963508}
+  - component: {fileID: 4144512905879949425}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (11)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7014262079925117338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2854,7 +2963,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7384796964089746780
 CanvasRenderer:
@@ -2877,7 +2986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2894,6 +3003,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4144512905879949425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446840821066520418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4227162108387963508}
 --- !u!1 &1504304307956775248
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,7 +3290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4834250992186385967}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7056874178687532426}
+        m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
+        m_MethodName: ClickRecipeLevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1611450886826674752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,9 +3469,8 @@ GameObject:
   - component: {fileID: 4596204713102623480}
   - component: {fileID: 1100752886573616065}
   - component: {fileID: 7924832266420045104}
-  - component: {fileID: 5385946971140233838}
   m_Layer: 5
-  m_Name: UnlockButton (1)
+  m_Name: UnlockButton (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3445,7 +3578,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5385946971140233838}
+      - m_Target: {fileID: 3224045375406051295}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
         m_Mode: 1
@@ -3457,18 +3590,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5385946971140233838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669874110409168731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebba0666041ed649938aaee58641c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1679000827286485160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3557,13 +3678,14 @@ GameObject:
   - component: {fileID: 3590339634434045820}
   - component: {fileID: 3660248396342676139}
   - component: {fileID: 2836420656781047695}
+  - component: {fileID: 4210841867597045634}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (7)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3590339634434045820
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3581,7 +3703,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3660248396342676139
 CanvasRenderer:
@@ -3604,7 +3726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3621,6 +3743,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4210841867597045634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839088767715453486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2836420656781047695}
 --- !u!1 &1961142924588032353
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,13 +3767,14 @@ GameObject:
   - component: {fileID: 1740484798105679961}
   - component: {fileID: 8075504884727226274}
   - component: {fileID: 509004043809404016}
+  - component: {fileID: 5801639701299435901}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (19)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1740484798105679961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3656,7 +3792,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8075504884727226274
 CanvasRenderer:
@@ -3679,7 +3815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3696,6 +3832,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5801639701299435901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961142924588032353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 509004043809404016}
 --- !u!1 &1971636265232784802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3707,13 +3856,14 @@ GameObject:
   - component: {fileID: 5623147152075463465}
   - component: {fileID: 4130454224909148158}
   - component: {fileID: 4701974465226175375}
+  - component: {fileID: 692766636924220948}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (2)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5623147152075463465
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3731,7 +3881,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4130454224909148158
 CanvasRenderer:
@@ -3754,7 +3904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3771,6 +3921,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &692766636924220948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1971636265232784802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4701974465226175375}
 --- !u!1 &2026538075437892967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3926,7 +4089,7 @@ GameObject:
   - component: {fileID: 3425662111410226629}
   - component: {fileID: 7986562402844059030}
   m_Layer: 5
-  m_Name: NoFreezer (1)
+  m_Name: FreezeComplete (0)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3966,7 +4129,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045905804667479406}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3996,7 +4159,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045905804667479406}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -4159,7 +4322,7 @@ GameObject:
   - component: {fileID: 3096240696412366933}
   - component: {fileID: 6227463145825783388}
   m_Layer: 5
-  m_Name: EmptyFreezerImage (5)
+  m_Name: EmptyFreezerImage (4)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4251,7 +4414,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -4624,18 +4787,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '>'
 --- !u!1 &2554533448756584417
 GameObject:
   m_ObjectHideFlags: 0
@@ -4857,18 +5020,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uB808\uC2DC\uD53C"
 --- !u!1 &2632009038686013265
 GameObject:
   m_ObjectHideFlags: 0
@@ -4964,7 +5127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3272111023609734912
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4998,13 +5161,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4c9724ab145574796bceccffc79f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fruits:
+  - {fileID: 11400000, guid: 0468fb9b43af78a42840c744654bd78b, type: 2}
+  - {fileID: 11400000, guid: cafcd90b2fd61534cb499c72304059e3, type: 2}
+  - {fileID: 11400000, guid: e9d7b62583be51c42afa8bb043617d71, type: 2}
+  - {fileID: 11400000, guid: c0f4bf41a8da5b5468806cf1ac184ee5, type: 2}
+  - {fileID: 11400000, guid: 9bfa08e29a364b245844caaeec307f71, type: 2}
   tangfuruImage: {fileID: 8972399779538904294}
   rcpLevelText: {fileID: 8024066221211118927}
   priceText: {fileID: 7680603327195179113}
   rqQuantityText: {fileID: 653880921239220853}
-  rqcoinText: {fileID: 0}
+  rqcoinText: {fileID: 2875971637109923234}
   saleTangfuruNumText: {fileID: 3570173231351007962}
   rqQuantitySlider: {fileID: 5244859822415365940}
+  selectTangfuru: 0
 --- !u!1 &2648854206225579508
 GameObject:
   m_ObjectHideFlags: 0
@@ -5576,13 +5746,14 @@ GameObject:
   - component: {fileID: 7156850344133910618}
   - component: {fileID: 171692797569652102}
   - component: {fileID: 7163682429870544432}
+  - component: {fileID: 1358176282681398886}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (6)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7156850344133910618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5600,7 +5771,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &171692797569652102
 CanvasRenderer:
@@ -5623,7 +5794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5640,6 +5811,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1358176282681398886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3013018178275727109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 7163682429870544432}
 --- !u!1 &3051238129026872650
 GameObject:
   m_ObjectHideFlags: 0
@@ -5653,7 +5837,7 @@ GameObject:
   - component: {fileID: 500578365102452761}
   - component: {fileID: 5743272515760086740}
   m_Layer: 5
-  m_Name: NoFreezer (2)
+  m_Name: FreezeComplete (1)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6033,7 +6217,7 @@ GameObject:
   - component: {fileID: 7070896965407919119}
   - component: {fileID: 4187792439607919010}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6153,6 +6337,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7056874178687532426}
+        m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
+        m_MethodName: ClickWhatRecipe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3297661371944252084
 GameObject:
   m_ObjectHideFlags: 0
@@ -6164,13 +6360,14 @@ GameObject:
   - component: {fileID: 3354599575940783488}
   - component: {fileID: 5187936772918386011}
   - component: {fileID: 6036187104054989717}
+  - component: {fileID: 2362201774153452362}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (18)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3354599575940783488
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6188,7 +6385,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5187936772918386011
 CanvasRenderer:
@@ -6211,7 +6408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6228,6 +6425,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2362201774153452362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3297661371944252084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 6036187104054989717}
 --- !u!1 &3327944467854480923
 GameObject:
   m_ObjectHideFlags: 0
@@ -6239,7 +6449,7 @@ GameObject:
   - component: {fileID: 8771575303671968706}
   - component: {fileID: 1752674566459055268}
   m_Layer: 5
-  m_Name: EmptyFreezer (1)
+  m_Name: EmptyFreezer (0)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6519,7 +6729,7 @@ GameObject:
   - component: {fileID: 1973158710188059600}
   - component: {fileID: 5785519132917973302}
   m_Layer: 5
-  m_Name: EmptyFreezer (5)
+  m_Name: EmptyFreezer (4)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6679,7 +6889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -220}
+  m_AnchoredPosition: {x: -50, y: -350}
   m_SizeDelta: {x: 170, y: 170}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &123098581004690879
@@ -7201,13 +7411,14 @@ GameObject:
   - component: {fileID: 8275296510325656334}
   - component: {fileID: 2347852472105417364}
   - component: {fileID: 311897059079834310}
+  - component: {fileID: 8980857288604856518}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (9)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8275296510325656334
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7225,7 +7436,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2347852472105417364
 CanvasRenderer:
@@ -7248,7 +7459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7265,6 +7476,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8980857288604856518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021570975008987605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 311897059079834310}
 --- !u!1 &4051731954858736142
 GameObject:
   m_ObjectHideFlags: 0
@@ -7763,18 +7987,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC0C1\uC810"
 --- !u!1 &4483197193059099308
 GameObject:
   m_ObjectHideFlags: 0
@@ -7786,13 +8010,14 @@ GameObject:
   - component: {fileID: 4770206874906856533}
   - component: {fileID: 713361458732374117}
   - component: {fileID: 4879072573900967712}
+  - component: {fileID: 8026782845743679060}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (0)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4770206874906856533
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7810,7 +8035,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &713361458732374117
 CanvasRenderer:
@@ -7833,7 +8058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7850,6 +8075,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8026782845743679060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4483197193059099308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 4879072573900967712}
 --- !u!1 &4504511058108203828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7867,7 +8105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3835066780718699223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8263,6 +8501,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2090928766527024900}
+  - component: {fileID: 3224045375406051295}
+  - component: {fileID: 400039300759576317}
   m_Layer: 5
   m_Name: Freezer
   m_TagString: Untagged
@@ -8282,8 +8522,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7970405404666201764}
   - {fileID: 7141765230983813860}
+  - {fileID: 7970405404666201764}
   - {fileID: 6164226540291282131}
   m_Father: {fileID: 2827991645786052806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8292,6 +8532,46 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3224045375406051295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716561498977315838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ebba0666041ed649938aaee58641c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lockFreezer: 00000000
+  FreezerUnlockPopUp: {fileID: 6205424107401098417}
+  unlockFreezerText: {fileID: 2130357698033317171}
+--- !u!114 &400039300759576317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716561498977315838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 667143ba5e4914745aabf9b51cbc86a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emptyFreezers:
+  - {fileID: 2156810850127982274}
+  - {fileID: 8893149850656730639}
+  - {fileID: 6567871002415504257}
+  - {fileID: 1705749638686999220}
+  - {fileID: 3096240696412366933}
+  freezeComplete:
+  - {fileID: 3425662111410226629}
+  - {fileID: 500578365102452761}
+  - {fileID: 6768389250883766447}
+  - {fileID: 6152345021700718722}
+  - {fileID: 6876455316781784821}
+  tangfuruNumInFreezerNow: 0000000000000000000000000000000000000000
 --- !u!1 &4746766090390459508
 GameObject:
   m_ObjectHideFlags: 0
@@ -8461,7 +8741,7 @@ GameObject:
   - component: {fileID: 8703006160007497530}
   - component: {fileID: 5951075753927553529}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8581,6 +8861,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7056874178687532426}
+        m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
+        m_MethodName: ClickWhatRecipe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4798933461385326076
 GameObject:
   m_ObjectHideFlags: 0
@@ -8594,7 +8886,7 @@ GameObject:
   - component: {fileID: 2156810850127982274}
   - component: {fileID: 2836812507623656464}
   m_Layer: 5
-  m_Name: EmptyFreezerImage (1)
+  m_Name: EmptyFreezerImage (0)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8686,7 +8978,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -8826,7 +9118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981212a033bcc4d43a417c5495436021, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AT_100: AT_100
+  AT_100: Production_Plant
   AT_200: AT_200
   AT_300: AT_300
 --- !u!114 &6338894313022064358
@@ -8870,7 +9162,7 @@ GameObject:
   - component: {fileID: 6152345021700718722}
   - component: {fileID: 4387262767560094218}
   m_Layer: 5
-  m_Name: NoFreezer (4)
+  m_Name: FreezeComplete (3)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9674,7 +9966,7 @@ GameObject:
   - component: {fileID: 7195360771391787792}
   - component: {fileID: 8795248633274874417}
   m_Layer: 5
-  m_Name: FulFreezer (5)
+  m_Name: FulFreezer (4)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9694,9 +9986,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7141765230983813860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 972, y: -118.61705}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 185, y: 254.2301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &876511378716516319
@@ -9963,7 +10255,7 @@ GameObject:
   - component: {fileID: 8893149850656730639}
   - component: {fileID: 7467686325323228633}
   m_Layer: 5
-  m_Name: EmptyFreezerImage (2)
+  m_Name: EmptyFreezerImage (1)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10055,7 +10347,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10084,7 +10376,7 @@ GameObject:
   - component: {fileID: 7031801186087102055}
   - component: {fileID: 8920701182204359833}
   m_Layer: 5
-  m_Name: FulFreezer (2)
+  m_Name: FulFreezer (1)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10104,9 +10396,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7141765230983813860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 324, y: -118.61705}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 185, y: 254.2301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8806308445880386690
@@ -10359,7 +10651,7 @@ GameObject:
   - component: {fileID: 6567871002415504257}
   - component: {fileID: 6191279932269361830}
   m_Layer: 5
-  m_Name: EmptyFreezerImage (3)
+  m_Name: EmptyFreezerImage (2)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10451,7 +10743,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -10848,18 +11140,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 150
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 200
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: '>'
 --- !u!1 &6054671223183824899
 GameObject:
   m_ObjectHideFlags: 0
@@ -10873,7 +11165,7 @@ GameObject:
   - component: {fileID: 7536775575185647741}
   - component: {fileID: 7339436105571127988}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10993,6 +11285,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7056874178687532426}
+        m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
+        m_MethodName: ClickWhatRecipe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6083554605850112249
 GameObject:
   m_ObjectHideFlags: 0
@@ -11027,7 +11331,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -680}
+  m_AnchoredPosition: {x: 0, y: -720}
   m_SizeDelta: {x: 382.3423, y: 59.3657}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7596865329394187752
@@ -11198,9 +11502,9 @@ RectTransform:
   - {fileID: 2795293248227289984}
   m_Father: {fileID: 2827991645786052806}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 750}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -250}
   m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9064662393764818484
@@ -11279,7 +11583,7 @@ GameObject:
   - component: {fileID: 6876455316781784821}
   - component: {fileID: 480741184495363145}
   m_Layer: 5
-  m_Name: NoFreezer (5)
+  m_Name: FreezeComplete (4)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11400,7 +11704,7 @@ GameObject:
   - component: {fileID: 1705749638686999220}
   - component: {fileID: 4413951591828214260}
   m_Layer: 5
-  m_Name: EmptyFreezerImage (4)
+  m_Name: EmptyFreezerImage (3)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11492,7 +11796,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -11600,7 +11904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2301257007420434834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11635,7 +11939,7 @@ GameObject:
   - component: {fileID: 2605205013673089745}
   - component: {fileID: 6987441832700546420}
   m_Layer: 5
-  m_Name: FulFreezer (3)
+  m_Name: FulFreezer (2)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11655,9 +11959,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7141765230983813860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 540, y: -118.61705}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 185, y: 254.2301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3485782432833072244
@@ -12077,9 +12381,8 @@ GameObject:
   - component: {fileID: 2130294894755746806}
   - component: {fileID: 5751056478545549026}
   - component: {fileID: 682999990799008549}
-  - component: {fileID: 5192205714718833139}
   m_Layer: 5
-  m_Name: UnlockButton (3)
+  m_Name: UnlockButton (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12187,7 +12490,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5192205714718833139}
+      - m_Target: {fileID: 3224045375406051295}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
         m_Mode: 1
@@ -12199,18 +12502,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5192205714718833139
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6465252040960486619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebba0666041ed649938aaee58641c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6486846519160274633
 GameObject:
   m_ObjectHideFlags: 0
@@ -12222,7 +12513,7 @@ GameObject:
   - component: {fileID: 6164226540291282131}
   - component: {fileID: 8371116118969705784}
   m_Layer: 5
-  m_Name: NoFreezerGroup
+  m_Name: FreezeCompleteGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12622,7 +12913,7 @@ GameObject:
   - component: {fileID: 4933713350368255291}
   - component: {fileID: 8406088687906941134}
   m_Layer: 5
-  m_Name: EmptyFreezer (4)
+  m_Name: EmptyFreezer (3)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12706,13 +12997,14 @@ GameObject:
   - component: {fileID: 480844565423533312}
   - component: {fileID: 8625722427710585018}
   - component: {fileID: 3957265027226893155}
+  - component: {fileID: 55620892597308016}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (8)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &480844565423533312
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12730,7 +13022,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8625722427710585018
 CanvasRenderer:
@@ -12753,7 +13045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12770,6 +13062,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &55620892597308016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6710397296747241556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 3957265027226893155}
 --- !u!1 &6783712931545694766
 GameObject:
   m_ObjectHideFlags: 0
@@ -12782,9 +13087,8 @@ GameObject:
   - component: {fileID: 3928337746663925394}
   - component: {fileID: 2936744050545329188}
   - component: {fileID: 2052851808340035900}
-  - component: {fileID: 9190593250432745007}
   m_Layer: 5
-  m_Name: UnlockButton (2)
+  m_Name: UnlockButton (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12892,7 +13196,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9190593250432745007}
+      - m_Target: {fileID: 3224045375406051295}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
         m_Mode: 1
@@ -12904,18 +13208,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9190593250432745007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6783712931545694766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebba0666041ed649938aaee58641c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6790988658793482969
 GameObject:
   m_ObjectHideFlags: 0
@@ -13118,7 +13410,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -600}
+  m_SizeDelta: {x: -200, y: -900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5379003612837384515
 CanvasRenderer:
@@ -13309,13 +13601,14 @@ GameObject:
   - component: {fileID: 2660457814790772815}
   - component: {fileID: 1329761197515269577}
   - component: {fileID: 9164065132096349541}
+  - component: {fileID: 8976911096006509293}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (14)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2660457814790772815
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13333,7 +13626,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1329761197515269577
 CanvasRenderer:
@@ -13356,7 +13649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13373,6 +13666,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8976911096006509293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6851209818709837932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 9164065132096349541}
 --- !u!1 &6860813067787844012
 GameObject:
   m_ObjectHideFlags: 0
@@ -13612,6 +13918,27 @@ MonoBehaviour:
   - {fileID: 7598906698339438434}
   - {fileID: 6684446150803023416}
   - {fileID: 8473925157272306477}
+  tangfuruSlots:
+  - {fileID: 8026782845743679060}
+  - {fileID: 3173529850519728379}
+  - {fileID: 692766636924220948}
+  - {fileID: 237296388495550260}
+  - {fileID: 4513494006429387700}
+  - {fileID: 9140743341647495755}
+  - {fileID: 1358176282681398886}
+  - {fileID: 4210841867597045634}
+  - {fileID: 55620892597308016}
+  - {fileID: 8980857288604856518}
+  - {fileID: 4430410413982166745}
+  - {fileID: 4144512905879949425}
+  - {fileID: 7147273186940297793}
+  - {fileID: 7456818807751706932}
+  - {fileID: 8976911096006509293}
+  - {fileID: 4139231961550424122}
+  - {fileID: 633717883959950480}
+  - {fileID: 7238994305049214875}
+  - {fileID: 2362201774153452362}
+  - {fileID: 5801639701299435901}
   isPotFull: 0
   potInventoryNum: 0
   isPotEmpty: 0
@@ -13637,6 +13964,7 @@ MonoBehaviour:
   - 0
   - 0
   - 0
+  TangfuruClick: {fileID: 5000017895124875239}
 --- !u!1 &6921120973103524264
 GameObject:
   m_ObjectHideFlags: 0
@@ -13761,6 +14089,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6338894313022064358}
         m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
         m_MethodName: ClickAT_2A1PopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7056874178687532426}
+        m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
+        m_MethodName: ClickWhatRecipe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14631,7 +14971,7 @@ GameObject:
   - component: {fileID: 2675506584052879959}
   - component: {fileID: 110190613141606888}
   m_Layer: 5
-  m_Name: EmptyFreezer (3)
+  m_Name: EmptyFreezer (2)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14875,13 +15215,14 @@ GameObject:
   - component: {fileID: 840075813583359002}
   - component: {fileID: 5153861809957436545}
   - component: {fileID: 5509499882814865723}
+  - component: {fileID: 3173529850519728379}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (1)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &840075813583359002
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14899,7 +15240,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5153861809957436545
 CanvasRenderer:
@@ -14922,7 +15263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14939,6 +15280,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3173529850519728379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7753270736078535169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 5509499882814865723}
 --- !u!1 &7753761080198724697
 GameObject:
   m_ObjectHideFlags: 0
@@ -15380,7 +15734,7 @@ GameObject:
   - component: {fileID: 8033541156711185386}
   - component: {fileID: 2216858304559993048}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Button (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15491,6 +15845,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6338894313022064358}
         m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
         m_MethodName: ClickAT_2A1PopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7056874178687532426}
+        m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
+        m_MethodName: ClickWhatRecipe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15863,13 +16229,14 @@ GameObject:
   - component: {fileID: 4249442636388307507}
   - component: {fileID: 6915287178988873043}
   - component: {fileID: 2132138452328627115}
+  - component: {fileID: 9140743341647495755}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (5)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4249442636388307507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15887,7 +16254,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6915287178988873043
 CanvasRenderer:
@@ -15910,7 +16277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15927,6 +16294,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &9140743341647495755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8202078085215563390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 2132138452328627115}
 --- !u!1 &8240246599448138928
 GameObject:
   m_ObjectHideFlags: 0
@@ -15965,7 +16345,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -200, y: -600}
+  m_SizeDelta: {x: -200, y: -900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7109074062210111040
 CanvasRenderer:
@@ -16654,9 +17034,8 @@ GameObject:
   - component: {fileID: 8073154404066109823}
   - component: {fileID: 2581789477041007079}
   - component: {fileID: 806976591956460199}
-  - component: {fileID: 5770608513898515434}
   m_Layer: 5
-  m_Name: UnlockButton (4)
+  m_Name: UnlockButton (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16764,7 +17143,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5770608513898515434}
+      - m_Target: {fileID: 3224045375406051295}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
         m_Mode: 1
@@ -16776,18 +17155,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5770608513898515434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8696115087482259225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ebba0666041ed649938aaee58641c73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8764539221112856137
 GameObject:
   m_ObjectHideFlags: 0
@@ -16878,13 +17245,14 @@ GameObject:
   - component: {fileID: 7256483437941454143}
   - component: {fileID: 598867792424265568}
   - component: {fileID: 6270758749516864137}
+  - component: {fileID: 7238994305049214875}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (17)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7256483437941454143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16902,7 +17270,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &598867792424265568
 CanvasRenderer:
@@ -16925,7 +17293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -16942,6 +17310,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7238994305049214875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8786106945199875594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 6270758749516864137}
 --- !u!1 &8786948410639339104
 GameObject:
   m_ObjectHideFlags: 0
@@ -17070,7 +17451,7 @@ GameObject:
   - component: {fileID: 7395226498787025945}
   - component: {fileID: 3788046437098109735}
   m_Layer: 5
-  m_Name: EmptyFreezer (2)
+  m_Name: EmptyFreezer (1)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17172,18 +17553,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uC190\uC9C8 \uAC00\uC18D"
 --- !u!1 &8836913034100492884
 GameObject:
   m_ObjectHideFlags: 0
@@ -17356,7 +17737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7141765230983813860
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17418,13 +17799,14 @@ GameObject:
   - component: {fileID: 1760243218968122979}
   - component: {fileID: 631496981521865680}
   - component: {fileID: 6435739595450454999}
+  - component: {fileID: 4513494006429387700}
   m_Layer: 5
-  m_Name: TangfuruImage ()
-  m_TagString: Untagged
+  m_Name: TangfuruImage (4)
+  m_TagString: Tangfuru
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1760243218968122979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17442,7 +17824,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &631496981521865680
 CanvasRenderer:
@@ -17465,7 +17847,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.60754716, b: 0.60754716, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -17482,6 +17864,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4513494006429387700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983438065269364061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30eb9bdc8550ea04ab681fa28f7ecfa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 6435739595450454999}
 --- !u!1 &9082787701556567496
 GameObject:
   m_ObjectHideFlags: 0
@@ -17495,7 +17890,7 @@ GameObject:
   - component: {fileID: 6763325261086606665}
   - component: {fileID: 2553232824671101267}
   m_Layer: 5
-  m_Name: FulFreezer (4)
+  m_Name: FulFreezer (3)
   m_TagString: Freezer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17515,9 +17910,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 7141765230983813860}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 756, y: -118.61705}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 185, y: 254.2301}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8521451309625486156

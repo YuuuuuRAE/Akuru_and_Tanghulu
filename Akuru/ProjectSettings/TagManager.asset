@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Tree
+  - Freezer
+  - Fruit
+  - BlockLine1
+  - BlockLine2
+  - Wall
+  - Counter
+  - Customer
+  - Tangfuru
   layers:
   - Default
   - TransparentFX
@@ -41,4 +49,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background_AT200
+    uniqueID: 2579341683
+    locked: 0
+  - name: Desk_AT200
+    uniqueID: 294373451
+    locked: 0
+  - name: Plate_AT200
+    uniqueID: 920104439
+    locked: 0
+  - name: Akuru_AT200
+    uniqueID: 1242748713
+    locked: 0
+  - name: Pot_AT200
+    uniqueID: 3058599437
     locked: 0

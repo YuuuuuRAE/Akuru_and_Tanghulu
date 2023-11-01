@@ -6,14 +6,14 @@ using UnityEngine.UI;
 
 public class DragFruit : MonoBehaviour
 {
-    FreezeTangfuru freezeTangfuru;
+    TangfuruGoToFreezer tangfuruGoToFreezer;
 
     Vector3 returnPosition;
     Image image;
 
     void Start()
     {
-        freezeTangfuru = FindAnyObjectByType<FreezeTangfuru>();
+        tangfuruGoToFreezer = FindAnyObjectByType<TangfuruGoToFreezer>();
         image = GetComponent<Image>();
 
     }
@@ -30,9 +30,9 @@ public class DragFruit : MonoBehaviour
         {
             transform.position = Input.mousePosition;
 
-            if (freezeTangfuru.ClickFruitImg != null)
+            if (tangfuruGoToFreezer.ClickFruitImg != null)
             {
-                image.sprite = freezeTangfuru.ClickFruitImg.sprite;
+                image.sprite = tangfuruGoToFreezer.ClickFruitImg.sprite;
             }
         }
         else if(Input.GetMouseButtonUp(0))
