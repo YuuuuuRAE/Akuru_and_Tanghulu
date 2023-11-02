@@ -21,7 +21,9 @@ public class PotInventory : MonoBehaviour
     //Player player;
     public bool isPotFull; //과일이 냄비에 가득 찼는지
     public int potInventoryNum = 0; //냄비 위치 인덱스
-    public bool isPotEmpty; //냄비가 비어있는지
+
+    [Header("냄비 얼마나 찼나")]
+    public int FullNum; // 냄비가 몇개나 차있는지
 
     [Header("과일 끓이는 중")]
     public List<bool> isBoil;
@@ -42,10 +44,9 @@ public class PotInventory : MonoBehaviour
 
     void Awake()
     {
-        //player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
         tangfuruGoToFreezer = FindAnyObjectByType<TangfuruGoToFreezer>();
         isPotFull = false;
-        isPotEmpty = true;
+        FullNum = 0;
 
         FreshSlot(); //게임이 시작되면 fruit에 들어있는 아이템을 potinventoy에 넣어준다 
     }
@@ -53,6 +54,7 @@ public class PotInventory : MonoBehaviour
     private void Update()
     {
         BoilFruit();
+        IsPotEmpty();
     }
 
     void BoilFruit() //과일 냄비조리 확인
@@ -115,49 +117,24 @@ public class PotInventory : MonoBehaviour
 
     
     
-    public void IsPotEmpty() // ((수정하기))
+    public void IsPotEmpty() // 냄비가 비어있는지 검사 ((수정하기))
     {
-        
-        if (isPotEmpty)
-        {
-            isPotFull = false;
-            int FullNum = 0 ;
-            for (int i = 0; i <= fruits.Count; i++)
-            {
-                FullNum = 0;
-                if (fruits[i] != null) // 선택된 냄비에 빈자리가 없으면
-                {
-                    FullNum++;
-                }
-                
-                
-            }
-            if (FullNum >= fruits.Count)
-            {
-                isPotEmpty = false;
-            }
-        }
-        else if (!isPotEmpty)
+        if (FullNum >= slots.Length)
         {
             isPotFull = true;
-            int FullNum = fruits.Count;
-            for (int i = 0; i <= fruits.Count; i++)
-            {
-                FullNum = fruits.Count;
-                if (fruits[i] != null) // 선택된 냄비에 빈자리가 없으면
-                {
-                    FullNum--;
-                }
+            Debug.LogWarning("냄비가득참");
 
-                
-            }
-
-            if (FullNum <= fruits.Count)
-            {
-                isPotEmpty = true;
-            }
         }
+        else if (FullNum < slots.Length)
+        {
+            isPotFull = false;
+
+        }
+
+
     }
+
+    
 
     public void FreshSlot() //아이템이 들어오거나 나가면 Slot의 내용을 다시 정리하여 화면에 보여 주는 기능
     {
@@ -198,7 +175,8 @@ public class PotInventory : MonoBehaviour
 
             
         }
-        
+        FullNum += 1;
+
         //냄비조리
         isBoil[potInventoryNum] = true; // 선택된 인덱스의 끓기 true
         tangfuruSlots[potInventoryNum].gameObject.SetActive(false);

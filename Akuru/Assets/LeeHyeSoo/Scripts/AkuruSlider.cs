@@ -24,7 +24,7 @@ public class AkuruSlider : MonoBehaviour
         {
             akuruSlider.gameObject.SetActive(false);
         }
-        else
+        else if (!potInventory.isPotFull)
         {
             akuruSlider.gameObject.SetActive(true);
         }
