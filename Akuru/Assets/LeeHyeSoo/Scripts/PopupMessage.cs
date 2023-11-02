@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PopupMessage : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class PopupMessage : MonoBehaviour
 
 
     public GameObject fullMessage; // 굳히소가 가득찼을때 메세지
+    public List<Image> fullMsgImageList;
+
+
     public GameObject recipePopUp; //레시피 팝업창
     public GameObject freezerPopUp; //굳히소 구매 팝업창
     public GameObject AT_2A1PopUp;
@@ -22,6 +26,8 @@ public class PopupMessage : MonoBehaviour
 
     private void Start()
     {
+        //fullMessage = GameObject.Find(name: "FullMessage").GetComponent<GameObject>();
+
         fullMessage.SetActive(false);
         recipePopUp.SetActive(false);
         freezerPopUp.SetActive(false);
@@ -32,23 +38,40 @@ public class PopupMessage : MonoBehaviour
 
     private void Update()
     {
-        if (fullMessage.activeSelf == true) //굳히소가 가득찼을때 메세지는 3초뒤에 사라짐
+        if(Input.GetKeyDown(KeyCode.Space)) //판매대가 가득찼을때 ((후에 수정하기))
+        {
+            IsFreezerFull();
+            Debug.Log("IsFreezerFull() 실행됨");
+        }
+
+        if (fullMessage.activeSelf == true) //판매대가 가득찼을때 메세지는 3초뒤에 사라짐
         {
             timer += Time.deltaTime;
+
+
             if (timer >= waitTime)
             {
                 fullMessage.SetActive(false);
                 timer = 0;
+            }
+            else if (timer < waitTime)
+            {
+                //서서히 사라지도록 페이드아웃 ((수정하기))
             }
         }
 
         
     }
 
-    public void IsFreezerFull() //굳히소가 가득차면 뜨도록 ((수정하기))
+    public void IsFreezerFull() //판매대가 가득차면 뜨고 3초뒤에 사라짐 ((수정하기))
     {
+        //if(/*판매대가 가득 찼다면*/)
+        //{
+        //    fullMessage.SetActive(true);
+        //}
+
         fullMessage.SetActive(true);
-        
+
     }
     
 

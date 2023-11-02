@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        //potInventory.IsPotEmpty(); //수정하기
+        
         if (!isMaking && !potInventory.isPotFull)
         {
 
@@ -75,7 +75,6 @@ public class Player : MonoBehaviour
             
             Debug.Log("손질완료");
             GoToPot();
-            //potInventory.RandomSelectPotNum(); //과일이 들어갈 냄비 랜덤위치 선택
             akuruMakingTime = 0;
             isMaking = false;
         }
