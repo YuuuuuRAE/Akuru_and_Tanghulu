@@ -13,6 +13,7 @@ TagManager:
   - Counter
   - Customer
   - Tangfuru
+
   layers:
   - Default
   - TransparentFX
@@ -21,6 +22,7 @@ TagManager:
   - Water
   - UI
   - Tanghulu
+  - Pop_Up
   - 
   - 
   - 
@@ -64,4 +66,6 @@ TagManager:
     locked: 0
   - name: Pot_AT200
     uniqueID: 3372003449
+  - name: UI
+    uniqueID: 908473435
     locked: 0

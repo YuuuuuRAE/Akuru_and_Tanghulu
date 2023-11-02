@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13ffeb12b175e774ca30d90151a9c8fa, type: 3}
+  m_Name: Mandarin
+  m_EditorClassIdentifier: 
+  fruitName: "\uADE4"
+  fruitImage: {fileID: 21300000, guid: 412144bf1543f9445a2dd5615c61a357, type: 3}
+  tangfuruImage: {fileID: 21300000, guid: 20378fa7a8c35ab48aef987a0baa215a, type: 3}
+  making_time: 36
+  fruitAmount: 0
+  fruitInPotTime: 3
+  rcpLevel: 1
+  price: 20
+  exp: 1
+  rqQuantity: 30
+  rqCoin: 500
+  rqRuby: 1
+  rqQuantityNow: 0
+  saleTangfuruNum: 0
