@@ -23,7 +23,7 @@ public class Counter : MonoBehaviour
     public float price;
 
     // 가속시간
-    public float acceleration = 1;
+    public float acceleration = 1.5f;
 
     public void Update()
     {
