@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
 
-public class Slot : MonoBehaviour
+public class TangfuruSlot : MonoBehaviour
 {
     [SerializeField] public Image image;
-    
+
 
     private Fruit __fruit; //이미지 컴포넌트 담을 곳
     public Fruit fruit
@@ -19,7 +19,7 @@ public class Slot : MonoBehaviour
             if (__fruit != null)
             {
                 
-                image.sprite = fruit.fruitImage;
+                image.sprite = fruit.tangfuruImage;
                 image.color = new Color(1, 1, 1, 1);
             }
             else

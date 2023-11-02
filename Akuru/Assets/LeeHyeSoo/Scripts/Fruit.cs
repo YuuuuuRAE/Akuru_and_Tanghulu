@@ -22,6 +22,8 @@ public class Fruit : ScriptableObject
     public int rqRuby; // 레벨업에 필요한 루비
 
 
+    public int rqQuantityNow; //다음 레벨업을 위한 현재 제작 수량
+    public int saleTangfuruNum; // 누적 탕후루 판매 갯수
 
-
+    
 }

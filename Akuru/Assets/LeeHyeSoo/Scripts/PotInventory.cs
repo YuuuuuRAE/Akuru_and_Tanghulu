@@ -11,10 +11,14 @@ public class PotInventory : MonoBehaviour
 
     [SerializeField]
     private Transform slotParent; //슬롯의 부모 potGroup담을 곳
+
+    [Header("과일 슬롯")]
     [SerializeField]
     public Slot[] slots; //potGroup의 하위에 등록된 slot 담을 곳
+    [Header("탕후루 슬롯")]
+    public TangfuruSlot[] tangfuruSlots; //potGroup의 하위에 등록된 TangfuruSlot 담을 곳
 
-    Player player;
+    //Player player;
     public bool isPotFull; //과일이 냄비에 가득 찼는지
     public int potInventoryNum = 0; //냄비 위치 인덱스
     public bool isPotEmpty; //냄비가 비어있는지
@@ -23,16 +27,23 @@ public class PotInventory : MonoBehaviour
     public List<bool> isBoil;
     public List<float> startBoil;
 
+    [Header("탕후루 클릭")]
+    public GameObject TangfuruClick;
+
+    TangfuruGoToFreezer tangfuruGoToFreezer;
+
 #if UNITY_EDITOR
     private void OnValidate() //OnValidate는 유니티 에디터에서 바로 작동을 하는 역할
     {
         slots = slotParent.GetComponentsInChildren<Slot>();
+        tangfuruSlots = slotParent.GetComponentsInChildren<TangfuruSlot>();
     }
 #endif
 
     void Awake()
     {
-        player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
+        //player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
+        tangfuruGoToFreezer = FindAnyObjectByType<TangfuruGoToFreezer>();
         isPotFull = false;
         isPotEmpty = true;
 
@@ -54,19 +65,52 @@ public class PotInventory : MonoBehaviour
                 if (startBoil[i] >= fruits[i].fruitInPotTime) //타이머 값이 조리시간에 도달했다면
                 {
                     Debug.Log(fruits[i] + "조리완료");
-                    //탕후루 이미지 setactive true하기 ((수정하기))
-                    //fruits[i].fruitImage = fruits[i].tangfuruImage; //해당 인덱스의 과일탕후루 이미지를 담기
+                    
+                    tangfuruSlots[i].gameObject.SetActive(true);
+                    
                     isBoil[i] = false;
+                    
                 }
             }
             else if (isBoil[i] == false)// 해당인덱스의 isBoil이 false면
             {
                 startBoil[i] = 0;
-                //탕후루 이미지 setactive false하기 ((수정하기))
+                if(Input.GetMouseButtonDown(0))
+                {
+                    IsClickTangfuru(i);
+                }
             }
         }
 
 
+    }
+
+    void IsClickTangfuru(int i) //(((((((((((((((수정하기)))))))))))))))))))
+    {
+        //Color slotsColorNow = slots[i].image.color;
+        //Color tangfuruSlotsColorNow = tangfuruSlots[i].image.color;
+
+        if (TangfuruClick.gameObject.activeSelf == true)
+        {
+            Debug.LogWarning("IsClickTangfuru실행");
+            slots[i].image.color = new Color(1, 1, 1, 0);
+            tangfuruSlots[i].image.color = new Color(1, 1, 1, 0);
+
+            //if (tangfuruGoToFreezer.hitObj1.tag == "Tangfuru")
+            //{
+            //    Debug.LogWarning("IsClickTangfuru실행");
+            //    slots[i].image.color = new Color(1, 1, 1, 0);
+            //    tangfuruSlots[i].image.color = new Color(1, 1, 1, 0);
+            //}
+        }
+        else if (TangfuruClick.gameObject.activeSelf == false)
+        {
+            //slots[i].image.color = slotsColorNow;
+            //tangfuruSlots[i].image.color = tangfuruSlotsColorNow;
+
+            //slots[i].image.color = new Color(1, 1, 1, 1);
+            //tangfuruSlots[i].image.color = new Color(1, 1, 1, 1);
+        }
     }
 
     
@@ -121,6 +165,7 @@ public class PotInventory : MonoBehaviour
         for (int i = 0; i < slots.Length; i++) // i의 값이 items와 slots 두 개의 값 보다 작아야만((수정하기))
         {
             slots[i].fruit = fruits[i];
+            tangfuruSlots[i].fruit = fruits[i];
         }
     }
 
@@ -153,9 +198,10 @@ public class PotInventory : MonoBehaviour
 
             
         }
-
+        
         //냄비조리
         isBoil[potInventoryNum] = true; // 선택된 인덱스의 끓기 true
+        tangfuruSlots[potInventoryNum].gameObject.SetActive(false);
 
         FreshSlot();
 
