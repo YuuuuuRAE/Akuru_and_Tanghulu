@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 6925428653857358360}
   - component: {fileID: 7807008036250505554}
   m_Layer: 5
-  m_Name: FruitItem (11)
+  m_Name: FruitItem (10)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -431,7 +431,7 @@ GameObject:
   - component: {fileID: 3977264059837653926}
   - component: {fileID: 7598906698339438434}
   m_Layer: 5
-  m_Name: FruitItem (18)
+  m_Name: FruitItem (17)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -965,7 +965,7 @@ GameObject:
   - component: {fileID: 390229410858277470}
   - component: {fileID: 6684446150803023416}
   m_Layer: 5
-  m_Name: FruitItem (19)
+  m_Name: FruitItem (18)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2199,7 +2199,7 @@ GameObject:
   - component: {fileID: 4418460766244598291}
   - component: {fileID: 5137259681504036200}
   m_Layer: 5
-  m_Name: FruitItem (16)
+  m_Name: FruitItem (15)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3316,7 +3316,7 @@ GameObject:
   - component: {fileID: 1343310226754630039}
   - component: {fileID: 8433113998283366769}
   m_Layer: 5
-  m_Name: FruitItem (1)
+  m_Name: FruitItem (0)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6777,7 +6777,7 @@ GameObject:
   - component: {fileID: 1269609605140181264}
   - component: {fileID: 8473925157272306477}
   m_Layer: 5
-  m_Name: FruitItem (20)
+  m_Name: FruitItem (19)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7063,7 +7063,7 @@ GameObject:
   - component: {fileID: 7590311821959117886}
   - component: {fileID: 3578833163366110423}
   m_Layer: 5
-  m_Name: FruitItem (17)
+  m_Name: FruitItem (16)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7777,7 +7777,7 @@ GameObject:
   - component: {fileID: 3522254728275264103}
   - component: {fileID: 5375008215548405581}
   m_Layer: 5
-  m_Name: FruitItem (7)
+  m_Name: FruitItem (6)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8416,7 +8416,7 @@ GameObject:
   - component: {fileID: 144241345711984370}
   - component: {fileID: 7758465708715521672}
   m_Layer: 5
-  m_Name: FruitItem (12)
+  m_Name: FruitItem (11)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8565,12 +8565,6 @@ MonoBehaviour:
   - {fileID: 6567871002415504257}
   - {fileID: 1705749638686999220}
   - {fileID: 3096240696412366933}
-  freezeComplete:
-  - {fileID: 3425662111410226629}
-  - {fileID: 500578365102452761}
-  - {fileID: 6768389250883766447}
-  - {fileID: 6152345021700718722}
-  - {fileID: 6876455316781784821}
   tangfuruNumInFreezerNow: 0000000000000000000000000000000000000000
 --- !u!1 &4746766090390459508
 GameObject:
@@ -9134,6 +9128,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullMessage: {fileID: 6689403647329843997}
+  fullMsgImageList:
+  - {fileID: 247147127016385913}
+  - {fileID: 4420360539604593117}
+  - {fileID: 3435589566428589617}
   recipePopUp: {fileID: 8786948410639339104}
   freezerPopUp: {fileID: 6205424107401098417}
   AT_2A1PopUp: {fileID: 2648061591640128534}
@@ -9552,7 +9550,7 @@ GameObject:
   - component: {fileID: 8107393950002759440}
   - component: {fileID: 947360717384885389}
   m_Layer: 5
-  m_Name: FruitItem (5)
+  m_Name: FruitItem (4)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10087,7 +10085,7 @@ GameObject:
   - component: {fileID: 3249957120322108233}
   - component: {fileID: 4574347085116230016}
   m_Layer: 5
-  m_Name: FruitItem (13)
+  m_Name: FruitItem (12)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11390,7 +11388,7 @@ GameObject:
   - component: {fileID: 3857966569681682}
   - component: {fileID: 4405000213857680425}
   m_Layer: 5
-  m_Name: FruitItem (4)
+  m_Name: FruitItem (3)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11904,7 +11902,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2301257007420434834
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12139,7 +12137,7 @@ GameObject:
   - component: {fileID: 1108070867965305593}
   - component: {fileID: 8504102139313904487}
   m_Layer: 5
-  m_Name: FruitItem (6)
+  m_Name: FruitItem (5)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12582,7 +12580,7 @@ GameObject:
   - component: {fileID: 3545192380743327396}
   - component: {fileID: 7445399833045179207}
   m_Layer: 5
-  m_Name: FruitItem (15)
+  m_Name: FruitItem (14)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13221,7 +13219,7 @@ GameObject:
   - component: {fileID: 3771162614969071784}
   - component: {fileID: 775139355548300287}
   m_Layer: 5
-  m_Name: FruitItem (3)
+  m_Name: FruitItem (2)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13941,7 +13939,7 @@ MonoBehaviour:
   - {fileID: 5801639701299435901}
   isPotFull: 0
   potInventoryNum: 0
-  isPotEmpty: 0
+  FullNum: 0
   isBoil: 0000000000000000000000000000000000000000
   startBoil:
   - 0
@@ -14123,7 +14121,7 @@ GameObject:
   - component: {fileID: 903159650159406988}
   - component: {fileID: 3068705276767911974}
   m_Layer: 5
-  m_Name: FruitItem (8)
+  m_Name: FruitItem (7)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14354,7 +14352,7 @@ GameObject:
   - component: {fileID: 4431087931138583628}
   - component: {fileID: 3774710570998543585}
   m_Layer: 5
-  m_Name: FruitItem (2)
+  m_Name: FruitItem (1)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14884,7 +14882,7 @@ GameObject:
   - component: {fileID: 1989610547825561162}
   - component: {fileID: 6478982330857215142}
   m_Layer: 5
-  m_Name: FruitItem (9)
+  m_Name: FruitItem (8)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15306,7 +15304,7 @@ GameObject:
   - component: {fileID: 5145521817821017121}
   - component: {fileID: 7984502069474701974}
   m_Layer: 5
-  m_Name: FruitItem (14)
+  m_Name: FruitItem (13)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16751,7 +16749,7 @@ GameObject:
   - component: {fileID: 7533483713094500681}
   - component: {fileID: 520546126083207306}
   m_Layer: 5
-  m_Name: FruitItem (10)
+  m_Name: FruitItem (9)
   m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

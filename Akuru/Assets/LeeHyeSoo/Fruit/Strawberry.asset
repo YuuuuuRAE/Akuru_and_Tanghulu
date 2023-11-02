@@ -18,11 +18,11 @@ MonoBehaviour:
   making_time: 30
   fruitAmount: 0
   fruitInPotTime: 3
-  rcpLevel: 2
+  rcpLevel: 3
   price: 20
   exp: 1
   rqQuantity: 30
   rqCoin: 500
   rqRuby: 1
   rqQuantityNow: 0
-  saleTangfuruNum: 30
+  saleTangfuruNum: 60
