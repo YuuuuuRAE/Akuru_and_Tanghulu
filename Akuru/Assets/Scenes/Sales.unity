@@ -290,8 +290,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 584445574}
+        m_TargetAssemblyTypeName: CustomerList, Assembly-CSharp
         m_MethodName: ListRight
         m_Mode: 1
         m_Arguments:
@@ -818,8 +818,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
-        m_MethodName: Kitchen
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: AT_200
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -949,8 +949,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseClose
         m_Mode: 1
         m_Arguments:
@@ -1923,6 +1923,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &386810269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 386810271}
+  - component: {fileID: 386810270}
+  m_Layer: 0
+  m_Name: Purchase Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &386810270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386810269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721850308a16f0844b47f1fafd084015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  purchaseStand: {fileID: 1546945189}
+  purchase:
+  - {fileID: 1925601223}
+  - {fileID: 1245273611}
+  - {fileID: 2022622877}
+  - {fileID: 1904761374}
+  - {fileID: 257428680}
+  - {fileID: 2101029330}
+  - {fileID: 1895998343}
+  purchaseNum: 0
+--- !u!4 &386810271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386810269}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &386867167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,34 +2515,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417cabd7d37326245a91dd351d170135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  customerList: {fileID: 9133124}
-  purchaseStand: {fileID: 1546945189}
-  purchase:
-  - {fileID: 1925601223}
-  - {fileID: 1245273611}
-  - {fileID: 2022622877}
-  - {fileID: 1904761374}
-  - {fileID: 257428680}
-  - {fileID: 2101029330}
-  - {fileID: 1895998343}
-  purchaseNum: 0
-  customers:
-  - {fileID: 2137404530}
-  - {fileID: 1800068348}
-  - {fileID: 2106667274}
-  - {fileID: 505364981}
-  - {fileID: 1534304580}
-  customerName: {fileID: 1977685404}
-  customerInst: {fileID: 521462737}
-  likeability: {fileID: 1233245668}
   ruby: {fileID: 53278520}
   coin: {fileID: 930319937}
   currentRuby: 0
   currentCoin: 0
-  doubleSpeed: 0
-  customerSpawner: {fileID: 960874878}
-  tanghuluSpawner: {fileID: 958662028}
-  favorite: 0
+  isdoubleSpeed: 0
 --- !u!4 &502948458
 Transform:
   m_ObjectHideFlags: 0
@@ -2939,8 +2970,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 584445574}
+        m_TargetAssemblyTypeName: CustomerList, Assembly-CSharp
         m_MethodName: ListLeft
         m_Mode: 1
         m_Arguments:
@@ -3122,6 +3153,60 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580615884}
   m_CullTransparentMesh: 1
+--- !u!1 &584445573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 584445575}
+  - component: {fileID: 584445574}
+  m_Layer: 0
+  m_Name: Customer List Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &584445574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584445573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb817c916b5989499d29107e3ad657a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customerList: {fileID: 9133124}
+  customers:
+  - {fileID: 2137404530}
+  - {fileID: 1800068348}
+  - {fileID: 2106667274}
+  - {fileID: 505364981}
+  - {fileID: 1534304580}
+  customerName: {fileID: 1977685404}
+  customerInst: {fileID: 521462737}
+  likeability: {fileID: 1233245668}
+--- !u!4 &584445575
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584445573}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &594173207
 GameObject:
   m_ObjectHideFlags: 0
@@ -3363,8 +3448,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -3580,8 +3665,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 584445574}
+        m_TargetAssemblyTypeName: CustomerList, Assembly-CSharp
         m_MethodName: ListOpen
         m_Mode: 1
         m_Arguments:
@@ -3912,8 +3997,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: Purchase
         m_Mode: 1
         m_Arguments:
@@ -4807,8 +4892,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -5390,8 +5475,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -5924,8 +6009,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -7237,8 +7322,10 @@ MonoBehaviour:
     m_Bits: 64
   tanghuluObjects: []
   customer: {fileID: 0}
+  isCustomer: 0
   payDelay: 0
   progress: {fileID: 1812217991}
+  price: 0
   acceleration: 1
 --- !u!1 &1361020986
 GameObject:
@@ -7322,8 +7409,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 584445574}
+        m_TargetAssemblyTypeName: CustomerList, Assembly-CSharp
         m_MethodName: ListClose
         m_Mode: 1
         m_Arguments:
@@ -7948,8 +8035,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -8166,8 +8253,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -9110,8 +9197,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 502948457}
-        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+      - m_Target: {fileID: 386810270}
+        m_TargetAssemblyTypeName: StandPurchase, Assembly-CSharp
         m_MethodName: PurchaseOpen
         m_Mode: 3
         m_Arguments:
@@ -10635,3 +10722,5 @@ SceneRoots:
   - {fileID: 958662027}
   - {fileID: 960874877}
   - {fileID: 1357865530}
+  - {fileID: 584445575}
+  - {fileID: 386810271}
