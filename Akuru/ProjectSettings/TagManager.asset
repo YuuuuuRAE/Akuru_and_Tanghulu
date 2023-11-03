@@ -3,21 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Tree
-  - Freezer
-<<<<<<< Updated upstream
-  - Fruit
-  - BlockLine1
-  - BlockLine2
-  - Wall
-  - Counter
-  - Customer
-  - Tangfuru
-
-=======
-  - Tangfuru
->>>>>>> Stashed changes
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -25,8 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Tanghulu
-  - Pop_Up
+  - 
   - 
   - 
   - 
@@ -55,36 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background_AT200
-<<<<<<< Updated upstream
-    uniqueID: 4132349667
-    locked: 0
-  - name: Desk_AT200
-    uniqueID: 221391029
-    locked: 0
-  - name: Plate_AT200
-    uniqueID: 2838043451
-    locked: 0
-  - name: Akuru_AT200
-    uniqueID: 3191159395
-    locked: 0
-  - name: Pot_AT200
-    uniqueID: 3372003449
-  - name: UI
-=======
->>>>>>> Stashed changes
-    uniqueID: 908473435
-    locked: 0
-  - name: Desk_AT200
-    uniqueID: 3894215873
-    locked: 0
-  - name: Plate_AT200
-    uniqueID: 716732499
-    locked: 0
-  - name: Akuru_AT200
-    uniqueID: 3811897425
-    locked: 0
-  - name: Pot_AT200
-    uniqueID: 501432891
     locked: 0
