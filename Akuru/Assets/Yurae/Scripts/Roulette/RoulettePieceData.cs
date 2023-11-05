@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+[System.Serializable]
 public class RoulettePieceData : MonoBehaviour
 {
     public Sprite icon; //아이콘 이미지 파일
