@@ -11,11 +11,11 @@ public class TangfuruGoToFreezer : MonoBehaviour
     EventSystem eventSystem;
 
     FreezeTangfuru freezeTangfuru;
-    //RecipeLevelUp recipeLevelUp; //탕후루 제작수량 누적시 사용
     PotInventory potInventory;
-    int tangfuruNum; //선택된 탕후루 인덱스 저장
+    public int tangfuruNum; //선택된 탕후루 인덱스 저장
 
     Player player;
+    FreezerGroup freezerGroup;
 
     public GameObject potCompleteFruitsImg; //조리완료된 과일 이미지
 
@@ -24,17 +24,20 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
     public Image ClickFruitImg; //드래그할 때 드래그 이미지를 담을 곳
 
-    //public int tangfuruInFreezer;
+    
     int FreezerNum = 5; // 냉장고 개수
+
+    
+    public int freezerInd;
 
     private void Awake()
     {
         raycaster = GameObject.Find(name: "AT_200Canvas").GetComponent<GraphicRaycaster>();
         eventSystem = FindAnyObjectByType<EventSystem>();
         freezeTangfuru = FindAnyObjectByType<FreezeTangfuru>();
-        //recipeLevelUp = FindAnyObjectByType<RecipeLevelUp>();
         potInventory = FindAnyObjectByType<PotInventory>();
         player = GetComponent<Player>();
+        freezerGroup = FindAnyObjectByType<FreezerGroup>();
     }
     void Start()
     {
@@ -67,7 +70,7 @@ public class TangfuruGoToFreezer : MonoBehaviour
                 hitObj1Img = hitObj1.GetComponent<Image>();
                 if (hitObj1Img.color != ImgClear)
                 {
-                    Debug.LogWarning("클릭시 안보여야할 탕후루" + hitObj1Img.name); //예) TangfuruImage (7)
+                    Debug.Log("클릭시 안보여야할 탕후루" + hitObj1Img.name); //예) TangfuruImage (7)
                     for (int i = 0; i < potInventory.slots.Length; i++)
                     {
                         if (hitObj1Img.name == "TangfuruImage (" + i + ")")
@@ -118,6 +121,8 @@ public class TangfuruGoToFreezer : MonoBehaviour
                         {
                             if (hitObj1.name == "TangfuruImage (" + j + ")")
                             {
+                                
+                                freezerInd = i;
                                 Debug.Log("담긴 탕후루냄비위치: " + (hitObj1.name));
                                 Image image = hitObj1.GetComponent<Image>(); 
                                 Debug.Log("담긴 탕후루종류: " + image.sprite);
@@ -132,7 +137,9 @@ public class TangfuruGoToFreezer : MonoBehaviour
                                             + player.fruits[k].rqQuantityNow);
                                         potInventory.FullNum -= 1;
 
-                                        
+                                        freezerGroup.PlusTangfuruInFreezer(i, k);
+
+
 
                                     }
                                 }

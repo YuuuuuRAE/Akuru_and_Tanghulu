@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pineapple
   m_EditorClassIdentifier: 
   fruitName: "\uD30C\uC778\uC560\uD50C"
-  fruitImage: {fileID: 21300000, guid: 01c83904c2579624db4407dc81315c9c, type: 3}
-  tangfuruImage: {fileID: 21300000, guid: 44064dce7039ead40847be1e4db3c191, type: 3}
+  fruitImage: {fileID: 21300000, guid: 528f28dd3a16cb0449f13dcdada2dca4, type: 3}
+  tangfuruImage: {fileID: 21300000, guid: 9fbaccd33118c14499f4a228f0536a4a, type: 3}
   making_time: 36
   fruitAmount: 0
   fruitInPotTime: 3
@@ -24,5 +24,5 @@ MonoBehaviour:
   rqQuantity: 30
   rqCoin: 500
   rqRuby: 1
-  rqQuantityNow: 14
+  rqQuantityNow: 0
   saleTangfuruNum: 0
