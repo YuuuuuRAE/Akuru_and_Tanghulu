@@ -15,6 +15,8 @@ public class UnlockFreezer : MonoBehaviour
 
     Player player;
 
+    public Text freezerPopUpText;
+
     private void Start()
     {
         player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
@@ -22,7 +24,39 @@ public class UnlockFreezer : MonoBehaviour
         FreezerUnlockPopUp.SetActive(false);
     }
 
-    
+    void FreezerPopUpText() //코인소모 추가((수정하기))
+    {
+
+        for (int i = 0; i < lockFreezerNum; i++)
+        {
+            if (lockFreezer[0] == false)
+            {
+                freezerPopUpText.text = "코인 " + 100;
+                break;
+            }
+            else if(lockFreezer[1] == false)
+            {
+                freezerPopUpText.text = "코인 " + 500;
+                break;
+            }
+            else if (lockFreezer[2] == false)
+            {
+                freezerPopUpText.text = "코인 " + 1000;
+                break;
+            }
+            else if (lockFreezer[3] == false)
+            {
+                freezerPopUpText.text = "코인 " + 3000;
+                break;
+            }
+            
+        }
+        
+        
+
+        
+    }
+
     public void ClickUnlockfreezer()
     {
         clickButton = EventSystem.current.currentSelectedGameObject;
@@ -34,6 +68,7 @@ public class UnlockFreezer : MonoBehaviour
                 Debug.Log("클릭한 냉장고: " + clickButton.name);
                 if (i == 0 || lockFreezer[i - 1] == true)
                 {
+                    FreezerPopUpText();
                     FreezerUnlockPopUp.SetActive(true);
                     unlockFreezerText.text = player.fruits[i + 1].fruitName.ToString()
                                                 + " 탕후루를 굳히고 보관할 곳을 추가합니다.";

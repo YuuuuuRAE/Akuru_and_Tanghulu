@@ -8,15 +8,13 @@ public class FreezeTangfuru : MonoBehaviour
 {
     
     public List<Image> emptyFreezers;
-    //public List<Image> fullFreezers;
-    //public List<Image> freezeComplete;
-
-    [Header("굳히소 안 탕후루 수")]
-    public List<int> tangfuruNumInFreezerNow; //현재 굳히소 안에 있는 탕후루 개수 / 판매대로 이동하면 (-)되도록 추가하기
-
-
     
 
+    [Header("굳히소 안 탕후루 수")]
+    public List<int> tangfuruNumInFreezerNow; 
+    //현재 굳히소 안에 있는 탕후루 개수 
+
+    
     private void Start()
     {
         for (int i = 0; i < tangfuruNumInFreezerNow.Count;i++) 
@@ -29,6 +27,8 @@ public class FreezeTangfuru : MonoBehaviour
     {
         EmptyFreezer();
     }
+
+    
 
     public void FullFreezer(int i)
     {

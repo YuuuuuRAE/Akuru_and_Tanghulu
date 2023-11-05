@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PopupMessage : MonoBehaviour
 {
-    float timer = 0;
+    public float timer = 0;
     float waitTime = 3;
 
 
@@ -15,7 +15,17 @@ public class PopupMessage : MonoBehaviour
 
     public GameObject recipePopUp; //레시피 팝업창
     public GameObject freezerPopUp; //굳히소 구매 팝업창
+    
     public GameObject AT_2A1PopUp;
+
+    
+
+
+    [Header("fullMessage")]
+    public Image fullMessageImg;
+    public Text fullMessageText;
+    public Image fullMessageButton;
+
     //[Header("상단UI")]
     //public GameObject attendancePopUp; //출석 팝업창
     //public GameObject questPopUp; //퀘스트 팝업창
@@ -26,8 +36,7 @@ public class PopupMessage : MonoBehaviour
 
     private void Start()
     {
-        //fullMessage = GameObject.Find(name: "FullMessage").GetComponent<GameObject>();
-
+        
         fullMessage.SetActive(false);
         recipePopUp.SetActive(false);
         freezerPopUp.SetActive(false);
@@ -38,38 +47,50 @@ public class PopupMessage : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) //판매대가 가득찼을때 ((후에 수정하기))
+        if(Input.GetKeyDown(KeyCode.Space)) //판매대가 가득찼을때 
         {
             IsFreezerFull();
-            Debug.Log("IsFreezerFull() 실행됨");
         }
 
         if (fullMessage.activeSelf == true) //판매대가 가득찼을때 메세지는 3초뒤에 사라짐
         {
             timer += Time.deltaTime;
-
+            Color clear = new Color(1, 1, 1, 0);
 
             if (timer >= waitTime)
             {
-                fullMessage.SetActive(false);
+                StartCoroutine(FadeCoroutine()); //서서히 사라지도록 
                 timer = 0;
             }
-            else if (timer < waitTime)
+
+            if (fullMessageImg.color == clear)
             {
-                //서서히 사라지도록 페이드아웃 ((수정하기))
+                fullMessage.SetActive(false);
             }
         }
 
         
     }
 
-    public void IsFreezerFull() //판매대가 가득차면 뜨고 3초뒤에 사라짐 ((수정하기))
+    IEnumerator FadeCoroutine()
     {
-        //if(/*판매대가 가득 찼다면*/)
-        //{
-        //    fullMessage.SetActive(true);
-        //}
+        float fadeCount = 1;
+        
+        while (fadeCount > 0)
+        {
+            fadeCount -= 0.01f;
+            yield return new WaitForSeconds(0.01f); // 0.01초마다 실행 
+            fullMessageImg.color = new Color(1, 1, 1, fadeCount);
+            fullMessageButton.color = new Color(1, 1, 1, fadeCount);
+            fullMessageText.color = new Color(0, 0, 0, fadeCount);
+        }
+    }
 
+    public void IsFreezerFull() //판매대가 가득차면
+    {
+        fullMessageImg.color = new Color(1, 1, 1, 1);
+        fullMessageButton.color = new Color(1, 1, 1, 1);
+        fullMessageText.color = new Color(0, 0, 0, 1);
         fullMessage.SetActive(true);
 
     }
@@ -108,6 +129,8 @@ public class PopupMessage : MonoBehaviour
     {
         freezerPopUp.SetActive(false);
     }
+
+    
 
     //public void ClickAttendancePopUp() //출석 팝업창을 열었을 때 
     //{

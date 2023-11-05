@@ -20,7 +20,9 @@ public class Player : MonoBehaviour
     public PotInventory potInventory; // 냄비
 
     [Header("랜덤과일 인덱스 번호")]
-    public int i; 
+    public int i;
+
+    UnlockFreezer unlockFreezer;
 
 
 
@@ -29,6 +31,7 @@ public class Player : MonoBehaviour
         timeText = GameObject.Find(name: "SliderText").GetComponent<Text>();
         akuruSlider = GameObject.Find(name: "AkuruSlider").GetComponent<Slider>();
         potInventory = FindAnyObjectByType<PotInventory>();
+        unlockFreezer = FindAnyObjectByType<UnlockFreezer>();
 
         akuruMakingTime = 0;
         isMaking = false;
@@ -57,8 +60,33 @@ public class Player : MonoBehaviour
     //랜덤 과일 인덱스 선택
     void RandomSelectTangfuru() 
     {
+        //냉장고 해금도로 탕후루 랜덤 범위 조절
+        int fruitNum = 0;
+        for (int i = 0; i < fruits.Count; i++)
+        {
+            if (unlockFreezer.lockFreezer[i] == false)
+            {
+                fruitNum = i + 1;
+                break;
+            }
+            else if (unlockFreezer.lockFreezer[3] == true)
+            {
+                fruitNum = 3 + 1;
+                break;
+            }
+        }
+
+
+
         //랜덤한 과일선택
-        i = Random.Range(0, fruits.Count);
+        if (fruitNum == 0)
+        {
+            i = 0;
+        }
+        else
+        {
+            i = Random.Range(0, fruitNum);
+        }
         Debug.Log("랜덤으로 과일이 선택되었습니다. 현재 손질중인 과일: " + fruits[i].name);
 
 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: GreenGrape
   m_EditorClassIdentifier: 
   fruitName: "\uCCAD\uD3EC\uB3C4"
-  fruitImage: {fileID: 21300000, guid: 045e7941ebec96745bdff9ae01a2a212, type: 3}
-  tangfuruImage: {fileID: 21300000, guid: a17df6629a46d264381ae7e540627e95, type: 3}
+  fruitImage: {fileID: 21300000, guid: a64567ccc34371b49a91b64cec10d4bd, type: 3}
+  tangfuruImage: {fileID: 21300000, guid: 8d5b204cdf4a48948a42a402d5208f6f, type: 3}
   making_time: 30
   fruitAmount: 0
   fruitInPotTime: 3
@@ -24,5 +24,5 @@ MonoBehaviour:
   rqQuantity: 30
   rqCoin: 500
   rqRuby: 1
-  rqQuantityNow: 13
+  rqQuantityNow: 0
   saleTangfuruNum: 0
