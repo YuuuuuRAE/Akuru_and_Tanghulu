@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class RoulettePieceData : MonoBehaviour
+public class RoulettePieceData
 {
     public Sprite icon; //아이콘 이미지 파일
     public string description; //이름, 속성, 능력치 등의 정보
