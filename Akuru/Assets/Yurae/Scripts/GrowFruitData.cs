@@ -14,4 +14,9 @@ public class GrowFruitData
     public float None_Time; //None -> Flower
     public float Flower_Time; // Flower -> Mid
     public float Mid_Time; // Mid -> Fin
+
+
+    //Contena
+    public int FruitsCount; // 현재 과일의 개수
+
 }

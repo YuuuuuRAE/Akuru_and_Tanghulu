@@ -29,6 +29,8 @@ public class GrowFruit : MonoBehaviour
     [SerializeField]
     private float currentTime;
 
+    public ProductionPlant productionPlant;
+
     //스프라이트의 경우 후에 변하는데 걸리는 시간 변경들을 고려해 각 단계를 나눠놓음
 
     public bool isGrowing = false;
@@ -119,6 +121,15 @@ public class GrowFruit : MonoBehaviour
             Color color = CurrentImage.color;
             color.a = 0;
             CurrentImage.color = color;
+
+            //해당하는 과일 데이터의 FruitsCount 증가
+            for (int i = 0; i < productionPlant.growFruitDatas.Length; i++)
+            {
+                if(FruitsName == productionPlant.growFruitDatas[i].FruitsName)
+                {
+                    productionPlant.growFruitDatas[i].FruitsCount++;
+                }
+            }
         }
     }
 

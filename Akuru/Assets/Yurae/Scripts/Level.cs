@@ -11,6 +11,8 @@ public class Level : MonoBehaviour
     public Text LV_in_AdmLV;
     public Text XP;
 
+    public Contena contena;
+
     /*
      Lv 1 = 3xp
     이후 5LV씩 5부터 1씩 증가분을 가짐

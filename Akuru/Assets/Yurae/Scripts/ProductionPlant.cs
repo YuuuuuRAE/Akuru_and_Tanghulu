@@ -5,14 +5,14 @@ using UnityEngine;
 public class ProductionPlant : MonoBehaviour
 {
     public GameObject Player;
+
     [SerializeField]
     private GameObject[] Fruits; //표시되는 과일 게임 오브젝트 배열
 
     [SerializeField]
     private int MaxFruitsType;
 
-    [SerializeField]
-    private GrowFruitData[] growFruitDatas;
+    public GrowFruitData[] growFruitDatas;
 
     void Update()
     {
