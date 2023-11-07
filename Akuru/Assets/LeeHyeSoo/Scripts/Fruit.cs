@@ -9,8 +9,10 @@ public class Fruit : ScriptableObject
     public string fruitName; //과일 이름
     public Sprite fruitImage; //과일 이미지
     public Sprite tangfuruImage; //탕후루 이미지
+    public Sprite tangfuruRcpImage; //탕후루 레시피 이미지
+    public Sprite tangfuruRcpLvUpImage; //탕후루 레시피 레벨업 이미지
     public float making_time; //손질시간
-    public int fruitAmount; //과일 갯수
+    public int fruitAmount; //과일 갯수 / 수확한 과일이 이곳에 + 되도록 ((유래님 파트))
     public float fruitInPotTime; // 냄비 조리시간
 
     [Header("레시피 창: 과일 레벨업")]
