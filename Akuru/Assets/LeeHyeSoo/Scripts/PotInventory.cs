@@ -35,8 +35,6 @@ public class PotInventory : MonoBehaviour
     [Header("탕후루 클릭")]
     public GameObject TangfuruClick;
 
-    TangfuruGoToFreezer tangfuruGoToFreezer;
-
 #if UNITY_EDITOR
     private void OnValidate() //OnValidate는 유니티 에디터에서 바로 작동을 하는 역할
     {
@@ -47,7 +45,6 @@ public class PotInventory : MonoBehaviour
 
     void Awake()
     {
-        tangfuruGoToFreezer = FindAnyObjectByType<TangfuruGoToFreezer>();
         isPotFull = false;
         FullNum = 0;
 
@@ -170,25 +167,23 @@ public class PotInventory : MonoBehaviour
 
         if (flip == 0)
         {
-            Debug.LogWarning("0_Flip");
+            
             fruit_Tf.localScale = new Vector3(1, 1, 1);
             tangfuru_Tf.localScale = new Vector3(1.5f, 1.5f, 1);
         }
         else if(flip == 1)
         {
-            Debug.LogWarning("1_Flip");
+            
             fruit_Tf.localScale = new Vector3(-1, 1, 1);
             tangfuru_Tf.localScale = new Vector3(-1.5f, 1.5f, 1);
         }
         else if (flip == 2)
         {
-            Debug.LogWarning("2_Flip");
             fruit_Tf.localScale = new Vector3(1, -1, 1);
             tangfuru_Tf.localScale = new Vector3(1.5f, -1.5f, 1);
         }
         else if (flip == 3)
         {
-            Debug.LogWarning("3_Flip");
             fruit_Tf.localScale = new Vector3(-1, -1, 1);
             tangfuru_Tf.localScale = new Vector3(-1.5f, -1.5f, 1);
         }

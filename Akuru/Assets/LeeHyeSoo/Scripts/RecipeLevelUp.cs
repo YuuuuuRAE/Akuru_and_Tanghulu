@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,6 +12,7 @@ public class RecipeLevelUp : MonoBehaviour
     public Image tangfuruImage;
 
     [Header("레시피 레벨업")]
+    public Text tangfuruLvUpNameText;
     public Text rcpLevelText;
     public Text priceText;
     public Text rqQuantityText;
@@ -23,16 +25,21 @@ public class RecipeLevelUp : MonoBehaviour
     public int selectTangfuru; //선택된 과일 레시피 인덱스
     GameObject clickObject;
 
-    int rcpLevel_UP; //탕후루 레벨
-    int price_UP; //= 해당 레시피 레벨 달성 시 판매소에서의 탕후루 판매 가격
-    int exp_UP; //= 해당 레시피 레벨일 때 탕후루 제작시 경험치
-    int rqQuantity_UP; //다음 레벨로 레벨업을 하기 위한 필요 제작 수량
+    public int rcpLevel_UP; //탕후루 레벨
+    public int price_UP; //= 해당 레시피 레벨 달성 시 판매소에서의 탕후루 판매 가격
+    public int exp_UP; //= 해당 레시피 레벨일 때 탕후루 제작시 경험치
+    public int rqQuantity_UP; //다음 레벨로 레벨업을 하기 위한 필요 제작 수량
 
     int rqPay;
     int rqCoin_UP; // 레벨업에 필요한 코인
     int rqRuby_UP; // 레벨업에 필요한 루비
 
+    GameManager gameManager;
 
+    private void Awake()
+    {
+        gameManager = FindAnyObjectByType<GameManager>();
+    }
     private void Start()
     {
         SelectRecipe();
@@ -65,9 +72,9 @@ public class RecipeLevelUp : MonoBehaviour
 
     }
 
-    void SelectRecipe()
+    public void SelectRecipe()
     {
-        tangfuruImage.sprite = fruits[selectTangfuru].tangfuruImage;
+        tangfuruImage.sprite = fruits[selectTangfuru].tangfuruRcpLvUpImage;
         rcpLevel_UP = fruits[selectTangfuru].rcpLevel;
         price_UP = fruits[selectTangfuru].price;
         exp_UP = fruits[selectTangfuru].exp;
@@ -78,14 +85,26 @@ public class RecipeLevelUp : MonoBehaviour
         
     }
 
+    void SaveInFruit() //업데이트 정보 과일에 저장하기
+    {
+        fruits[selectTangfuru].rcpLevel = rcpLevel_UP;
+        fruits[selectTangfuru].price = price_UP;
+        fruits[selectTangfuru].exp = exp_UP;
+        fruits[selectTangfuru].rqQuantity = rqQuantity_UP;
+        fruits[selectTangfuru].rqCoin = rqCoin_UP;
+        fruits[selectTangfuru].rqRuby = rqRuby_UP;
+    }
+
 
     void RecipeLevelUpPopUptext() //레시피 레벨업 팝업창 기본 세팅 
     {
-        rcpLevelText.text = "Lv." + rcpLevel_UP;
-        priceText.text = "판매 가격    " + price_UP;
-        saleTangfuruNumText.text = "누적 판매 횟수    " + fruits[selectTangfuru].saleTangfuruNum;
+        tangfuruImage.sprite = fruits[selectTangfuru].tangfuruRcpLvUpImage;
+        tangfuruLvUpNameText.text = fruits[selectTangfuru].fruitName + " 탕후루";
+        rcpLevelText.text = rcpLevel_UP.ToString(); //레벨
+        priceText.text = price_UP.ToString(); // 판매가격
+        saleTangfuruNumText.text = fruits[selectTangfuru].saleTangfuruNum.ToString(); // 누적판매횟수
         rqQuantityText.text = fruits[selectTangfuru].rqQuantityNow + " /" + rqQuantity_UP;
-        rqcoinText.text = "레벨업\n" + rqPay;
+        rqcoinText.text = rqPay + "     ";
     }
 
     void QuantitySlider() //슬라이더 제어
@@ -98,13 +117,27 @@ public class RecipeLevelUp : MonoBehaviour
     {
         if (fruits[selectTangfuru].rqQuantityNow == rqQuantity_UP && rcpLevel_UP < 5)
         {
-            rcpLevel_UP++;
-            fruits[selectTangfuru].rcpLevel = rcpLevel_UP;
             RCPLevelUp();
+            if (gameManager.currentCoin > rqPay)
+            {
+                if (rcpLevel_UP < 4)
+                {
+                    gameManager.currentCoin -= rqCoin_UP;
+                }
+                else
+                {
+                    gameManager.currentRuby -= rqRuby_UP;
+                }
+                rcpLevel_UP++;
+                RCPLevelUp();
+                SaveInFruit();
+            }
+            else
+            {
+                Debug.Log("코인이 부족합니다");
+            }
+                
         }
-        
-
-
     }
 
     void RCPLevelUp()
@@ -119,6 +152,8 @@ public class RecipeLevelUp : MonoBehaviour
             rqQuantity_UP = 30;
             rqCoin_UP = 500;
             rqPay = rqCoin_UP;
+
+            
         }
         else if (rcpLevel_UP == 2)
         {
@@ -130,6 +165,7 @@ public class RecipeLevelUp : MonoBehaviour
             rqQuantity_UP = 60;
             rqCoin_UP = 1000;
             rqPay = rqCoin_UP;
+
         }
         else if (rcpLevel_UP == 3)
         {
@@ -141,6 +177,7 @@ public class RecipeLevelUp : MonoBehaviour
             rqQuantity_UP = 90;
             rqCoin_UP = 1500;
             rqPay = rqCoin_UP;
+
         }
         else if (rcpLevel_UP == 4)
         {
@@ -153,6 +190,7 @@ public class RecipeLevelUp : MonoBehaviour
             rqQuantity_UP = 120;
             rqCoin_UP = 2000;
             rqPay = rqCoin_UP;
+
         }
         else if (rcpLevel_UP == 5)
         {
@@ -164,6 +202,7 @@ public class RecipeLevelUp : MonoBehaviour
             rqQuantity_UP = 150;
             rqRuby_UP = 1; //루비로 바뀜 ((수정하기))
             rqPay = rqRuby_UP;
+
         }
     }
 

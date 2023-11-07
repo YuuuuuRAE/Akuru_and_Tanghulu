@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class Player : MonoBehaviour
 {
     public List<Fruit> fruits; //과일을 정보 담을 리스트 
@@ -11,8 +12,9 @@ public class Player : MonoBehaviour
     public Text timeText;
     
     public Slider akuruSlider; //아쿠루 과일 손질 슬라이더
-    float sliderMax;
-    float sliderNow;
+
+    Animator anim;
+    
 
     public bool isMaking;
 
@@ -32,6 +34,7 @@ public class Player : MonoBehaviour
         akuruSlider = GameObject.Find(name: "AkuruSlider").GetComponent<Slider>();
         potInventory = FindAnyObjectByType<PotInventory>();
         unlockFreezer = FindAnyObjectByType<UnlockFreezer>();
+        anim = GetComponent<Animator>();
 
         akuruMakingTime = 0;
         isMaking = false;
@@ -52,7 +55,12 @@ public class Player : MonoBehaviour
         else if(isMaking && !potInventory.isPotFull)
         {
             AkuruMakingTangfuru();
+            anim.SetBool("isMakingTfr",true);
 
+        }
+        else
+        {
+            anim.SetBool("isMakingTfr", false);
         }
         
     }
