@@ -10,7 +10,6 @@ public class PopupMessage : MonoBehaviour
 
 
     public GameObject fullMessage; // 굳히소가 가득찼을때 메세지
-    public List<Image> fullMsgImageList;
 
 
     public GameObject recipePopUp; //레시피 팝업창
@@ -23,7 +22,6 @@ public class PopupMessage : MonoBehaviour
 
     [Header("fullMessage")]
     public Image fullMessageImg;
-    public Text fullMessageText;
     public Image fullMessageButton;
 
     //[Header("상단UI")]
@@ -82,7 +80,6 @@ public class PopupMessage : MonoBehaviour
             yield return new WaitForSeconds(0.01f); // 0.01초마다 실행 
             fullMessageImg.color = new Color(1, 1, 1, fadeCount);
             fullMessageButton.color = new Color(1, 1, 1, fadeCount);
-            fullMessageText.color = new Color(0, 0, 0, fadeCount);
         }
     }
 
@@ -90,7 +87,6 @@ public class PopupMessage : MonoBehaviour
     {
         fullMessageImg.color = new Color(1, 1, 1, 1);
         fullMessageButton.color = new Color(1, 1, 1, 1);
-        fullMessageText.color = new Color(0, 0, 0, 1);
         fullMessage.SetActive(true);
 
     }

@@ -7,8 +7,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     // 재화 텍스트 종류
+    public Text playerLevel;
     public Text ruby;
     public Text coin;
+
+    //현재 레벨
+    public int currentLevel;
+    //레벨업을 위해 모아야할 경험치
+    public int nextLevelUpExp;
+    //레벨업을 위해 모인 현재 경험치
+    public int currentExp;
 
     // 현재 재화 보유량
     public float currentRuby;
@@ -35,6 +43,10 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+        currentLevel = 1;
+        nextLevelUpExp = 3;
+        currentExp = 0;
+
         currentRuby = 99999;
         currentCoin = 3000;
         isdoubleSpeed = false;
@@ -42,11 +54,24 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
+        PlayerLevelUp();
+
         // 현재 재화
-        ruby.text = "루비 : " + currentRuby;
-        coin.text = "코인 : " + currentCoin;
+        ruby.text = currentRuby.ToString();
+        coin.text = currentCoin.ToString();
+        playerLevel.text = currentLevel.ToString();
     }
 
+    void PlayerLevelUp() //플레이어 레벨업
+    {
+        if(currentExp >= nextLevelUpExp)
+        {
+            currentLevel += 1;
+            currentExp -= nextLevelUpExp; 
+            nextLevelUpExp += 5; //exp증가분 5
+        }
+
+    }
 
     // 각 버튼에 넣으시면 됩니다.
     // 생산소(AT_100) 씬으로 이동
