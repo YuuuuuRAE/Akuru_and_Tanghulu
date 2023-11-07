@@ -9,14 +9,14 @@ public class SoundPlayer : MonoBehaviour
 
     public string BGMname;
 
-    private void Update()
+    private void Start()
     {
-        if (Input.GetKeyDown(KeyCode.V))
-            PlayBGM(BGMname);
+        StartCoroutine(PlayBGM(BGMname));
     }
 
-    private void PlayBGM(string _BGMname)
+    IEnumerator PlayBGM(string _BGMname)
     {
+        yield return new WaitForSeconds(2.5f);
         audioManager.Play(_BGMname);
     }
 }
