@@ -15,7 +15,7 @@ public class Level : MonoBehaviour
      Lv 1 = 3xp
     이후 5LV씩 5부터 1씩 증가분을 가짐
      */
-    private int PlayerLevel = 1; //현재 플레이어의 레벨
+    public int PlayerLevel = 1; //현재 플레이어의 레벨 MaxLv = 5 (현재 기획서에 따름)
 
 
     private float maxXP = 3; //필요 경험치
@@ -34,8 +34,9 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && PlayerLevel < 5)
         {
+
             curXP += test_XP;
             if (curXP >= maxXP)
             {
@@ -46,6 +47,7 @@ public class Level : MonoBehaviour
                     increment_XP++;
                 }
                 maxXP += increment_XP;
+                if (PlayerLevel == 5) curXP = maxXP;
             }
         }
         HandleXP();
