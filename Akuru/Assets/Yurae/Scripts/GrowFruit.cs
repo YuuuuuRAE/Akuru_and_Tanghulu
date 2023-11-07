@@ -101,6 +101,13 @@ public class GrowFruit : MonoBehaviour
             }
         }
     }
+    
+    //성장 가속 함수
+    public void GrowAccel()
+    {
+        if (isGrowing)
+        currentTime += 3f;
+    }
 
     public void Gathering()
     {
