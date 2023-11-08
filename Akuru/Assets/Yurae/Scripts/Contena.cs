@@ -24,14 +24,14 @@ public class Contena : MonoBehaviour
     void Update()
     {
         //해금
-        if(level.PlayerLevel - Unlocklevel > 1 && Unlocklevel < 4)                  
+        if(GameControl.Instance.Level - Unlocklevel > 1 && Unlocklevel < 4)                  
         {
             Unlocklevel++;
 
             Images[Unlocklevel].color = Color.white; //실루엣 제거
 
             start += 3;
-            int iterator = level.PlayerLevel * 3;
+            int iterator = GameControl.Instance.Level * 3;
 
             for (int i = start; i < iterator; i++)
             {
