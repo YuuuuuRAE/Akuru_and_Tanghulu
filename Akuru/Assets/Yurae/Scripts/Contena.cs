@@ -24,7 +24,7 @@ public class Contena : MonoBehaviour
     void Update()
     {
         //ÇØ±Ý
-        if(level.PlayerLevel - Unlocklevel > 1 && Unlocklevel < 4)
+        if(level.PlayerLevel - Unlocklevel > 1 && Unlocklevel < 4)                  
         {
             Unlocklevel++;
 
