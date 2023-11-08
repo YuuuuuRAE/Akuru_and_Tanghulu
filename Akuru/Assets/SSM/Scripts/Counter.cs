@@ -22,8 +22,22 @@ public class Counter : MonoBehaviour
     // 탕후루 별 금액 변수
     public float price;
 
+    // 수입 텍스트
+    public GameObject incomeText;
+    public Transform calculatorPos;
+
+    // 각 아쿠루 별 원하는 탕후루를 구매한 횟수(호감도)
+    public float[] salesCount;
+
     // 가속시간
     public float acceleration = 1.5f;
+
+    // 루비 드롭관련
+    public GameObject rubyPrefab;
+    public bool isRuby = false;
+    public float dropRate;
+    public GameObject dropTable;
+    public int likability;
 
     public void Update()
     {
@@ -61,13 +75,42 @@ public class Counter : MonoBehaviour
                 if (tanghuluComponent != null)
                 {
                     // payDelay와 price 변수 가져오기
-                    payDelay = tanghuluComponent.payDelay; // 게임배속 관련
+                    payDelay = tanghuluComponent.payDelay;
                     price = tanghuluComponent.price;
 
                     // Tanghulu 오브젝트 비활성화
                     tanghulu.SetActive(false);
                     isCustomer = false;
                 }
+                // 판매수 1씩 증가
+                //salesCount[customerIndex - 1] += 1;
+
+                // 판매수 100씩 증가 (테스트)
+                salesCount[customerIndex - 1] += 100;
+
+                // 계산이 끝난 후 루비 드랍
+                isRuby = true;
+
+                // 루비 드랍률 조정
+                if (salesCount[customerIndex - 1] < 100)
+                {
+                    likability = 0;
+                }
+                else if (salesCount[customerIndex - 1] < 200)
+                {
+                    likability = 1;
+                }
+                else if (salesCount[customerIndex - 1] < 300)
+                {
+                    likability = 2;
+                }
+                else
+                {
+                    likability = 3;
+                }
+
+                dropTable = GameObject.Find("Customer List Manager");
+                dropRate = dropTable.GetComponent<CustomerList>().dropValues[customerIndex - 1][likability];
                 Debug.Log("아쿠루가 원하는 탕후루를 가져왔습니다.");
             }
             else if (tanghuluObjects.Count > 0)
@@ -79,7 +122,7 @@ public class Counter : MonoBehaviour
                     Tanghulu randomTanghuluComponent = tanghuluObjects[randomTanghuluIndex].GetComponent<Tanghulu>();
                     if (randomTanghuluComponent != null)
                     {
-                        payDelay = randomTanghuluComponent.payDelay; // 게임배속 관련
+                        payDelay = randomTanghuluComponent.payDelay;
                         price = randomTanghuluComponent.price;
                     }
                     // 랜덤 Tanghulu 오브젝트 비활성화
@@ -97,7 +140,7 @@ public class Counter : MonoBehaviour
             // 진행 바의 최대값 설정
             progress.maxValue = payDelay;
         }
-    
+
 
         // 계산 시간 동기화
         if (payDelay > 0)
@@ -113,6 +156,22 @@ public class Counter : MonoBehaviour
             progress.value = 0;
             payDelay = 0;
             GameManager.instance.currentCoin += price;
+
+            // 수입 텍스트 출력
+            GameObject income = Instantiate(incomeText);
+            income.transform.position = calculatorPos.position;
+            income.GetComponent<Income>().income = price;
+
+            // 계산이 끝난 후 드랍률에 따라 루비 드롭
+            if (isRuby)
+            {
+                if (Random.Range(0, 100) < dropRate) // 드롭 확률
+                {
+                    DropRuby();
+                }
+                isRuby = false;
+            }
+
             Debug.Log("코인 추가 : " + price + "코인");
         }
     }
@@ -139,6 +198,18 @@ public class Counter : MonoBehaviour
         else
         {
             Debug.Log("계산 중이 아닙니다.");
+        }
+    }
+
+    // 루비 드롭
+    public void DropRuby()
+    {
+        GameObject newItem = Instantiate(rubyPrefab, transform.position, Quaternion.identity);
+
+        Ruby itemMovement = newItem.GetComponent<Ruby>();
+        if (itemMovement != null)
+        {
+            itemMovement.enabled = true;
         }
     }
 }

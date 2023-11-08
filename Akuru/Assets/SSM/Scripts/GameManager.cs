@@ -35,16 +35,22 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-        currentRuby = 99999;
+        currentRuby = 1000;
         currentCoin = 3000;
         isdoubleSpeed = false;
     }
 
-    public void Update()
+    void Update()
     {
         // 현재 재화
-        ruby.text = "루비 : " + currentRuby;
-        coin.text = "코인 : " + currentCoin;
+        ruby.text = FormatNumber(currentRuby);
+        coin.text = FormatNumber(currentCoin);
+    }
+
+    // 숫자를 천 단위 구분 기호가 있는 문자열로 서식화
+    private string FormatNumber(float number)
+    {
+        return string.Format("{0:N0}", number);
     }
 
 
