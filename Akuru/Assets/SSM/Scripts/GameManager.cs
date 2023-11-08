@@ -25,6 +25,11 @@ public class GameManager : MonoBehaviour
     // 게임 가속버튼 판정
     public bool isdoubleSpeed;
 
+    [Header("레벨업 팝업")]
+    public Text playerLevelPopUp_Level;
+    public Slider playerLevelPopUp_Slider;
+    public Text playerLevelPopUp_SliderText;
+
     // Sinleton Pattern
     public static GameManager instance;
     private void Awake()
@@ -43,14 +48,22 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
-
+        currentLevel = 1;
+        nextLevelUpExp = 3;
+        currentCoin = 3000;
         currentRuby = 1000;
-
     }
 
     void Update()
     {
         PlayerLevelUp();
+
+        playerLevel.text = currentLevel.ToString();
+        playerLevelPopUp_Level.text = currentLevel.ToString();
+        playerLevelPopUp_SliderText.text = currentExp + " / " + nextLevelUpExp;
+
+        playerLevelPopUp_Slider.maxValue = nextLevelUpExp;
+        playerLevelPopUp_Slider.value = currentExp;
 
         // 현재 재화
 
