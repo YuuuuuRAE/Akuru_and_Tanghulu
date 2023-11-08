@@ -12,11 +12,13 @@ TagManager:
   - Tangfuru
   - Fruit
   - Freezer
+
+
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - Tanghulu
@@ -51,4 +53,12 @@ TagManager:
     locked: 0
   - name: New Layer 1
     uniqueID: 59409615
+  - name: Background_AT200
+    uniqueID: 1018890555
+    locked: 0
+  - name: Akuru_AT200
+    uniqueID: 2295754649
+    locked: 0
+  - name: Pot_AT200
+    uniqueID: 3141516835
     locked: 0

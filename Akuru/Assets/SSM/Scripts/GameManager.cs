@@ -6,15 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // ÀçÈ­ ÅØ½ºÆ® Á¾·ù
+    // ì¬í™” í…ìŠ¤íŠ¸ ì¢…ë¥˜
+    public Text playerLevel;
     public Text ruby;
     public Text coin;
 
-    // ÇöÀç ÀçÈ­ º¸À¯·®
+    //í˜„ì¬ ë ˆë²¨
+    public int currentLevel;
+    //ë ˆë²¨ì—…ì„ ìœ„í•´ ëª¨ì•„ì•¼í•  ê²½í—˜ì¹˜
+    public int nextLevelUpExp;
+    //ë ˆë²¨ì—…ì„ ìœ„í•´ ëª¨ì¸ í˜„ì¬ ê²½í—˜ì¹˜
+    public int currentExp;
+
+    // í˜„ì¬ ì¬í™” ë³´ìœ ëŸ‰
     public float currentRuby;
     public float currentCoin;
 
-    // °ÔÀÓ °¡¼Ó¹öÆ° ÆÇÁ¤
+    // ê²Œì„ ê°€ì†ë²„íŠ¼ íŒì •
     public bool isdoubleSpeed;
 
     // Sinleton Pattern
@@ -29,117 +37,131 @@ public class GameManager : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            Debug.Log("ÆÄ±«");
+            Debug.Log("íŒŒê´´");
         }
     }
 
     public void Start()
     {
+
         currentRuby = 1000;
-        currentCoin = 3000;
-        isdoubleSpeed = false;
+
     }
 
     void Update()
     {
-        // ÇöÀç ÀçÈ­
+        PlayerLevelUp();
+
+        // í˜„ì¬ ì¬í™”
+
         ruby.text = FormatNumber(currentRuby);
         coin.text = FormatNumber(currentCoin);
     }
 
-    // ¼ıÀÚ¸¦ Ãµ ´ÜÀ§ ±¸ºĞ ±âÈ£°¡ ÀÖ´Â ¹®ÀÚ¿­·Î ¼­½ÄÈ­
+    // ìˆ«ìë¥¼ ì²œ ë‹¨ìœ„ êµ¬ë¶„ ê¸°í˜¸ê°€ ìˆëŠ” ë¬¸ìì—´ë¡œ ì„œì‹í™”
     private string FormatNumber(float number)
     {
         return string.Format("{0:N0}", number);
+
     }
 
+    void PlayerLevelUp() //í”Œë ˆì´ì–´ ë ˆë²¨ì—…
+    {
+        if(currentExp >= nextLevelUpExp)
+        {
+            currentLevel += 1;
+            currentExp -= nextLevelUpExp; 
+            nextLevelUpExp += 5; //expì¦ê°€ë¶„ 5
+        }
 
-    // °¢ ¹öÆ°¿¡ ³ÖÀ¸½Ã¸é µË´Ï´Ù.
-    // »ı»ê¼Ò(AT_100) ¾ÀÀ¸·Î ÀÌµ¿
+    }
+
+    // ê° ë²„íŠ¼ì— ë„£ìœ¼ì‹œë©´ ë©ë‹ˆë‹¤.
+    // ìƒì‚°ì†Œ(AT_100) ì”¬ìœ¼ë¡œ ì´ë™
     public void AT_100()
     {
         SceneManager.LoadScene("Production_Plant");
-        Debug.Log("»ı»ê¼Ò ¾ÀÀ¸·Î ÀÌµ¿");
+        Debug.Log("ìƒì‚°ì†Œ ì”¬ìœ¼ë¡œ ì´ë™");
     }
 
-    // Á¦ÀÛ¼Ò(AT_200) ¾ÀÀ¸·Î ÀÌµ¿
+    // ì œì‘ì†Œ(AT_200) ì”¬ìœ¼ë¡œ ì´ë™
     public void AT_200()
     {
         SceneManager.LoadScene("AT_200");
-        Debug.Log("Á¦ÀÛ¼Ò ¾ÀÀ¸·Î ÀÌµ¿");
+        Debug.Log("ì œì‘ì†Œ ì”¬ìœ¼ë¡œ ì´ë™");
     }
 
-    // ÆÇ¸Å¼Ò(AT_300) ¾ÀÀ¸·Î ÀÌµ¿
+    // íŒë§¤ì†Œ(AT_300) ì”¬ìœ¼ë¡œ ì´ë™
     public void AT_300()
     {
         SceneManager.LoadScene("Sales");
-        Debug.Log("ÆÇ¸Å¼Ò ¾ÀÀ¸·Î ÀÌµ¿");
+        Debug.Log("íŒë§¤ì†Œ ì”¬ìœ¼ë¡œ ì´ë™");
     }
 
-    // ·ê·¿ ¾ÀÀ¸·Î ÀÌµ¿
+    // ë£°ë › ì”¬ìœ¼ë¡œ ì´ë™
     public void Roulette()
     {
         SceneManager.LoadScene("Roulette");
-        Debug.Log("·ê·¿ ¾ÀÀ¸·Î ÀÌµ¿");
+        Debug.Log("ë£°ë › ì”¬ìœ¼ë¡œ ì´ë™");
     }
 
-    // ¹è¼Ó ¹öÆ°
+    // ë°°ì† ë²„íŠ¼
     public void DoubleSpeed()
     {
-        // ±âº»¼ÓµµÀÏ ¶§
+        // ê¸°ë³¸ì†ë„ì¼ ë•Œ
         if (!isdoubleSpeed)
         {
             Time.timeScale = 2.0f;
             isdoubleSpeed = true;
-            Debug.Log("°ÔÀÓ 2¹è¼Ó");
+            Debug.Log("ê²Œì„ 2ë°°ì†");
         }
-        // µÎ¹è¼ÓÀÏ ¶§
+        // ë‘ë°°ì†ì¼ ë•Œ
         else if (isdoubleSpeed)
         {
             Time.timeScale = 1.0f;
             isdoubleSpeed = false;
-            Debug.Log("°ÔÀÓ Á¤»ó ¹è¼Ó");
+            Debug.Log("ê²Œì„ ì •ìƒ ë°°ì†");
         }
     }
 
-    // »óÁ¡ ¹öÆ°
+    // ìƒì  ë²„íŠ¼
     public void Shop()
     {
-        Debug.Log("»óÁ¡");
+        Debug.Log("ìƒì ");
     }
 
 
-    // ¼³Á¤Ã¢ UI ¿ÀÇÂ ¹öÆ°
+    // ì„¤ì •ì°½ UI ì˜¤í”ˆ ë²„íŠ¼
     public void Setting()
     {
-        Debug.Log("¼³Á¤Ã¢ ¿ÀÇÂ");
+        Debug.Log("ì„¤ì •ì°½ ì˜¤í”ˆ");
     }
 
 
-    // ·¹º§Ã¢ UI ¿ÀÇÂ ¹öÆ°
+    // ë ˆë²¨ì°½ UI ì˜¤í”ˆ ë²„íŠ¼
     public void Level()
     {
-        Debug.Log("·¹º§Ã¢ ¿ÀÇÂ");
+        Debug.Log("ë ˆë²¨ì°½ ì˜¤í”ˆ");
     }
 
 
-    // Ãâ¼® Ã¼Å© UI ¿ÀÇÂ ¹öÆ°
+    // ì¶œì„ ì²´í¬ UI ì˜¤í”ˆ ë²„íŠ¼
     public void Check()
     {
-        Debug.Log("Ãâ¼®Ã¼Å© ¿ÀÇÂ");
+        Debug.Log("ì¶œì„ì²´í¬ ì˜¤í”ˆ");
     }
 
 
-    // Äõ½ºÆ®Ã¢ UI ¿ÀÇÂ ¹öÆ°
+    // ì¿¼ìŠ¤íŠ¸ì°½ UI ì˜¤í”ˆ ë²„íŠ¼
     public void Quest()
     {
-        Debug.Log("Äù½ºÆ® ¿ÀÇÂ");
+        Debug.Log("í€˜ìŠ¤íŠ¸ ì˜¤í”ˆ");
     }
 
 
-    // ÀÌº¥Æ® UI ¿ÀÇÂ ¹öÆ°
+    // ì´ë²¤íŠ¸ UI ì˜¤í”ˆ ë²„íŠ¼
     public void Event()
     {
-        Debug.Log("ÀÌº¥Æ® ¿ÀÇÂ");
+        Debug.Log("ì´ë²¤íŠ¸ ì˜¤í”ˆ");
     }
 }

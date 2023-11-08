@@ -27,7 +27,10 @@ public class TangfuruGoToFreezer : MonoBehaviour
     
     int FreezerNum = 5; // 냉장고 개수
 
-    
+    GameManager gameManager;
+    RecipeLevelUp recipeLevelUp;
+
+
     public int freezerInd;
 
     private void Awake()
@@ -38,6 +41,7 @@ public class TangfuruGoToFreezer : MonoBehaviour
         potInventory = FindAnyObjectByType<PotInventory>();
         player = GetComponent<Player>();
         freezerGroup = FindAnyObjectByType<FreezerGroup>();
+        gameManager = FindAnyObjectByType<GameManager>();
     }
     void Start()
     {
@@ -140,6 +144,9 @@ public class TangfuruGoToFreezer : MonoBehaviour
                                         freezerGroup.PlusTangfuruInFreezer(i, k);
 
 
+                                        gameManager.currentExp += player.fruits[k].exp; //탕후루 제작시 exp+
+
+
 
                                     }
                                 }
@@ -164,9 +171,9 @@ public class TangfuruGoToFreezer : MonoBehaviour
             {
                 potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                 potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
-                //굳히소 충돌했을 때 potinventory 슬롯이 비워지도록((추가하기))
+                
             }
-            /*if (results[0].gameObject != null && potInventory.fruits[tangfuruNum] != null && results[0].gameObject.tag != "Freezer")*/
+            
 
 
             
@@ -175,4 +182,6 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
         }
     }
+
+    
 }

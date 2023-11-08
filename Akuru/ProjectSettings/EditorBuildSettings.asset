@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AT_200.unity
     guid: 58f0731db81d4c041a493f62b2d50af0
   - enabled: 1
+    path: Assets/Scenes/Sales.unity
+    guid: 9570a253d9cff8745b89c4666105abc4
+  - enabled: 1
     path: Assets/Scenes/Roulette.unity
     guid: 81a0a881bd0fe7343ba663dddef11c72
   m_configObjects:

@@ -10,12 +10,12 @@ public class Roulette : MonoBehaviour
 {
     [SerializeField]
     private Transform piecePrefab; // 룰렛에 표시되는 정보 프리팹
-    [SerializeField]
-    private Transform linePrefab; // 정보 구분 선 프리팹
+    //[SerializeField]
+    //private Transform linePrefab; // 정보 구분 선 프리팹
     [SerializeField]
     private Transform pieceParent; //정보들이 배치되는 부모 Transform
-    [SerializeField]
-    private Transform lineParent; // 선들이 배치되는 부모 Transform
+    //[SerializeField]
+    //private Transform lineParent; // 선들이 배치되는 부모 Transform
     [SerializeField]
     private RoulettePieceData[] roulettePieceData; // 룰렛에 표시되는 정보 배열
 
@@ -58,9 +58,11 @@ public class Roulette : MonoBehaviour
             // 생성한 룰렛 조각 회전
             piece.RotateAround(pieceParent.position, Vector3.back, (pieceAngle * i));
 
+            /*
             Transform line = Instantiate(linePrefab, lineParent.position, Quaternion.identity, lineParent);
             //생성한 선 회전
             line.RotateAround(lineParent.position, Vector3.back, (pieceAngle * i) + halfPieceAngle);
+            */
         }
     }
 

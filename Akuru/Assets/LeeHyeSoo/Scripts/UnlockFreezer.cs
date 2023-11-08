@@ -14,12 +14,16 @@ public class UnlockFreezer : MonoBehaviour
     public Text unlockFreezerText;
 
     Player player;
+    GameManager gameManager;
+
+    int payCoin;
 
     public Text freezerPopUpText;
 
     private void Start()
     {
         player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
+        gameManager = FindAnyObjectByType<GameManager>();
 
         FreezerUnlockPopUp.SetActive(false);
     }
@@ -31,22 +35,26 @@ public class UnlockFreezer : MonoBehaviour
         {
             if (lockFreezer[0] == false)
             {
-                freezerPopUpText.text = "코인 " + 100;
+                payCoin = 100;
+                freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
             else if(lockFreezer[1] == false)
             {
-                freezerPopUpText.text = "코인 " + 500;
+                payCoin = 500;
+                freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
             else if (lockFreezer[2] == false)
             {
-                freezerPopUpText.text = "코인 " + 1000;
+                payCoin = 1000;
+                freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
             else if (lockFreezer[3] == false)
             {
-                freezerPopUpText.text = "코인 " + 3000;
+                payCoin = 3000;
+                freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
             
@@ -91,9 +99,20 @@ public class UnlockFreezer : MonoBehaviour
             {
                 if (i == 0 || lockFreezer[i - 1] == true)
                 {
-                    clickButton.gameObject.SetActive(false);
-                    lockFreezer[i] = true;
-                    FreezerUnlockPopUp.SetActive(false);
+                    if(gameManager.currentCoin > payCoin)
+                    {
+                        clickButton.gameObject.SetActive(false);
+                        lockFreezer[i] = true;
+
+                        gameManager.currentCoin -= payCoin;
+
+                        FreezerUnlockPopUp.SetActive(false);
+                    }
+                    else
+                    {
+                        Debug.Log("코인이 부족합니다.");
+                    }
+                    
                 }
                 else
                 {
