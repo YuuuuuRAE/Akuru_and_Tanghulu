@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ffeb12b175e774ca30d90151a9c8fa, type: 3}
   m_Name: GreenGrape
   m_EditorClassIdentifier: 
+  fruitNum: 2
   fruitName: "\uCCAD\uD3EC\uB3C4"
   fruitImage: {fileID: 21300000, guid: a64567ccc34371b49a91b64cec10d4bd, type: 3}
   tangfuruImage: {fileID: 21300000, guid: 8d5b204cdf4a48948a42a402d5208f6f, type: 3}
