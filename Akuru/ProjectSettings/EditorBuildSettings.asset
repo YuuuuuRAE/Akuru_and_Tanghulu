@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Production_Plant.unity
+    path: Assets/Scenes/AT_100.unity
     guid: 4d281366f0f749048a7ad842d072e437
   - enabled: 1
     path: Assets/Scenes/AT_200.unity

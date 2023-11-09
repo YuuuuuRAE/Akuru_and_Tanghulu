@@ -16,20 +16,11 @@ public class ProductionPlant : MonoBehaviour
 
     void Update()
     {
-        SetFruitsType();
-        SpawnFruits();
-    }
 
-    public void SetFruitsType()
-    {
-        MaxFruitsType = Player.GetComponent<Level>().PlayerLevel; //현재 생성 가능한 과일의 종류를 플레이 레벨 만큼 설정
-    }
-
-    public void SpawnFruits()
-    {
+        //SpawnFruits
         for (int i = 0; i < Fruits.Length; i++)
         {
-            int randomFruits = Random.Range(0, MaxFruitsType);
+            int randomFruits = Random.Range(0, GameManager.instance.MaxFruitType);
             if (Fruits[i].GetComponent<GrowFruit>().isGrowing == false &&
                 Fruits[i].GetComponent<GrowFruit>().isGathering == true) //성장 중이 아니고 채집이 되었을 때 새롭게 할당
             {
@@ -37,4 +28,6 @@ public class ProductionPlant : MonoBehaviour
             }
         }
     }
+
+
 }

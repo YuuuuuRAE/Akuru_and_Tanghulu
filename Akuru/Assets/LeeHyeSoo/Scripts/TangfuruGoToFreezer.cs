@@ -151,7 +151,7 @@ public class TangfuruGoToFreezer : MonoBehaviour
                                         freezerGroup.PlusTangfuruInFreezer(i, k);
 
 
-                                        gameManager.currentExp += player.fruits[k].exp; //탕후루 제작시 exp+
+                                        gameManager.CurrentXp += player.fruits[k].exp; //탕후루 제작시 exp+
                                         isFruitinFreezer = true;
 
 
