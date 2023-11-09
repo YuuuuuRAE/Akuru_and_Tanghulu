@@ -30,7 +30,7 @@ public class Counter : MonoBehaviour
     public float[] salesCount;
 
     // 가속시간
-    public float acceleration = 1.5f;
+    public float acceleration = 3f;
 
     // 루비 드롭관련
     public GameObject rubyPrefab;
@@ -108,7 +108,7 @@ public class Counter : MonoBehaviour
                 {
                     likability = 3;
                 }
-
+                // 루비 드롭률 셋팅
                 dropTable = GameObject.Find("Customer List Manager");
                 dropRate = dropTable.GetComponent<CustomerList>().dropValues[customerIndex - 1][likability];
                 Debug.Log("아쿠루가 원하는 탕후루를 가져왔습니다.");
@@ -147,6 +147,7 @@ public class Counter : MonoBehaviour
         {
             payDelay -= Time.deltaTime;
             progress.value = payDelay;
+            progress.gameObject.SetActive(true);
         }
 
         //계산이 끝날 시
@@ -171,7 +172,7 @@ public class Counter : MonoBehaviour
                 }
                 isRuby = false;
             }
-
+            progress.gameObject.SetActive(false);
             Debug.Log("코인 추가 : " + price + "코인");
         }
     }

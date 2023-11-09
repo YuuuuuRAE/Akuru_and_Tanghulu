@@ -6,44 +6,69 @@ public class TanghuluSpawner : MonoBehaviour
     // 탕후루 진열장에 스폰
     // 탕후루 종류
     public GameObject[] tanghulus;
-    // 탕후루가 스폰 될 진열장
-    public Transform[] stand;
+    
+    // 탕후루가 스폰 될 진열장의 위치
+    public Transform[] standPos1;
+    public Transform[] standPos2;
+    public Transform[] standPos3;
+    public Transform[] standPos4;
+    public Transform[] standPos5;
+    public Transform[] standPos6;
+    public Transform[] standPos7;
+    public Transform[] standPos8;
+    
+    public Transform[][] standPosArray = new Transform[8][];
+
+    // 현재 진열장에 몇개가 있는지 체크
+    public int[] standIndex;
+
     // 진열장이 잠겨있는지 체크
     public GameObject[] purchase;
-    // 진열장의 넘버
-    public int standNum;
+    private int activeCount = 0;
 
-    int activeStandCount = 0;
-
-    HashSet<Vector3> spawnedLocations = new HashSet<Vector3>();
-
-    void Update() // 이 부분은 사실상 임시(혜수님 파트랑 연계해야함)
+    public void Start()
     {
-        if (Input.GetButtonDown("Jump"))
+        standPosArray[0] = standPos1;
+        standPosArray[1] = standPos2;
+        standPosArray[2] = standPos3;
+        standPosArray[3] = standPos4;
+        standPosArray[4] = standPos5;
+        standPosArray[5] = standPos6;
+        standPosArray[6] = standPos7;
+        standPosArray[7] = standPos8;
+
+        PurchaseStand();
+    }
+
+    private void Update()
+    {
+        for (int i = 0; i < purchase.Length; i++)
         {
-            foreach (GameObject obj in purchase)
+            if (purchase[i].activeSelf)
             {
-                if (obj.activeSelf)
-                {
-                    activeStandCount++;
-                }
+                activeCount++;
             }
+        }
+    }
 
-            standNum = stand.Length - activeStandCount;
-            activeStandCount = 0;
-
-            for (int i = 0; i < standNum; i++)
+    public void PurchaseStand()
+    {
+        // 과일 종류당 한 진열장 사용하게 하기... 수정 필요....
+        for (int tanghuluNum = 0; tanghuluNum < 5; tanghuluNum++) // 탕후루 종류만큼 돌리기
+        {
+            for (int standNum = 0; standNum < 8 - activeCount; standNum++)  // 열려있는 진열장 개수만큼 돌린다
             {
-                Vector3 spawnPosition = stand[i].position;
-
-                // 이미 생성된 위치인지 확인
-                if (!spawnedLocations.Contains(spawnPosition))
+                for (int s1 = 0; s1 < 3; s1++)  // 각 진열장에 탕후루 3개씩 진열
                 {
-                    int tanghuluType = Random.Range(0, tanghulus.Length);
-                    GameObject tanghulu = Instantiate(tanghulus[tanghuluType], spawnPosition, Quaternion.identity);
-
-                    // 생성된 위치를 기록
-                    spawnedLocations.Add(spawnPosition);
+                    if (GameManager.instance.tangfuruNumList[tanghuluNum] > 0)  // 굳히소에 탕후루가 있을 경우
+                    {
+                        if (standIndex[standNum] < 3)  // 각 진열장 중에 진열된 탕후루가 3개 미만인 곳을 찾는다
+                        {
+                            Instantiate(tanghulus[tanghuluNum], standPosArray[standNum][s1].position, Quaternion.identity);
+                            standIndex[standNum]++;
+                            GameManager.instance.tangfuruNumList[tanghuluNum]--;
+                        }
+                    }
                 }
             }
         }
