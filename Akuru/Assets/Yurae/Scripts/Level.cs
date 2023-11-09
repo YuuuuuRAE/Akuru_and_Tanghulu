@@ -13,6 +13,8 @@ public class Level : MonoBehaviour
 
     public Contena contena;
 
+    
+
     /*
      Lv 1 = 3xp
     이후 5LV씩 5부터 1씩 증가분을 가짐
@@ -36,7 +38,7 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && PlayerLevel < 5)
+        if(Input.GetKeyDown(KeyCode.Space))
         {
 
             curXP += test_XP;
@@ -49,31 +51,39 @@ public class Level : MonoBehaviour
                     increment_XP++;
                 }
                 maxXP += increment_XP;
-                if (PlayerLevel == 5) curXP = maxXP;
             }
         }
+
+        LoadGameControl();
         HandleXP();
         ShowCurXP();
+    }
+
+    private void LoadGameControl()
+    {
+        GameControl.Instance.MaxXp = maxXP;
+        GameControl.Instance.CurrentXp = curXP;
+        GameControl.Instance.IncrementXp = increment_XP;
     }
 
     //슬라이더 관리 함수
     private void HandleXP()
     {
-        xpBar.value = (float)curXP / (float)maxXP;
+        xpBar.value = GameControl.Instance.CurrentXp / GameControl.Instance.MaxXp;
     }
 
 
     //레벨업 관리 함수 
     private void LevelUP()
     {
-        PlayerLevel++;
-        LV_in_AdmLV.text = PlayerLevel.ToString();
-        LV_in_Main.text = PlayerLevel.ToString();
+        GameControl.Instance.Level++;
+        LV_in_AdmLV.text = GameControl.Instance.Level.ToString();
+        LV_in_Main.text = GameControl.Instance.Level.ToString();
     }
 
     //현재 경험치 상태 관리 함수
     private void ShowCurXP()
     {
-        XP.text = curXP.ToString() + " / " + maxXP.ToString();
+        XP.text = GameControl.Instance.CurrentXp.ToString() + " / " + GameControl.Instance.MaxXp.ToString();
     }
 }
