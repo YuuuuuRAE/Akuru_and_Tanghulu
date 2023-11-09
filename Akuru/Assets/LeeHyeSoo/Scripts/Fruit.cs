@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Fruit : ScriptableObject
 {
-
+    public int fruitNum; //과일 번호
     public string fruitName; //과일 이름
     public Sprite fruitImage; //과일 이미지
     public Sprite tangfuruImage; //탕후루 이미지

@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class FreezeTangfuru : MonoBehaviour
 {
-    
+    GameManager gameManager;
+
     public List<Image> emptyFreezers;
     
 
@@ -17,6 +18,8 @@ public class FreezeTangfuru : MonoBehaviour
     
     private void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
+
         for (int i = 0; i < tangfuruNumInFreezerNow.Count;i++) 
         {
             tangfuruNumInFreezerNow[i] = 0;
@@ -26,6 +29,12 @@ public class FreezeTangfuru : MonoBehaviour
     private void Update()
     {
         EmptyFreezer();
+
+        for (int i = 0;i < emptyFreezers.Count;i++)
+        {
+            gameManager.tangfuruNumList[i] = tangfuruNumInFreezerNow[i];
+        }
+        
     }
 
     
@@ -43,6 +52,9 @@ public class FreezeTangfuru : MonoBehaviour
             {
                 emptyFreezers[i].color = new Color(1, 1, 1, 1);
             }
+            
         }
     }
+
+    
 }

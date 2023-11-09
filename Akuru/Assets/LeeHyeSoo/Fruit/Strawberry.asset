@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ffeb12b175e774ca30d90151a9c8fa, type: 3}
   m_Name: Strawberry
   m_EditorClassIdentifier: 
+  fruitNum: 0
   fruitName: "\uB538\uAE30"
   fruitImage: {fileID: 21300000, guid: 12c3326270f2734488f224853ce17947, type: 3}
   tangfuruImage: {fileID: 21300000, guid: abbcbef86ecc08a4d8e355b5621eebc0, type: 3}

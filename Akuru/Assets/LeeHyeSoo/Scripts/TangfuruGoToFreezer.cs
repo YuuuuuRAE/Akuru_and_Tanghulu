@@ -110,6 +110,8 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
             //해당결과 첫 번째 객체 확인
 
+            bool isFruitinFreezer = false;
+
             if (results[0].gameObject.tag == "Freezer" && results[0].gameObject != null)
             {
                 hitObj2 = results[0].gameObject;
@@ -117,10 +119,10 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
                 for (int i = 0; i < FreezerNum; i++)
                 {
-                    if (results[0].gameObject.name == "EmptyFreezerImage (" + i + ")") //충돌한 굳히소 인덱스
+                    if (results[0].gameObject.name == "EmptyFreezerImage (" + i + ")" ) //충돌한 굳히소 인덱스
                     {
-                        freezeTangfuru.FullFreezer(i); //해당 굳히소 찼음으로 전환
-                        freezeTangfuru.tangfuruNumInFreezerNow[i]++;
+                        //freezeTangfuru.FullFreezer(i); //해당 굳히소 찼음으로 전환
+                        //freezeTangfuru.tangfuruNumInFreezerNow[i]++;
                         for (int j = 0; j < 20; j++) 
                         {
                             if (hitObj1.name == "TangfuruImage (" + j + ")")
@@ -133,9 +135,14 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
                                 for (int k = 0; k < player.fruits.Count; k++)
                                 {
-                                    if (image.sprite.name == player.fruits[k].tangfuruImage.name)
+                                    if (image.sprite.name == player.fruits[k].tangfuruImage.name && player.fruits[k].fruitNum == i) //이미지 이름과 과일이름이 같으면 && 냉장고 인덱스와 과일 인덱스가 같으면
                                     {
+                                        freezeTangfuru.FullFreezer(i); //해당 굳히소 찼음으로 전환
+                                        freezeTangfuru.tangfuruNumInFreezerNow[i]++;
+
+
                                         player.fruits[k].rqQuantityNow++;
+                                        
                                         
                                         Debug.Log("굳히는중 / 현재 제작수량: "
                                             + player.fruits[k].rqQuantityNow);
@@ -145,10 +152,20 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
 
                                         gameManager.currentExp += player.fruits[k].exp; //탕후루 제작시 exp+
-
+                                        isFruitinFreezer = true;
 
 
                                     }
+                                    else if (image.sprite.name == player.fruits[k].tangfuruImage.name && player.fruits[k].fruitNum != i)
+                                    {
+                                        Debug.LogWarning("잘못된 냉장고입니다");
+                                        potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
+                                        potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
+                                        isFruitinFreezer = false;
+                                    }
+
+
+
                                 }
                                 
                                 
@@ -159,22 +176,25 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
                     }
                 }
-                potInventory.fruits[tangfuruNum] = null; // 굳히소에 탕후루가 담겼다면 냄비속 탕후루 지우기
-                potInventory.slots[tangfuruNum].image.sprite = null;
-                potInventory.tangfuruSlots[tangfuruNum].image.sprite = null;
 
-                hitObj1 = null;
+                if(isFruitinFreezer)
+                {
+                    potInventory.fruits[tangfuruNum] = null; // 굳히소에 탕후루가 담겼다면 냄비속 탕후루 지우기
+                    potInventory.slots[tangfuruNum].image.sprite = null;
+                    potInventory.tangfuruSlots[tangfuruNum].image.sprite = null;
+
+                    hitObj1 = null;
+                }
+                
 
             }
-            else if (results[0].gameObject == null 
-                && potInventory.fruits[tangfuruNum] != null && results[0].gameObject.tag != "Freezer")
+            else if (results[0].gameObject == null
+                || potInventory.fruits[tangfuruNum] != null || results[0].gameObject.tag != "Freezer")
             {
                 potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                 potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                 
             }
-            
-
 
             
             hitObj2 = null;

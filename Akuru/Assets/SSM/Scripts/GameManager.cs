@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
+    [Header("과일/탕후루 개수 리스트")]
+    //과일 리스트
+    // 0 = 딸기  /  0 = 청포도  /  0 = 귤  /  0 = 파인애플  /  0 = 블루베리  
+
+    public List<int> fruitNumList; // 과일 갯수 / 유래님이 수확한 과일 이곳에 쌓이도록
+    public List<int> tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록
+
+    [Header("텍스트")]
     // 재화 텍스트 종류
     public Text playerLevel;
     public Text ruby;
     public Text coin;
 
+    [Header("레벨")]
     //현재 레벨
     public int currentLevel;
     //레벨업을 위해 모아야할 경험치
@@ -18,10 +28,12 @@ public class GameManager : MonoBehaviour
     //레벨업을 위해 모인 현재 경험치
     public int currentExp;
 
+    [Header("재화 보유량")]
     // 현재 재화 보유량
     public float currentRuby;
     public float currentCoin;
 
+    [Header("게임 가속 버튼")]
     // 게임 가속버튼 판정
     public bool isdoubleSpeed;
 
@@ -48,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     public void Start()
     {
+
         currentLevel = 1;
         nextLevelUpExp = 3;
         currentCoin = 3000;
