@@ -73,7 +73,7 @@ public class Roulette : MonoBehaviour
         {
             roulettePieceData[i].index = i;
 
-            //예외처리, 혹시라도 chance값이 0 이하일 경우 1로 설정
+            //예외처리, 혹시라도 chance값이 0이하일 경우 1로 설정
             if (roulettePieceData[i].chance <= 0)
             {
                 roulettePieceData[i].chance = 1;
@@ -97,6 +97,29 @@ public class Roulette : MonoBehaviour
         {
             if (roulettePieceData[i].weight > weight)
             {
+                if (i >= 0 && i <= 1)
+                {
+                    GameManager.instance.fruitNumList[0]++; //딸기 증가
+                }
+                else
+                {
+                    switch (i)
+                    {
+                        case 2:
+                            GameManager.instance.currentCoin += 10;
+                            break;
+                        case 3:
+                            GameManager.instance.currentCoin += 20;
+                            break;
+                        case 4:
+                            GameManager.instance.currentCoin += 30;
+                            break;
+                        default:
+                            break;
+
+                    }
+                }
+
                 return i;
             }
         }

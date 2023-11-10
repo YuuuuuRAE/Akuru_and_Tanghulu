@@ -877,32 +877,32 @@ MonoBehaviour:
     weight: 0
   - icon: {fileID: 21300000, guid: ebc84c583b4dd0e41808a4c97d613a86, type: 3}
     description: x10
-    chance: 50
+    chance: 100
     index: 0
     weight: 0
   - icon: {fileID: 21300000, guid: ebc84c583b4dd0e41808a4c97d613a86, type: 3}
     description: x20
-    chance: 30
+    chance: 100
     index: 0
     weight: 0
   - icon: {fileID: 21300000, guid: ebc84c583b4dd0e41808a4c97d613a86, type: 3}
     description: x30
-    chance: 30
+    chance: 100
     index: 0
     weight: 0
   - icon: {fileID: 21300000, guid: 93c450bee4d6c7a4abbeb9cffb69a6f9, type: 3}
     description: x40
-    chance: 5
+    chance: 0
     index: 0
     weight: 0
   - icon: {fileID: 21300000, guid: 93c450bee4d6c7a4abbeb9cffb69a6f9, type: 3}
     description: x1
-    chance: 10
+    chance: 0
     index: 0
     weight: 0
   - icon: {fileID: 21300000, guid: 93c450bee4d6c7a4abbeb9cffb69a6f9, type: 3}
     description: x2
-    chance: 7
+    chance: 0
     index: 0
     weight: 0
   spinDuration: 5
