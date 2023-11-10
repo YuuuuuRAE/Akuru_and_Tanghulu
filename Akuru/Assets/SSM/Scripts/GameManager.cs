@@ -45,6 +45,14 @@ public class GameManager : MonoBehaviour
     [Header("룰렛에서 돌아가는 씬")]
     public string SceneName;
 
+    [Header("BGM 이름")]
+    public string BGMname;
+
+    [Header("설정 관련")]
+    public bool isBGM; //브금 관련
+    public bool isSound; //효과음 관련
+    public bool isVibe; //진동 관련
+
 
     // Singleton Pattern
     public static GameManager instance;

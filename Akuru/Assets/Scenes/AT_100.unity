@@ -1015,21 +1015,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 1
---- !u!4 &680679514299592795
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3732811392588853620}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06984584, y: -1.7555851, z: -0.05864276}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &683479766729379765
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2194,23 +2179,6 @@ MonoBehaviour:
   isGrowing: 0
   GrowingStart: 0
   isGathering: 1
---- !u!114 &1548609222558950068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3732811392588853620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80f25d0735e6271409bed975dcaf59a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: mainBGM
-    clip: {fileID: 8300000, guid: 15bb6f089d9c1da4da22232e4546d796, type: 3}
-    Volume: 1
-    loop: 1
 --- !u!114 &1548893173821709357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5692,23 +5660,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3732811392588853620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 680679514299592795}
-  - component: {fileID: 1548609222558950068}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
 --- !u!114 &3735900202224313710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9142,6 +9093,10 @@ PrefabInstance:
     - target: {fileID: 5123457082548453631, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
+      propertyPath: BGMname
+      value: mainBGM
       objectReference: {fileID: 0}
     - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
       propertyPath: SceneName
@@ -13238,6 +13193,5 @@ SceneRoots:
   - {fileID: 391534610}
   - {fileID: 1540296520}
   - {fileID: 683479766729379765}
-  - {fileID: 680679514299592795}
   - {fileID: 5427053182902064278}
   - {fileID: 6223208907898307063}

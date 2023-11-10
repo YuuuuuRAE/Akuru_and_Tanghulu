@@ -44,6 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417cabd7d37326245a91dd351d170135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iSFirstStart: 0
+  tangfuruNowNum_Rcp: 0000000000000000000000000000000000000000
+  tangfuruAllNum_Rcp: 0000000000000000000000000000000000000000
   fruitNumList: 0000000000000000000000000000000000000000
   tangfuruNumList: 0000000000000000000000000000000000000000
   MaxFruitType: 1
@@ -56,3 +59,7 @@ MonoBehaviour:
   currentCoin: 0
   isdoubleSpeed: 0
   SceneName: AT_100
+  BGMname: mainBGM
+  isBGM: 1
+  isSound: 1
+  isVibe: 1
