@@ -66,7 +66,6 @@ public class PotInventory : MonoBehaviour
                 startBoil[i] += Time.deltaTime; //타이머 시작
                 if (startBoil[i] >= fruits[i].fruitInPotTime) //타이머 값이 조리시간에 도달했다면
                 {
-                    Debug.Log(fruits[i] + "조리완료");
                     
                     tangfuruSlots[i].gameObject.SetActive(true);
                     
@@ -90,7 +89,6 @@ public class PotInventory : MonoBehaviour
         if (FullNum >= slots.Length)
         {
             isPotFull = true;
-            Debug.LogWarning("냄비가득참");
 
         }
         else if (FullNum < slots.Length)
@@ -125,7 +123,6 @@ public class PotInventory : MonoBehaviour
             int loopNum = 0;
             while (fruits[potInventoryNum] != null) //비어있는 냄비 자리 찾을때 까지
             {
-                Debug.Log("선택된위치에 다른 과일이 있음 / 냄비 재랜덤");
                 RandomSelectPotNum(); //다시 랜덤
 
                 if(loopNum++ > 100)
@@ -135,7 +132,6 @@ public class PotInventory : MonoBehaviour
                 
             }
             fruits[potInventoryNum] = _fruit; //냄비안에 과일 넣음
-            Debug.Log("냄비 재랜덤위치:" + potInventoryNum);
 
             
         }
@@ -197,7 +193,6 @@ public class PotInventory : MonoBehaviour
     {
         //랜덤한 냄비 위치 선택
         potInventoryNum = Random.Range(0, slots.Length);
-        Debug.Log("냄비위치 랜덤선택됨. 냄비 위치: " + potInventoryNum);
     }
 
 

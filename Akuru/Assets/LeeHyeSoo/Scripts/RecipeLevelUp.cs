@@ -34,12 +34,7 @@ public class RecipeLevelUp : MonoBehaviour
     int rqCoin_UP; // 레벨업에 필요한 코인
     int rqRuby_UP; // 레벨업에 필요한 루비
 
-    GameManager gameManager;
-
-    private void Awake()
-    {
-        gameManager = FindAnyObjectByType<GameManager>();
-    }
+    
     private void Start()
     {
         SelectRecipe();
@@ -118,15 +113,15 @@ public class RecipeLevelUp : MonoBehaviour
         if (fruits[selectTangfuru].rqQuantityNow == rqQuantity_UP && rcpLevel_UP < 5)
         {
             RCPLevelUp();
-            if (gameManager.currentCoin > rqPay)
+            if (GameManager.instance.currentCoin > rqPay)
             {
                 if (rcpLevel_UP < 4)
                 {
-                    gameManager.currentCoin -= rqCoin_UP;
+                    GameManager.instance.currentCoin -= rqCoin_UP;
                 }
                 else
                 {
-                    gameManager.currentRuby -= rqRuby_UP;
+                    GameManager.instance.currentRuby -= rqRuby_UP;
                 }
                 rcpLevel_UP++;
                 RCPLevelUp();
