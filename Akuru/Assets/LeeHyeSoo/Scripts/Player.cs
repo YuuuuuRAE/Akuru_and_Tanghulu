@@ -49,19 +49,27 @@ public class Player : MonoBehaviour
         {
 
             RandomSelectTangfuru();
+            anim.SetBool("isMakingTfr", false);
             isMaking = true;
 
         }
         else if(isMaking && !potInventory.isPotFull)
         {
             AkuruMakingTangfuru();
-            anim.SetBool("isMakingTfr",true);
+
+            //게임매니저 > 씬이 넘어가면 개수가 초기화됨 / 수정되면 아래 스크립트로 교체
+            //if(GameManager.instance.fruitNumList[i] > 0) // 선택된 과일의 수량이 없으면 
+            //{
+            //    AkuruMakingTangfuru();
+            //}
+            //else
+            //{
+            //    isMaking = false;
+            //}
+
 
         }
-        else
-        {
-            anim.SetBool("isMakingTfr", false);
-        }
+        
         
     }
 
@@ -85,7 +93,6 @@ public class Player : MonoBehaviour
         }
 
 
-
         //랜덤한 과일선택
         if (fruitNum == 0)
         {
@@ -101,15 +108,16 @@ public class Player : MonoBehaviour
     }
     void AkuruMakingTangfuru() //아쿠루 과일 손질
     {
+        //GameManager.instance.fruitNumList[i] -= 1;
+
         akuruMakingTime += Time.deltaTime;
         timeText.text = Mathf.FloorToInt(akuruMakingTime).ToString() + " S";
         akuruSlider.maxValue = fruits[i].making_time;
         akuruSlider.value = akuruMakingTime;
+        anim.SetBool("isMakingTfr", true);
 
         if (akuruMakingTime >= fruits[i].making_time)
         {
-            
-            Debug.Log("손질완료");
             GoToPot();
             akuruMakingTime = 0;
             isMaking = false;
@@ -121,14 +129,10 @@ public class Player : MonoBehaviour
     {
         if (!potInventory.isPotFull) //냄비인벤토리가 차지 않았다면
         {
-            Debug.Log("냄비로 이동" + fruits[i]);
             potInventory.AddFruit(fruits[i]);
             //만들어 둔 냄비인벤토리에 과일을 넣어 준다 
         }
-        else
-        {
-            Debug.Log("냄비 가득참");
-        }
+        
 
     }
 

@@ -27,7 +27,6 @@ public class TangfuruGoToFreezer : MonoBehaviour
     
     int FreezerNum = 5; // 냉장고 개수
 
-    GameManager gameManager;
     RecipeLevelUp recipeLevelUp;
 
 
@@ -41,7 +40,6 @@ public class TangfuruGoToFreezer : MonoBehaviour
         potInventory = FindAnyObjectByType<PotInventory>();
         player = GetComponent<Player>();
         freezerGroup = FindAnyObjectByType<FreezerGroup>();
-        gameManager = FindAnyObjectByType<GameManager>();
     }
     void Start()
     {
@@ -74,7 +72,6 @@ public class TangfuruGoToFreezer : MonoBehaviour
                 hitObj1Img = hitObj1.GetComponent<Image>();
                 if (hitObj1Img.color != ImgClear)
                 {
-                    Debug.Log("클릭시 안보여야할 탕후루" + hitObj1Img.name); //예) TangfuruImage (7)
                     for (int i = 0; i < potInventory.slots.Length; i++)
                     {
                         if (hitObj1Img.name == "TangfuruImage (" + i + ")")
@@ -115,23 +112,19 @@ public class TangfuruGoToFreezer : MonoBehaviour
             if (results[0].gameObject.tag == "Freezer" && results[0].gameObject != null)
             {
                 hitObj2 = results[0].gameObject;
-                Debug.Log("굳히소에 탕후루를 놓음 / 충돌한 굳히소:" + results[0].gameObject.name);
 
                 for (int i = 0; i < FreezerNum; i++)
                 {
                     if (results[0].gameObject.name == "EmptyFreezerImage (" + i + ")" ) //충돌한 굳히소 인덱스
                     {
-                        //freezeTangfuru.FullFreezer(i); //해당 굳히소 찼음으로 전환
-                        //freezeTangfuru.tangfuruNumInFreezerNow[i]++;
+                        
                         for (int j = 0; j < 20; j++) 
                         {
                             if (hitObj1.name == "TangfuruImage (" + j + ")")
                             {
                                 
                                 freezerInd = i;
-                                Debug.Log("담긴 탕후루냄비위치: " + (hitObj1.name));
                                 Image image = hitObj1.GetComponent<Image>(); 
-                                Debug.Log("담긴 탕후루종류: " + image.sprite);
 
                                 for (int k = 0; k < player.fruits.Count; k++)
                                 {
@@ -143,22 +136,18 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
                                         player.fruits[k].rqQuantityNow++;
                                         
-                                        
-                                        Debug.Log("굳히는중 / 현재 제작수량: "
-                                            + player.fruits[k].rqQuantityNow);
                                         potInventory.FullNum -= 1;
 
                                         freezerGroup.PlusTangfuruInFreezer(i, k);
 
 
-                                        gameManager.CurrentXp += player.fruits[k].exp; //탕후루 제작시 exp+
+                                        GameManager.instance.CurrentXp += player.fruits[k].exp; //탕후루 제작시 exp+
                                         isFruitinFreezer = true;
 
 
                                     }
                                     else if (image.sprite.name == player.fruits[k].tangfuruImage.name && player.fruits[k].fruitNum != i)
                                     {
-                                        Debug.LogWarning("잘못된 냉장고입니다");
                                         potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                                         potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                                         isFruitinFreezer = false;
@@ -188,8 +177,8 @@ public class TangfuruGoToFreezer : MonoBehaviour
                 
 
             }
-            else if (results[0].gameObject == null
-                || potInventory.fruits[tangfuruNum] != null || results[0].gameObject.tag != "Freezer")
+            else if (potInventory.fruits[tangfuruNum] != null 
+                || results[0].gameObject.tag != "Freezer" && results[0].gameObject == null)
             {
                 potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                 potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 1);

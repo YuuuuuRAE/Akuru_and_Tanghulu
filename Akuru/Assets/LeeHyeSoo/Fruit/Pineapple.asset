@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ffeb12b175e774ca30d90151a9c8fa, type: 3}
   m_Name: Pineapple
   m_EditorClassIdentifier: 
-  fruitNum: 4
+  fruitNum: 3
   fruitName: "\uD30C\uC778\uC560\uD50C"
   fruitImage: {fileID: 21300000, guid: 528f28dd3a16cb0449f13dcdada2dca4, type: 3}
   tangfuruImage: {fileID: 21300000, guid: 9fbaccd33118c14499f4a228f0536a4a, type: 3}

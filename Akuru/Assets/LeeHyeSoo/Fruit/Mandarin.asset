@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ffeb12b175e774ca30d90151a9c8fa, type: 3}
   m_Name: Mandarin
   m_EditorClassIdentifier: 
-  fruitNum: 3
+  fruitNum: 2
   fruitName: "\uADE4"
   fruitImage: {fileID: 21300000, guid: 1ce5cd228cc4cd54d82f5e53fc97a16a, type: 3}
   tangfuruImage: {fileID: 21300000, guid: 1dba8b6afebcbfa4ea8d861ef319ee67, type: 3}
