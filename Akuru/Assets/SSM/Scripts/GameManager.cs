@@ -9,10 +9,15 @@ public class GameManager : MonoBehaviour
 
     [Header("과일/탕후루 개수 리스트")]
     //과일 리스트
-    // 0 = 딸기  /  0 = 청포도  /  0 = 귤  /  0 = 파인애플  /  0 = 블루베리  
+    // 0 = 딸기  /  1 = 청포도  /  2 = 귤  /  3 = 파인애플  /  4 = 블루베리  
 
+<<<<<<< Updated upstream
     public int[] fruitNumList; // 과일 갯수 / 유래님이 수확한 과일 이곳에 쌓이도록
     public List<int> tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록
+=======
+    public List<int> fruitNumList; // 과일 갯수 / 유래님이 수확한 과일 이곳에 쌓이도록
+    public List<int> tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록 코드작성함
+>>>>>>> Stashed changes
 
     [Header("생산소 관련")]
     public int MaxFruitType; //최대 과일 타입
