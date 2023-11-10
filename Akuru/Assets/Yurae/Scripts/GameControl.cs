@@ -6,18 +6,18 @@ public class GameControl : MonoBehaviour
 {
     public static GameControl Instance;
 
-    //경험치 및 재화
-    public int Level; //레벨
 
-    public int Ruby; //루비
-    public int Coin; //코인
+    //Data Lists
+    public int Level;
+    public float MaxXp;
+    public float CurrentXp;
+    public float IncrementXp;
 
-    //과일 개수
-    public int CountStrawBerry;
-    public int CountGreenGrape;
-    public int CountMandarin;
-    public int CountPineApple;
-    public int BlueBerry;
+
+    public int Coin;
+    public int Ruby;
+
+    
 
 
     //SingleTon
@@ -35,13 +35,6 @@ public class GameControl : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
-
-
-
-
-
 
 
 }

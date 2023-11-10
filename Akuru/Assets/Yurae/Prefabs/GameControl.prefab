@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5913322122283514131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6101670627204386650}
+  - component: {fileID: 3317506856143986779}
+  - component: {fileID: 1988432049659298143}
+  - component: {fileID: 338761384544341274}
+  - component: {fileID: 7818438909201642293}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6101670627204386650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913322122283514131}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3317506856143986779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913322122283514131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7801f919343d974eb7b20233ab0e6e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Level: 0
+  MaxXp: 0
+  CurrentXp: 0
+  IncrementXp: 0
+  Coin: 0
+  Ruby: 0
+--- !u!114 &1988432049659298143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913322122283514131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51437f9ec0b776e468c8cdd874a26052, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PopUp_Object: {fileID: 3562179112622956444, guid: 8993f8eacab759e49a0edf67cbaef5f6, type: 3}
+--- !u!114 &338761384544341274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913322122283514131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2796369a05d7944ac6c9d287689f8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xpBar: {fileID: 1486940323000032010, guid: 53a0432af02301b43b8a5c571e419309, type: 3}
+  LV_in_Main: {fileID: 8855095026331613626, guid: e8098e4a89174624195a6ffd20b79ac3, type: 3}
+  LV_in_AdmLV: {fileID: 8087858545998023871, guid: 44ef9aab08e202c49a4a9e2174651760, type: 3}
+  XP: {fileID: 4502062820244874734, guid: 0dcc5403cd6b35348981e8ec39677c4e, type: 3}
+  contena: {fileID: 2224618889183694720, guid: 8ab72ec70ea67194b943f28e4e3941c8, type: 3}
+  PlayerLevel: 1
+  test_XP: 3
+--- !u!114 &7818438909201642293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5913322122283514131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0f4a979fceb3c43b242c4bd64f2c8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 8155324024573490007, guid: c033566de875a3048a08b26bd4faf4bc, type: 3}
+  BGMname: mainBGM

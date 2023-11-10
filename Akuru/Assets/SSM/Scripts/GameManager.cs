@@ -12,18 +12,25 @@ public class GameManager : MonoBehaviour
     // 0 = 딸기  /  1 = 청포도  /  2 = 귤  /  3 = 파인애플  /  4 = 블루베리  
 
     public List<int> fruitNumList; // 과일 갯수 / 유래님이 수확한 과일 이곳에 쌓이도록
+<<<<<<< HEAD
     public List<int> tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록 코드작성함
+=======
+    public List<int> tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록
+>>>>>>> parent of f8a414f (Repair GameManager)
 
-    [Header("생산소 관련")]
-    public int MaxFruitType; //최대 과일 타입
-    public bool isUnlock = false;
+    [Header("텍스트")]
+    // 재화 텍스트 종류
+    public Text playerLevel;
+    public Text ruby;
+    public Text coin;
 
     [Header("레벨")]
     //현재 레벨
-    public int CurrentLevel = 1;
-    public float MaxXp; // 최대 경험치
-    public float CurrentXp; //현재 경험치
-    public float IncrementXp; //경험치 증가량
+    public int currentLevel;
+    //레벨업을 위해 모아야할 경험치
+    public int nextLevelUpExp;
+    //레벨업을 위해 모인 현재 경험치
+    public int currentExp;
 
     [Header("재화 보유량")]
     // 현재 재화 보유량
@@ -34,10 +41,12 @@ public class GameManager : MonoBehaviour
     // 게임 가속버튼 판정
     public bool isdoubleSpeed;
 
-    [Header("룰렛에서 돌아가는 씬")]
-    public string SceneName;
+    [Header("레벨업 팝업")]
+    public Text playerLevelPopUp_Level;
+    public Slider playerLevelPopUp_Slider;
+    public Text playerLevelPopUp_SliderText;
 
-    // Singleton Pattern
+    // Sinleton Pattern
     public static GameManager instance;
     private void Awake()
     {
@@ -56,30 +65,75 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
 
-
+        currentLevel = 1;
+        nextLevelUpExp = 3;
+        currentCoin = 3000;
+        currentRuby = 1000;
     }
 
     void Update()
     {
+        PlayerLevelUp();
 
-        if (CurrentXp >= MaxXp)
+        playerLevel.text = currentLevel.ToString();
+        playerLevelPopUp_Level.text = currentLevel.ToString();
+        playerLevelPopUp_SliderText.text = currentExp + " / " + nextLevelUpExp;
+
+        playerLevelPopUp_Slider.maxValue = nextLevelUpExp;
+        playerLevelPopUp_Slider.value = currentExp;
+
+        // 현재 재화
+
+        ruby.text = FormatNumber(currentRuby);
+        coin.text = FormatNumber(currentCoin);
+    }
+
+    // 숫자를 천 단위 구분 기호가 있는 문자열로 서식화
+    private string FormatNumber(float number)
+    {
+        return string.Format("{0:N0}", number);
+
+    }
+
+    void PlayerLevelUp() //플레이어 레벨업
+    {
+        if(currentExp >= nextLevelUpExp)
         {
-            CurrentXp = CurrentXp - MaxXp; //초과 경험치는 현재 경험치 량에서 필요 겅험치 량을 뺀 양
-            CurrentLevel++; //플레이어 레벨업
-            if (CurrentLevel <= 5) MaxFruitType++;
-            if (CurrentLevel != 1 && CurrentLevel % 5 == 1) //플레이어 레벨이 1이 아니고 5로 나눈 나머지가 1일때 증가분을 1 증가 시킴
-            {
-                IncrementXp++;
-
-            }
-           MaxXp += IncrementXp;
+            currentLevel += 1;
+            currentExp -= nextLevelUpExp; 
+            nextLevelUpExp += 5; //exp증가분 5
         }
 
     }
 
+    // 각 버튼에 넣으시면 됩니다.
+    // 생산소(AT_100) 씬으로 이동
+    public void AT_100()
+    {
+        SceneManager.LoadScene("Production_Plant");
+        Debug.Log("생산소 씬으로 이동");
+    }
 
+    // 제작소(AT_200) 씬으로 이동
+    public void AT_200()
+    {
+        SceneManager.LoadScene("AT_200");
+        Debug.Log("제작소 씬으로 이동");
+    }
 
+    // 판매소(AT_300) 씬으로 이동
+    public void AT_300()
+    {
+        SceneManager.LoadScene("Sales");
+        Debug.Log("판매소 씬으로 이동");
+    }
 
+    // 룰렛 씬으로 이동
+    public void Roulette()
+    {
+        SceneManager.LoadScene("Roulette");
+        Debug.Log("룰렛 씬으로 이동");
+    }
 
     // 배속 버튼
     public void DoubleSpeed()

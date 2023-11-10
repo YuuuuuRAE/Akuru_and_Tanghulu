@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Collections;
 
 [System.Serializable]
 public class Sound
@@ -13,8 +12,6 @@ public class Sound
 
     public float Volume;
     public bool loop;
-
-
 
     public void SetSource(AudioSource _source)
     {
@@ -49,22 +46,6 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField]
     public Sound[] sounds;
-
-    private static AudioManager instance;
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
 
     // Start is called before the first frame update
     void Start()
