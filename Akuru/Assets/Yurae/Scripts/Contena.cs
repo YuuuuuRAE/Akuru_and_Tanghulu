@@ -10,8 +10,6 @@ public class Contena : MonoBehaviour
     private ProductionPlant plant;
 
     public Level level; //현재 플레이어의 레벨을 받아올 Level 변수
-    [SerializeField]
-    private int Unlocklevel = 0; //현재 해금 단계 레벨을 저장할 변수 플레이어의 레벨 == 1 ~ 5 / Unlock의 레벨은 0 ~ 4
 
     public GameObject[] UIsets; //버튼과 과일 갯수에 대한 배열
 
