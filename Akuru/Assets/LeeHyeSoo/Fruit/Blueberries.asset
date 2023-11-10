@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13ffeb12b175e774ca30d90151a9c8fa, type: 3}
   m_Name: Blueberries
   m_EditorClassIdentifier: 
-  fruitNum: 4
+  fruitNum: 5
   fruitName: "\uBE14\uB8E8\uBCA0\uB9AC"
   fruitImage: {fileID: 21300000, guid: bd7042ca69a956440bfb69c62f890741, type: 3}
   tangfuruImage: {fileID: 21300000, guid: 26bc401e81fd95248b9a46843f417f1c, type: 3}
   tangfuruRcpImage: {fileID: 21300000, guid: 108f65948968b0c48ba9186afdd2cd67, type: 3}
   tangfuruRcpLvUpImage: {fileID: 21300000, guid: ab9324404a7a28e4f9c186cdcf4e5fae, type: 3}
   making_time: 36
+  fruitAmount: 0
   fruitInPotTime: 3
   rcpLevel: 1
   price: 20

@@ -12,6 +12,7 @@ public class Fruit : ScriptableObject
     public Sprite tangfuruRcpImage; //탕후루 레시피 이미지
     public Sprite tangfuruRcpLvUpImage; //탕후루 레시피 레벨업 이미지
     public float making_time; //손질시간
+    public int fruitAmount; //과일 갯수 / 수확한 과일이 이곳에 + 되도록 ((유래님 파트))
     public float fruitInPotTime; // 냄비 조리시간
 
     [Header("레시피 창: 과일 레벨업")]
@@ -23,8 +24,6 @@ public class Fruit : ScriptableObject
     public int rqRuby; // 레벨업에 필요한 루비
 
 
-
-    //((슬렉 오면 수정할수도 있음))
     public int rqQuantityNow; //다음 레벨업을 위한 현재 제작 수량
     public int saleTangfuruNum; // 누적 탕후루 판매 갯수
 

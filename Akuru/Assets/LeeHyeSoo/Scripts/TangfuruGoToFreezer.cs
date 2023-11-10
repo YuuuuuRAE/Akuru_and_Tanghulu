@@ -30,8 +30,6 @@ public class TangfuruGoToFreezer : MonoBehaviour
     GameManager gameManager;
     RecipeLevelUp recipeLevelUp;
 
-    Image hitObj1Img;
-    Color ImgClear = new Color(1, 1, 1, 0);
 
     public int freezerInd;
 
@@ -66,7 +64,8 @@ public class TangfuruGoToFreezer : MonoBehaviour
             //레이캐스트 사용
             raycaster.Raycast(pointerEventData, results);
 
-            
+            Image hitObj1Img;
+            Color ImgClear = new Color(1, 1, 1, 0);
 
             //해당결과 첫 번째 객체 확인
             if (results[0].gameObject != null && results[0].gameObject.tag == "Tangfuru" && hitObj2 == null)
@@ -152,7 +151,7 @@ public class TangfuruGoToFreezer : MonoBehaviour
                                         freezerGroup.PlusTangfuruInFreezer(i, k);
 
 
-                                        gameManager.currentExp += player.fruits[k].exp; //탕후루 제작시 exp+
+                                        gameManager.CurrentXp += player.fruits[k].exp; //탕후루 제작시 exp+
                                         isFruitinFreezer = true;
 
 
@@ -185,14 +184,12 @@ public class TangfuruGoToFreezer : MonoBehaviour
                     potInventory.tangfuruSlots[tangfuruNum].image.sprite = null;
 
                     hitObj1 = null;
-
-                    Debug.LogWarning("hitObj1 = null");
                 }
                 
 
             }
-            else if (hitObj1 != null && hitObj1Img.color == ImgClear 
-                    && results[0].gameObject == null && results[0].gameObject.tag != "Freezer") 
+            else if (results[0].gameObject == null
+                || potInventory.fruits[tangfuruNum] != null || results[0].gameObject.tag != "Freezer")
             {
                 potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 1);
                 potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 1);

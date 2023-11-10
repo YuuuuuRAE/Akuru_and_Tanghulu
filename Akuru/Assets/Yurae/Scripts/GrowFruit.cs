@@ -127,7 +127,7 @@ public class GrowFruit : MonoBehaviour
             {
                 if(FruitsName == productionPlant.growFruitDatas[i].FruitsName)
                 {
-                    productionPlant.growFruitDatas[i].FruitsCount++;
+                    GameManager.instance.fruitNumList[i]++;
                 }
             }
         }
