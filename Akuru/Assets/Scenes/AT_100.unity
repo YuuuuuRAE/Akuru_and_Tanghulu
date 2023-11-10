@@ -9163,6 +9163,14 @@ PrefabInstance:
       propertyPath: tangfuruNumList.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
+      propertyPath: tangfuruAllNum_Rcp.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
+      propertyPath: tangfuruNowNum_Rcp.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -45,7 +45,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         
-        if (!isMaking && !potInventory.isPotFull)
+        if (!isMaking && !potInventory.isPotFull )
         {
 
             RandomSelectTangfuru();
@@ -55,17 +55,16 @@ public class Player : MonoBehaviour
         }
         else if(isMaking && !potInventory.isPotFull)
         {
-            AkuruMakingTangfuru();
 
-            //게임매니저 > 씬이 넘어가면 개수가 초기화됨 / 수정되면 아래 스크립트로 교체
-            //if(GameManager.instance.fruitNumList[i] > 0) // 선택된 과일의 수량이 없으면 
-            //{
-            //    AkuruMakingTangfuru();
-            //}
-            //else
-            //{
-            //    isMaking = false;
-            //}
+            if (GameManager.instance.fruitNumList[i] > 0) // 선택된 과일의 수량이 있으면
+            {
+                AkuruMakingTangfuru();
+            }
+            else
+            {
+
+                isMaking = false;
+            }
 
 
         }
@@ -108,7 +107,7 @@ public class Player : MonoBehaviour
     }
     void AkuruMakingTangfuru() //아쿠루 과일 손질
     {
-        //GameManager.instance.fruitNumList[i] -= 1;
+        
 
         akuruMakingTime += Time.deltaTime;
         timeText.text = Mathf.FloorToInt(akuruMakingTime).ToString() + " S";
@@ -119,6 +118,7 @@ public class Player : MonoBehaviour
         if (akuruMakingTime >= fruits[i].making_time)
         {
             GoToPot();
+            GameManager.instance.fruitNumList[i] -= 1;
             akuruMakingTime = 0;
             isMaking = false;
         }

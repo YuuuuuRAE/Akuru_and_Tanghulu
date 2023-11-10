@@ -9,8 +9,13 @@ public class GameManager : MonoBehaviour
     [Header("게임 첫 시작 여부")]
     public bool iSFirstStart;
 
+    [Header("다음 레벨업을 위한 현재 제작 수량")]
+    public List<int> tangfuruNowNum_Rcp; // 레벨업시 0으로 돌아감
 
-    [Header("과일/탕후루 개수 리스트")]
+    [Header("총 누적 탕후루 제작 갯수")]
+    public List<int> tangfuruAllNum_Rcp; 
+
+    [Header("현재 과일/탕후루 개수 리스트")]
     //과일 리스트
     // 0 = 딸기  /  0 = 청포도  /  0 = 귤  /  0 = 파인애플  /  0 = 블루베리  
 
