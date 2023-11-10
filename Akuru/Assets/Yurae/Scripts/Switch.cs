@@ -8,6 +8,31 @@ public class Switch : MonoBehaviour
     public Image On;
     public Image Off;
 
+    [Header("0 = BGM, 1 = Sound, 2= Vibe")]
+    public int Option_num;
+
+    public GameObject OnButt;
+    public GameObject OffButt;
+
+    void Update()
+    {
+        switch (Option_num)
+        {
+            case 0:
+                OnButt.SetActive(GameManager.instance.isBGM);
+                OffButt.SetActive(!GameManager.instance.isBGM);
+                break;
+            case 1:
+                OnButt.SetActive(GameManager.instance.isSound);
+                OffButt.SetActive(!GameManager.instance.isSound);
+                break;
+            case 2:
+                OnButt.SetActive(GameManager.instance.isVibe);
+                OffButt.SetActive(!GameManager.instance.isVibe);
+                break;
+        }
+    }
+
 
     public void BGM()
     {
@@ -25,6 +50,7 @@ public class Switch : MonoBehaviour
         }
 
     }
+
 
     public void Sound()
     {

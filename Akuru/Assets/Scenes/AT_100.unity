@@ -3005,6 +3005,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 3967203419965782167}
   Off: {fileID: 4346651748928409080}
+  Option_num: 0
+  OnButt: {fileID: 8080653173235936809}
+  OffButt: {fileID: 2909036004512322601}
 --- !u!224 &2157689559061333643
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5580,6 +5583,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 4459578941815689847}
   Off: {fileID: 3530383107342180772}
+  Option_num: 1
+  OnButt: {fileID: 6136181371988023251}
+  OffButt: {fileID: 3332829427088747905}
 --- !u!222 &3665109606594114723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9759,6 +9765,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 5590447337097199226}
   Off: {fileID: 3706206130889250075}
+  Option_num: 2
+  OnButt: {fileID: 3772802154197469409}
+  OffButt: {fileID: 2836762156418970169}
 --- !u!224 &6634147633684023553
 RectTransform:
   m_ObjectHideFlags: 0

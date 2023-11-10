@@ -7693,6 +7693,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 136334504333529954}
   Off: {fileID: 5049851278445354422}
+  Option_num: 1
+  OnButt: {fileID: 1360033728670180528}
+  OffButt: {fileID: 1021661004045690588}
 --- !u!114 &136334504333529954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10543,6 +10546,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 2437816715438655248}
   Off: {fileID: 2225479180525048438}
+  Option_num: 2
+  OnButt: {fileID: 1668225556326352316}
+  OffButt: {fileID: 4162016837698932241}
 --- !u!1 &5571106831110441065
 GameObject:
   m_ObjectHideFlags: 0
@@ -10596,6 +10602,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   On: {fileID: 4188745287110403759}
   Off: {fileID: 1332830637080659140}
+  Option_num: 0
+  OnButt: {fileID: 8502588892028409510}
+  OffButt: {fileID: 6665482416491142125}
 --- !u!114 &5601749593023559011
 MonoBehaviour:
   m_ObjectHideFlags: 0
