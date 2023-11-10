@@ -134,8 +134,11 @@ public class TangfuruGoToFreezer : MonoBehaviour
                                         freezeTangfuru.tangfuruNumInFreezerNow[i]++;
 
 
-                                        player.fruits[k].rqQuantityNow++;
-                                        
+                                        //player.fruits[k].rqQuantityNow++;
+                                        GameManager.instance.tangfuruNowNum_Rcp[k] += 1;
+                                        GameManager.instance.tangfuruAllNum_Rcp[k] += 1;
+
+
                                         potInventory.FullNum -= 1;
 
                                         freezerGroup.PlusTangfuruInFreezer(i, k);

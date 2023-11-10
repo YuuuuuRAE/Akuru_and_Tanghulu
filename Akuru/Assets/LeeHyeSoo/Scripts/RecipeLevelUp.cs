@@ -97,20 +97,20 @@ public class RecipeLevelUp : MonoBehaviour
         tangfuruLvUpNameText.text = fruits[selectTangfuru].fruitName + " 탕후루";
         rcpLevelText.text = rcpLevel_UP.ToString(); //레벨
         priceText.text = price_UP.ToString(); // 판매가격
-        saleTangfuruNumText.text = fruits[selectTangfuru].saleTangfuruNum.ToString(); // 누적판매횟수
-        rqQuantityText.text = fruits[selectTangfuru].rqQuantityNow + " /" + rqQuantity_UP;
+        saleTangfuruNumText.text = GameManager.instance.tangfuruAllNum_Rcp[selectTangfuru].ToString(); // 누적판매횟수
+        rqQuantityText.text = GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru].ToString() + " /" + rqQuantity_UP;
         rqcoinText.text = rqPay + "     ";
     }
 
     void QuantitySlider() //슬라이더 제어
     {
         rqQuantitySlider.maxValue = rqQuantity_UP;
-        rqQuantitySlider.value = fruits[selectTangfuru].rqQuantityNow;
+        rqQuantitySlider.value = GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru];
     }
 
     public void ClickRecipeLevelUp() //레시피 레벨업 버튼
     {
-        if (fruits[selectTangfuru].rqQuantityNow == rqQuantity_UP && rcpLevel_UP < 5)
+        if (GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru] == rqQuantity_UP && rcpLevel_UP < 5)
         {
             RCPLevelUp();
             if (GameManager.instance.currentCoin > rqPay)
@@ -139,8 +139,7 @@ public class RecipeLevelUp : MonoBehaviour
     {
         if(rcpLevel_UP == 1)
         {
-            fruits[selectTangfuru].saleTangfuruNum += fruits[selectTangfuru].rqQuantityNow;
-            fruits[selectTangfuru].rqQuantityNow = 0;
+            GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru] = 0;
 
             price_UP = 20;
             exp_UP = 1;
@@ -152,8 +151,7 @@ public class RecipeLevelUp : MonoBehaviour
         }
         else if (rcpLevel_UP == 2)
         {
-            fruits[selectTangfuru].saleTangfuruNum += fruits[selectTangfuru].rqQuantityNow;
-            fruits[selectTangfuru].rqQuantityNow = 0;
+            GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru] = 0;
 
             price_UP = 25;
             exp_UP = 1;
@@ -164,8 +162,7 @@ public class RecipeLevelUp : MonoBehaviour
         }
         else if (rcpLevel_UP == 3)
         {
-            fruits[selectTangfuru].saleTangfuruNum += fruits[selectTangfuru].rqQuantityNow;
-            fruits[selectTangfuru].rqQuantityNow = 0;
+            GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru] = 0;
 
             price_UP = 30;
             exp_UP = 1;
@@ -176,8 +173,7 @@ public class RecipeLevelUp : MonoBehaviour
         }
         else if (rcpLevel_UP == 4)
         {
-            fruits[selectTangfuru].saleTangfuruNum += fruits[selectTangfuru].rqQuantityNow;
-            fruits[selectTangfuru].rqQuantityNow = 0;
+            GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru] = 0;
 
 
             price_UP = 35;
@@ -189,8 +185,7 @@ public class RecipeLevelUp : MonoBehaviour
         }
         else if (rcpLevel_UP == 5)
         {
-            fruits[selectTangfuru].saleTangfuruNum += fruits[selectTangfuru].rqQuantityNow;
-            fruits[selectTangfuru].rqQuantityNow = 0;
+            GameManager.instance.tangfuruNowNum_Rcp[selectTangfuru] = 0;
 
             price_UP = 40;
             exp_UP = 2;
