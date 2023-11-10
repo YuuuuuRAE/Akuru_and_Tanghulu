@@ -1528,6 +1528,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iSFirstStart: 0
+  tangfuruNowNum_Rcp: 
+  tangfuruAllNum_Rcp: 
   fruitNumList: 
   tangfuruNumList: 
   MaxFruitType: 0
@@ -1540,6 +1542,10 @@ MonoBehaviour:
   currentCoin: 0
   isdoubleSpeed: 0
   SceneName: 
+  BGMname: 
+  isBGM: 0
+  isSound: 0
+  isVibe: 0
 --- !u!4 &502948458
 Transform:
   m_ObjectHideFlags: 0
@@ -8584,7 +8590,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98124473400251252}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: OFF
+        m_MethodName: Sound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9278,7 +9284,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5594982913696750426}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: OFF
+        m_MethodName: BGM
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9369,7 +9375,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5476236257336337651}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: ON
+        m_MethodName: Vibe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9747,7 +9753,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 98124473400251252}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: ON
+        m_MethodName: Sound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10636,7 +10642,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5594982913696750426}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: ON
+        m_MethodName: BGM
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12189,7 +12195,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5476236257336337651}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: OFF
+        m_MethodName: Vibe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

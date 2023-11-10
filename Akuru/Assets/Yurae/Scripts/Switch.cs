@@ -9,26 +9,52 @@ public class Switch : MonoBehaviour
     public Image Off;
 
 
-    // Start is called before the first frame update
-    void Start()
+    public void BGM()
     {
-        
+        if(GameManager.instance.isBGM == true)
+        {
+            
+            GameManager.instance.isBGM = false;
+            Off.gameObject.SetActive(true);
+            On.gameObject.SetActive(false);
+        }
+        else{
+            GameManager.instance.isBGM = true;
+            On.gameObject.SetActive(true);
+            Off.gameObject.SetActive(false);
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Sound()
     {
-
+        if (GameManager.instance.isSound == true)
+        {
+            GameManager.instance.isSound = false;
+            Off.gameObject.SetActive(true);
+            On.gameObject.SetActive(false);
+        }
+        else
+        {
+            GameManager.instance.isSound = true;
+            On.gameObject.SetActive(true);
+            Off.gameObject.SetActive(false);
+        }
     }
-    public void ON()
-    {
-        Off.gameObject.SetActive(true);
-        On.gameObject.SetActive(false);
-    }
 
-    public void OFF()
+    public void Vibe()
     {
-        On.gameObject.SetActive(true);
-        Off.gameObject.SetActive(false);
+        if (GameManager.instance.isVibe == true)
+        {
+            GameManager.instance.isVibe = false;
+            Off.gameObject.SetActive(true);
+            On.gameObject.SetActive(false);
+        }
+        else
+        {
+            GameManager.instance.isVibe = true;
+            On.gameObject.SetActive(true);
+            Off.gameObject.SetActive(false);
+        }
     }
 }

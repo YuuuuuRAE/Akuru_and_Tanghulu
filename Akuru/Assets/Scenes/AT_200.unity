@@ -4437,7 +4437,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 865094620634370495}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: OFF
+        m_MethodName: Sound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6599,7 +6599,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5089782903792838200}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: ON
+        m_MethodName: Vibe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7460,7 +7460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4681678833035663761}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: OFF
+        m_MethodName: BGM
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10784,7 +10784,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 865094620634370495}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: ON
+        m_MethodName: Sound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11426,7 +11426,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 4681678833035663761}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: ON
+        m_MethodName: BGM
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19311,7 +19311,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 5089782903792838200}
         m_TargetAssemblyTypeName: Switch, Assembly-CSharp
-        m_MethodName: OFF
+        m_MethodName: Vibe
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
