@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [Header("게임 첫 시작 여부")]
+    public bool iSFirstStart;
+
 
     [Header("과일/탕후루 개수 리스트")]
     //과일 리스트
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     [Header("룰렛에서 돌아가는 씬")]
     public string SceneName;
+
 
     // Singleton Pattern
     public static GameManager instance;

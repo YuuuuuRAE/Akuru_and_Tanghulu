@@ -44,9 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417cabd7d37326245a91dd351d170135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruitNumList: 
-  tangfuruNumList: 
-  MaxFruitType: 0
+  fruitNumList: 0000000000000000000000000000000000000000
+  tangfuruNumList: 0000000000000000000000000000000000000000
+  MaxFruitType: 1
+  isUnlock: 0
   CurrentLevel: 1
   MaxXp: 3
   CurrentXp: 0
@@ -54,3 +55,4 @@ MonoBehaviour:
   currentRuby: 0
   currentCoin: 0
   isdoubleSpeed: 0
+  SceneName: AT_100

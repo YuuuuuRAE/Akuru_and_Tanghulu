@@ -14,6 +14,10 @@ public class ProductionPlant : MonoBehaviour
 
     public GrowFruitData[] growFruitDatas;
 
+    private void Start()
+    {
+        GameManager.instance.iSFirstStart = false;
+    }
     void Update()
     {
 
