@@ -82,7 +82,7 @@ public class Roulette : MonoBehaviour
             accumlatedWeight += roulettePieceData[i].chance;
             roulettePieceData[i].weight = accumlatedWeight;
 
-            Debug.Log($"({roulettePieceData[i].index}){roulettePieceData[i].description}:{roulettePieceData[i].weight}");
+            //Debug.Log($"({roulettePieceData[i].index}){roulettePieceData[i].description}:{roulettePieceData[i].weight}");
         }
 
 
@@ -138,12 +138,13 @@ public class Roulette : MonoBehaviour
         float angle = pieceAngle * selectedIndex;
         // 정확히 중심이 아닌 결과 값 범위 안의 임의의 각도 선택
         float leftOffset = (angle - halfPieceAngleWithPaddings) % 360;
-        float rightOffset = (angle - halfPieceAngleWithPaddings) % 360;
-        float randomAngle = Random.RandomRange(leftOffset, rightOffset);
+        float rightOffset = (angle + halfPieceAngleWithPaddings) % 360;
+        float randomAngle = Random.Range(leftOffset, rightOffset);
 
         //목표 각도 (target Angle) = 결과각도 + 360 * 회전 시간 * 회전 속도
         int rotateSpeed = 2;
         float targetAngle = (randomAngle + 360 * spinDuration * rotateSpeed);
+        Debug.Log(targetAngle);
 
         isSpinning = true;
         StartCoroutine(OnSpin(targetAngle, action));
