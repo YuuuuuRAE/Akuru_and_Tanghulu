@@ -9,24 +9,25 @@ public class ConvertScene : MonoBehaviour
     // 생산소(AT_100) 씬으로 이동
     public void AT_100()
     {
-        SceneManager.LoadScene("AT_100");
         GameManager.instance.SceneName = "AT_100";
+        SceneManager.LoadScene("AT_100");
         Debug.Log("생산소 씬으로 이동");
     }
 
     // 제작소(AT_200) 씬으로 이동
     public void AT_200()
     {
-        SceneManager.LoadScene("AT_200");
+
         GameManager.instance.SceneName = "AT_200";
+        SceneManager.LoadScene("AT_200");
         Debug.Log("제작소 씬으로 이동");
     }
 
     // 판매소(AT_300) 씬으로 이동
     public void AT_300()
     {
-        SceneManager.LoadScene("AT_300");
         GameManager.instance.SceneName = "AT_300";
+        SceneManager.LoadScene("AT_300");
         Debug.Log("판매소 씬으로 이동");
     }
 
