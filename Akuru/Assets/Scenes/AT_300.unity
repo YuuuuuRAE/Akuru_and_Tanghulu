@@ -293,6 +293,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &45324097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,6 +1991,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &571019984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2310,7 +2334,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &701167494
@@ -4674,7 +4698,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1086082295
@@ -5144,7 +5168,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1361020989
@@ -8222,7 +8246,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -8444,7 +8468,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -8600,7 +8624,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1668225556326352316
@@ -8750,6 +8774,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2073905242445970152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8861,7 +8897,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -8941,7 +8977,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -9303,7 +9339,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -9480,6 +9516,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &3158316834172827736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9569,6 +9617,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &3243516806116847466
@@ -9964,6 +10024,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4006981527846305058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10029,7 +10101,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -10382,7 +10454,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 6570584982092923870}
@@ -10462,7 +10534,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 5220823168597164215}
@@ -10550,6 +10622,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &4999214480251538800
@@ -10895,6 +10979,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5641016605713476539
 GameObject:
   m_ObjectHideFlags: 0
@@ -10976,7 +11072,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7064946580693566983}
@@ -11001,7 +11097,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c48d64181147bc24bba440428cbcaf38, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -11325,7 +11421,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 5753357197836125507}
   clips:
-  - {fileID: 8300000, guid: c48d64181147bc24bba440428cbcaf38, type: 3}
+  - {fileID: 8300000, guid: baac43b7ddd00bc4f94ae86a0bcbe3a5, type: 3}
+  - {fileID: 8300000, guid: 522ab2018b24dba4bbbb1d1dba53b731, type: 3}
+  - {fileID: 8300000, guid: 930388d063a1ef447b22a68a53cb2672, type: 3}
+  - {fileID: 8300000, guid: 6df35bd8693532e46a858c07678619e3, type: 3}
+  - {fileID: 8300000, guid: c0409a366d062ec45b55bc93aa9426fd, type: 3}
+  - {fileID: 8300000, guid: fc6932257eac06141b5e55e61c1879d9, type: 3}
+  - {fileID: 8300000, guid: f3b1965bdd92ada42840e0d9edc181af, type: 3}
+  - {fileID: 8300000, guid: 9cdb313d37554da489a745d5765ebbad, type: 3}
 --- !u!114 &6414191978531414806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11369,7 +11472,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6202261427088906226}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6473023322514318281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11962,7 +12077,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6473023322514318281}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &7544301794492134480
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12458,7 +12585,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 6570584982092923870}
@@ -12581,6 +12708,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &8914178318234717412
@@ -12706,7 +12845,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Button
+          m_StringArgument: Tapping_Sound_re
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 4310380492928702637}
@@ -12789,7 +12928,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3760750659543421886}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6281626397589868110}
+        m_TargetAssemblyTypeName: SoundEffect, Assembly-CSharp
+        m_MethodName: ButtonClick
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Tapping_Sound_re
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
