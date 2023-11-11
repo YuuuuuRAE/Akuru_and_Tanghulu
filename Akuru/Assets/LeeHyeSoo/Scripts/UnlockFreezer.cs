@@ -99,7 +99,7 @@ public class UnlockFreezer : MonoBehaviour
             {
                 if (i == 0 || lockFreezer[i - 1] == true)
                 {
-                    if(GameManager.instance.currentCoin > payCoin)
+                    if(GameManager.instance.currentCoin >= payCoin)
                     {
                         clickButton.gameObject.SetActive(false);
                         lockFreezer[i] = true;

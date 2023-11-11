@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public List<Fruit> fruits; //과일을 정보 담을 리스트 
 
     public float akuruMakingTime; //아쿠루 손질 시간
-    public Text timeText;
+    //public Text timeText;
     
     public Slider akuruSlider; //아쿠루 과일 손질 슬라이더
 
@@ -27,10 +27,9 @@ public class Player : MonoBehaviour
     UnlockFreezer unlockFreezer;
 
 
-
     private void Start()
     {
-        timeText = GameObject.Find(name: "SliderText").GetComponent<Text>();
+        //timeText = GameObject.Find(name: "SliderText").GetComponent<Text>();
         akuruSlider = GameObject.Find(name: "AkuruSlider").GetComponent<Slider>();
         potInventory = FindAnyObjectByType<PotInventory>();
         unlockFreezer = FindAnyObjectByType<UnlockFreezer>();
@@ -60,11 +59,7 @@ public class Player : MonoBehaviour
             {
                 AkuruMakingTangfuru();
             }
-            else
-            {
-
-                isMaking = false;
-            }
+            
 
 
         }
@@ -101,16 +96,14 @@ public class Player : MonoBehaviour
         {
             i = Random.Range(0, fruitNum);
         }
-        Debug.Log("랜덤으로 과일이 선택되었습니다. 현재 손질중인 과일: " + fruits[i].name);
 
 
     }
     void AkuruMakingTangfuru() //아쿠루 과일 손질
     {
-        
 
         akuruMakingTime += Time.deltaTime;
-        timeText.text = Mathf.FloorToInt(akuruMakingTime).ToString() + " S";
+        //timeText.text = Mathf.FloorToInt(akuruMakingTime).ToString() + " S";
         akuruSlider.maxValue = fruits[i].making_time;
         akuruSlider.value = akuruMakingTime;
         anim.SetBool("isMakingTfr", true);
