@@ -29,8 +29,13 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
     RecipeLevelUp recipeLevelUp;
 
+    [Header("굳히소에서 판매소로 이동하는 버튼")]
+    public List<GameObject> freezerGotosaleButton; // 활성/비활성화 할때 사용
+
 
     public int freezerInd;
+    PlayAudio playAudio;
+    
 
     private void Awake()
     {
@@ -40,6 +45,7 @@ public class TangfuruGoToFreezer : MonoBehaviour
         potInventory = FindAnyObjectByType<PotInventory>();
         player = GetComponent<Player>();
         freezerGroup = FindAnyObjectByType<FreezerGroup>();
+        playAudio = FindAnyObjectByType<PlayAudio>();
     }
     void Start()
     {
@@ -68,6 +74,11 @@ public class TangfuruGoToFreezer : MonoBehaviour
             //해당결과 첫 번째 객체 확인
             if (results[0].gameObject != null && results[0].gameObject.tag == "Tangfuru" && hitObj2 == null)
             {
+                for(int i = 0; i<freezerGotosaleButton.Count;i++)
+                {
+                    freezerGotosaleButton[i].SetActive(false);
+                }
+
                 hitObj1 = results[0].gameObject;
                 hitObj1Img = hitObj1.GetComponent<Image>();
                 if (hitObj1Img.color != ImgClear)
@@ -79,6 +90,7 @@ public class TangfuruGoToFreezer : MonoBehaviour
                             tangfuruNum = i;
                             potInventory.slots[tangfuruNum].image.color = new Color(1, 1, 1, 0);
                             potInventory.tangfuruSlots[tangfuruNum].image.color = new Color(1, 1, 1, 0);
+                            playAudio.PlayTapping_Sound_re();
                         }
                     }
                     
@@ -190,8 +202,11 @@ public class TangfuruGoToFreezer : MonoBehaviour
 
             
             hitObj2 = null;
-            
 
+            for (int i = 0; i < freezerGotosaleButton.Count; i++)
+            {
+                freezerGotosaleButton[i].SetActive(true);
+            }
         }
     }
 

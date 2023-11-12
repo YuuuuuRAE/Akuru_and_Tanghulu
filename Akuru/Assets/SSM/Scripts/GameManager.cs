@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     // 0 = 딸기  /  0 = 청포도  /  0 = 귤  /  0 = 파인애플  /  0 = 블루베리  
 
     public int[] fruitNumList; // 과일 갯수 / 유래님이 수확한 과일 이곳에 쌓이도록
-    public List<int> tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록
+    public int[] tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록
 
     [Header("생산소 관련")]
     public int MaxFruitType; //최대 과일 타입

@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
     public int i;
 
     UnlockFreezer unlockFreezer;
+    
 
 
     private void Start()
@@ -34,6 +35,7 @@ public class Player : MonoBehaviour
         potInventory = FindAnyObjectByType<PotInventory>();
         unlockFreezer = FindAnyObjectByType<UnlockFreezer>();
         anim = GetComponent<Animator>();
+        
 
         akuruMakingTime = 0;
         isMaking = false;

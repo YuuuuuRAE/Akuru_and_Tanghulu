@@ -534,7 +534,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &306618349
 RectTransform:
   m_ObjectHideFlags: 0
@@ -598,9 +598,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6923176449036997020}
-        m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
+      - m_Target: {fileID: 5172114568485057734}
+        m_TargetAssemblyTypeName: Freezer, Assembly-CSharp
         m_MethodName: ClickFreezer_GoToSalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -741,7 +753,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &342557242
 RectTransform:
   m_ObjectHideFlags: 0
@@ -805,9 +817,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6923176449036997020}
-        m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
+      - m_Target: {fileID: 8587004362776346881}
+        m_TargetAssemblyTypeName: Freezer, Assembly-CSharp
         m_MethodName: ClickFreezer_GoToSalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -928,6 +952,12 @@ MonoBehaviour:
   hitObj1: {fileID: 0}
   hitObj2: {fileID: 0}
   ClickFruitImg: {fileID: 0}
+  freezerGotosaleButton:
+  - {fileID: 1222912876}
+  - {fileID: 1512826165}
+  - {fileID: 774183300}
+  - {fileID: 306618348}
+  - {fileID: 342557241}
   freezerInd: 0
 --- !u!114 &409509039
 MonoBehaviour:
@@ -1194,7 +1224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &774183301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1258,9 +1288,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6923176449036997020}
-        m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
+      - m_Target: {fileID: 1961612985228329847}
+        m_TargetAssemblyTypeName: Freezer, Assembly-CSharp
         m_MethodName: ClickFreezer_GoToSalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1630,7 +1672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1222912877
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1694,9 +1736,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6923176449036997020}
-        m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
+      - m_Target: {fileID: 7354949057746878033}
+        m_TargetAssemblyTypeName: Freezer, Assembly-CSharp
         m_MethodName: ClickFreezer_GoToSalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1955,7 +2009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1512826166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2019,9 +2073,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6923176449036997020}
-        m_TargetAssemblyTypeName: PopupMessage, Assembly-CSharp
+      - m_Target: {fileID: 7434763546455999599}
+        m_TargetAssemblyTypeName: Freezer, Assembly-CSharp
         m_MethodName: ClickFreezer_GoToSalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2402,6 +2468,7 @@ GameObject:
   - component: {fileID: 6923176449036997020}
   - component: {fileID: 233403190853418835}
   - component: {fileID: 8109213034009046395}
+  - component: {fileID: 8679606223433283570}
   m_Layer: 5
   m_Name: AT_200Canvas
   m_TagString: Untagged
@@ -3583,6 +3650,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3058361166527566819}
         m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
         m_MethodName: ClickWhatRecipe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6344,7 +6423,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 8008909681821950982}
   freezertangfuruNum: {fileID: 1011776669}
-  inFreezer: []
 --- !u!114 &1972643506085638131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7348,7 +7426,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -8683,6 +8761,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8679606223433283569}
         m_TargetAssemblyTypeName: SceneChange, Assembly-CSharp
         m_MethodName: GoToAT300
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11326,6 +11416,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayConfirm
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4261813582309152316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12835,7 +12937,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 6426570036571968669}
   freezertangfuruNum: {fileID: 239236639}
-  inFreezer: []
 --- !u!114 &5205038181163412970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12935,6 +13036,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3058361166527566819}
         m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
         m_MethodName: ClickWhatRecipe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13342,6 +13455,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5930606221486891272}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13949,6 +14074,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5930606221486891272}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15461,6 +15598,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5930606221486891272}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: PurchaseFreezer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayConfirm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17022,6 +17171,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &7138675039841496332
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17464,7 +17625,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 8082246705280467076}
   freezertangfuruNum: {fileID: 134378954}
-  inFreezer: []
 --- !u!114 &7364885228441495490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17613,7 +17773,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 486271482583174831}
   freezertangfuruNum: {fileID: 664358912}
-  inFreezer: []
 --- !u!114 &7455208002169483147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18992,6 +19151,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8105340105996026338
 GameObject:
   m_ObjectHideFlags: 0
@@ -19197,6 +19368,18 @@ MonoBehaviour:
       - m_Target: {fileID: 3058361166527566819}
         m_TargetAssemblyTypeName: RecipeLevelUp, Assembly-CSharp
         m_MethodName: ClickWhatRecipe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19714,6 +19897,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &8569148685450647205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19887,7 +20082,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 6545319614763970834}
   freezertangfuruNum: {fileID: 1851086575}
-  inFreezer: []
 --- !u!114 &8590128030916046898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20060,6 +20254,18 @@ MonoBehaviour:
   AT_100: Production_Plant
   AT_200: AT_200
   AT_300: Sales
+--- !u!114 &8679606223433283570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23061932221219031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62107b27ce421214babdd95829bd0886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8692711189618168941
 GameObject:
   m_ObjectHideFlags: 0
@@ -21060,6 +21266,18 @@ MonoBehaviour:
       - m_Target: {fileID: 5930606221486891272}
         m_TargetAssemblyTypeName: UnlockFreezer, Assembly-CSharp
         m_MethodName: ClickUnlockfreezer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8679606223433283570}
+        m_TargetAssemblyTypeName: PlayAudio, Assembly-CSharp
+        m_MethodName: PlayTapping_Sound_re
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
