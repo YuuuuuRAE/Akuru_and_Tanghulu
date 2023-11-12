@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class PopupMessage : MonoBehaviour
 {
@@ -24,11 +25,7 @@ public class PopupMessage : MonoBehaviour
     public Image fullMessageImg;
     public Image fullMessageButton;
 
-    //[Header("상단UI")]
-    //public GameObject attendancePopUp; //출석 팝업창
-    //public GameObject questPopUp; //퀘스트 팝업창
-    //public GameObject roulettePopUp; //룰렛 팝업창
-    //public GameObject eventPopUp; //이벤 팝업창
+    
 
 
 
@@ -43,9 +40,15 @@ public class PopupMessage : MonoBehaviour
 
     }
 
+    
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space)) //판매대가 가득찼을때 
+        //터치했을 때 판매대로 하나씩 넘어감
+        //판매대가 가득찼으면 터치했을때 뜨도록 onclick 작성
+
+        // if(GameManager.instance.(판매대 가득참) == true)
+        if (Input.GetKeyDown(KeyCode.Space)) //판매대가 가득찼을때 
         {
             IsFreezerFull();
         }
@@ -68,6 +71,25 @@ public class PopupMessage : MonoBehaviour
         }
 
         
+    }
+
+    public void ClickFreezer_GoToSalse()
+    {
+        GameObject clickbutton = EventSystem.current.currentSelectedGameObject;
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (clickbutton.name == "GoToSalesButton (" + i + ")")
+            {
+                if (GameManager.instance.tangfuruNumList[i] > 0)
+                {
+                    GameManager.instance.tangfuruNumList[i] -= 1;
+                }
+                
+            }
+        }
+
+
     }
 
     IEnumerator FadeCoroutine()

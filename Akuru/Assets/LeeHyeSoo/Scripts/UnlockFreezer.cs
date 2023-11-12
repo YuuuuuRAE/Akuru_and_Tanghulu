@@ -14,7 +14,7 @@ public class UnlockFreezer : MonoBehaviour
     public Text unlockFreezerText;
 
     Player player;
-    GameManager gameManager;
+    //GameManager gameManager;
 
     int payCoin;
 
@@ -23,7 +23,7 @@ public class UnlockFreezer : MonoBehaviour
     private void Start()
     {
         player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
-        gameManager = FindAnyObjectByType<GameManager>();
+        //gameManager = FindAnyObjectByType<GameManager>();
 
         FreezerUnlockPopUp.SetActive(false);
     }
@@ -99,25 +99,18 @@ public class UnlockFreezer : MonoBehaviour
             {
                 if (i == 0 || lockFreezer[i - 1] == true)
                 {
-                    if(gameManager.currentCoin > payCoin)
+                    if(GameManager.instance.currentCoin >= payCoin)
                     {
                         clickButton.gameObject.SetActive(false);
                         lockFreezer[i] = true;
 
-                        gameManager.currentCoin -= payCoin;
+                        GameManager.instance.currentCoin -= payCoin;
 
                         FreezerUnlockPopUp.SetActive(false);
                     }
-                    else
-                    {
-                        Debug.Log("코인이 부족합니다.");
-                    }
                     
                 }
-                else
-                {
-                    Debug.Log("이전 냉장고를 해금해주세요");
-                }
+                
             }
         }
     }

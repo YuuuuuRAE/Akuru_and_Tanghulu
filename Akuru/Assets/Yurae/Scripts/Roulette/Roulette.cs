@@ -34,6 +34,10 @@ public class Roulette : MonoBehaviour
     private bool isSpinning = false; //현재 회전중인지
     private int selectedIndex = 0; //룰렛에서 선택된 아이템
 
+    public AudioSource audioSource;
+    public AudioClip RoulleteSound;
+    public AudioClip CollectSound;
+
     private void Awake()
     {
         pieceAngle = 360 / roulettePieceData.Length;
@@ -73,7 +77,7 @@ public class Roulette : MonoBehaviour
         {
             roulettePieceData[i].index = i;
 
-            //예외처리, 혹시라도 chance값이 0 이하일 경우 1로 설정
+            //예외처리, 혹시라도 chance값이 0이하일 경우 1로 설정
             if (roulettePieceData[i].chance <= 0)
             {
                 roulettePieceData[i].chance = 1;
@@ -82,7 +86,7 @@ public class Roulette : MonoBehaviour
             accumlatedWeight += roulettePieceData[i].chance;
             roulettePieceData[i].weight = accumlatedWeight;
 
-            Debug.Log($"({roulettePieceData[i].index}){roulettePieceData[i].description}:{roulettePieceData[i].weight}");
+            //Debug.Log($"({roulettePieceData[i].index}){roulettePieceData[i].description}:{roulettePieceData[i].weight}");
         }
 
 
@@ -97,6 +101,29 @@ public class Roulette : MonoBehaviour
         {
             if (roulettePieceData[i].weight > weight)
             {
+                if (i >= 0 && i <= 1)
+                {
+                    GameManager.instance.fruitNumList[0]++; //딸기 증가
+                }
+                else
+                {
+                    switch (i)
+                    {
+                        case 2:
+                            GameManager.instance.currentCoin += 10;
+                            break;
+                        case 3:
+                            GameManager.instance.currentCoin += 20;
+                            break;
+                        case 4:
+                            GameManager.instance.currentCoin += 30;
+                            break;
+                        default:
+                            break;
+
+                    }
+                }
+
                 return i;
             }
         }
@@ -109,18 +136,22 @@ public class Roulette : MonoBehaviour
     {
         if (isSpinning == true) return;
 
+
+
+
         //룰렛 결과 값 선택
         selectedIndex = GetRandomIndex();
         //선택된 결과의 중심 각도
         float angle = pieceAngle * selectedIndex;
         // 정확히 중심이 아닌 결과 값 범위 안의 임의의 각도 선택
         float leftOffset = (angle - halfPieceAngleWithPaddings) % 360;
-        float rightOffset = (angle - halfPieceAngleWithPaddings) % 360;
-        float randomAngle = Random.RandomRange(leftOffset, rightOffset);
+        float rightOffset = (angle + halfPieceAngleWithPaddings) % 360;
+        float randomAngle = Random.Range(leftOffset, rightOffset);
 
         //목표 각도 (target Angle) = 결과각도 + 360 * 회전 시간 * 회전 속도
         int rotateSpeed = 2;
         float targetAngle = (randomAngle + 360 * spinDuration * rotateSpeed);
+        Debug.Log(targetAngle);
 
         isSpinning = true;
         StartCoroutine(OnSpin(targetAngle, action));
@@ -130,6 +161,12 @@ public class Roulette : MonoBehaviour
     {
         float current = 0;
         float percent = 0;
+
+        if (GameManager.instance.isSound == true)
+        {
+            audioSource.clip = RoulleteSound;
+            audioSource.Play();
+        }
 
         while (percent < 1)
         {
@@ -143,6 +180,8 @@ public class Roulette : MonoBehaviour
         }
 
         isSpinning = false;
+        audioSource.clip = CollectSound;
+        audioSource.Play();
 
         if (action != null) action.Invoke(roulettePieceData[selectedIndex]);
     }
