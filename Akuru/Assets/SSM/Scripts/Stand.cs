@@ -1,38 +1,37 @@
 ﻿using UnityEngine;
 
-
 public class Stand : MonoBehaviour
 {
+    // 좌우로 이동시킬 위치의 보정값
+    Vector3 leftBias = new Vector3(-0.4f, 0, 0);
+    Vector3 rightBias = new Vector3(0.4f, 0, 0);
 
-    [SerializeField] private Vector3 leftBias = new Vector3(-0.5f, 0, 0);
-    Vector3 rightBias = new Vector3(0.5f, 0, 0);
-
-    public int SpawnTanghuluGameObjects(GameObject tanghuluObject, int count)
+    // 탕후루를 생성하고 위치를 설정하는 메서드
+    public void SpawnTanghuluGameObjects(GameObject tanghuluObject, int count)
     {
-        int countNotInstaintiated = count;
+        // 주어진 개수만큼 탕후루 생성하고 위치 설정
         for (int i = 0; i < count; i++)
         {
             var tobj = Instantiate(tanghuluObject);
-            SetTanghuluPosition(this, tobj.transform, i);
-            countNotInstaintiated--;
+            SetTanghuluPosition(tobj.transform, i);
         }
-
-        return countNotInstaintiated;
     }
 
-    public void SetTanghuluPosition(Stand standTr, Transform tanghuluTr, int index)
+    // 탕후루의 위치를 설정하는 메서드
+    private void SetTanghuluPosition(Transform tanghuluTr, int index)
     {
-        if (index == 1)
+        // 인덱스에 따라 좌우 위치 조정
+        if (index == 0)
         {
-            tanghuluTr.position = standTr.transform.position + leftBias;
+            tanghuluTr.position = transform.position + leftBias;
+        }
+        else if (index == 1)
+        {
+            tanghuluTr.position = transform.position + rightBias;
         }
         else if (index == 2)
         {
-            tanghuluTr.position = standTr.transform.position + rightBias;
-        }
-        else if (index == 3)
-        {
-            tanghuluTr.position = standTr.transform.position;
+            tanghuluTr.position = transform.position;
         }
     }
 }
