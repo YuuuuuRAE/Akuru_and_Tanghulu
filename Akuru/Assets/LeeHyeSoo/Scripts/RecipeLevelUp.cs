@@ -34,7 +34,14 @@ public class RecipeLevelUp : MonoBehaviour
     int rqCoin_UP; // 레벨업에 필요한 코인
     int rqRuby_UP; // 레벨업에 필요한 루비
 
-    
+    PlayAudio playAudio;
+
+
+    void Awake()
+    {
+        playAudio = FindAnyObjectByType<PlayAudio>();
+    }
+
     private void Start()
     {
         SelectRecipe();
@@ -61,7 +68,6 @@ public class RecipeLevelUp : MonoBehaviour
             }
         }
 
-        Debug.Log("선택된 레시피:" + selectTangfuru);
         SelectRecipe();
 
 
@@ -126,11 +132,9 @@ public class RecipeLevelUp : MonoBehaviour
                 rcpLevel_UP++;
                 RCPLevelUp();
                 SaveInFruit();
+                playAudio.PlayConfirm();
             }
-            else
-            {
-                Debug.Log("코인이 부족합니다");
-            }
+            
                 
         }
     }

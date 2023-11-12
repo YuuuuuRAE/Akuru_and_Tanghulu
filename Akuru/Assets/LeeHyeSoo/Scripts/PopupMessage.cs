@@ -73,34 +73,7 @@ public class PopupMessage : MonoBehaviour
         
     }
 
-    //public void ClickFreezer_GoToSalse()
-    //{
-    //    GameObject clickbutton = EventSystem.current.currentSelectedGameObject;
-    //    Debug.Log(clickbutton);
-
-
-
-
-    //    for (int i = 0; i < 5; i++)
-    //    {
-    //        if (clickbutton.name == "GoToSalesButton (" + i + ")")
-    //        {
-    //            Debug.LogWarning(i);
-    //            Debug.LogWarning(GameManager.instance.tangfuruNumList[i]);
-
-
-    //            if (GameManager.instance.tangfuruNumList[i] > 0)
-    //            {
-
-    //                GameManager.instance.tangfuruNumList[i] -=  1;
-    //                Debug.LogWarning("½ÇÇà" + GameManager.instance.tangfuruNumList[i]);
-    //            }
-
-    //        }
-    //    }
-
-
-    //}
+    
 
     IEnumerator FadeCoroutine()
     {

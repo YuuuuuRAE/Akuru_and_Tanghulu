@@ -10,6 +10,7 @@ public class Freezer : MonoBehaviour
     public GameObject freezerNum;
 
     public Text freezertangfuruNum;
+    
 
     //[Header("≥√¿Â∞Ì æ»")]
     //public List<Fruit> inFreezer;
@@ -21,6 +22,7 @@ public class Freezer : MonoBehaviour
     private void Awake()
     {
         freezeTangfuru = FindAnyObjectByType<FreezeTangfuru>();
+
     }
 
     private void Start()
@@ -49,6 +51,7 @@ public class Freezer : MonoBehaviour
         {
 
             freezeTangfuru.tangfuruNumInFreezerNow[index] -= 1;
+
         }
     }
 }

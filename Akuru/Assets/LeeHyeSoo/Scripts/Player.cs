@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
     public int i;
 
     UnlockFreezer unlockFreezer;
-    
+    public bool isAkuruWorking;
 
 
     private void Start()
@@ -39,6 +39,7 @@ public class Player : MonoBehaviour
 
         akuruMakingTime = 0;
         isMaking = false;
+        isAkuruWorking = false;
         i = 0;
 
     }
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
     }
     void AkuruMakingTangfuru() //아쿠루 과일 손질
     {
-
+        isAkuruWorking = true;
         akuruMakingTime += Time.deltaTime;
         //timeText.text = Mathf.FloorToInt(akuruMakingTime).ToString() + " S";
         akuruSlider.maxValue = fruits[i].making_time;
@@ -116,6 +117,7 @@ public class Player : MonoBehaviour
             GameManager.instance.fruitNumList[i] -= 1;
             akuruMakingTime = 0;
             isMaking = false;
+            isAkuruWorking = false;
         }
     }
 

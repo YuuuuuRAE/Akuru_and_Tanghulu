@@ -20,11 +20,11 @@ public class AkuruSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(potInventory.isPotFull)
+        if(potInventory.isPotFull || player.isAkuruWorking == false)
         {
             akuruSlider.gameObject.SetActive(false);
         }
-        else if (!potInventory.isPotFull)
+        else if (!potInventory.isPotFull && player.isAkuruWorking == true)
         {
             akuruSlider.gameObject.SetActive(true);
         }
