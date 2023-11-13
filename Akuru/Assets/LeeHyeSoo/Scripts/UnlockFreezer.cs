@@ -20,10 +20,13 @@ public class UnlockFreezer : MonoBehaviour
 
     public Text freezerPopUpText;
 
+    PlayAudio playAudio;
+
     private void Start()
     {
         player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
         //gameManager = FindAnyObjectByType<GameManager>();
+        playAudio = FindAnyObjectByType<PlayAudio>();
 
         FreezerUnlockPopUp.SetActive(false);
     }
@@ -73,19 +76,13 @@ public class UnlockFreezer : MonoBehaviour
         {
             if (clickButton.name == "UnlockButton (" + i + ")")
             {
-                Debug.Log("클릭한 냉장고: " + clickButton.name);
                 if (i == 0 || lockFreezer[i - 1] == true)
                 {
                     FreezerPopUpText();
                     FreezerUnlockPopUp.SetActive(true);
-                    unlockFreezerText.text = player.fruits[i + 1].fruitName.ToString()
-                                                + " 탕후루를 굳히고 보관할 곳을 추가합니다.";
+                    
                 }
                 
-                else
-                {
-                    Debug.Log("이전 냉장고를 해금해주세요");
-                }
             }
         }
 
@@ -105,6 +102,7 @@ public class UnlockFreezer : MonoBehaviour
                         lockFreezer[i] = true;
 
                         GameManager.instance.currentCoin -= payCoin;
+                        playAudio.PlayConfirm();
 
                         FreezerUnlockPopUp.SetActive(false);
                     }

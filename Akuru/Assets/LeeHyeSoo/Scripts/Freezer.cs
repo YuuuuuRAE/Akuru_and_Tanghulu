@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Freezer : MonoBehaviour
@@ -9,11 +10,20 @@ public class Freezer : MonoBehaviour
     public GameObject freezerNum;
 
     public Text freezertangfuruNum;
+    
 
-    [Header("≥√¿Â∞Ì æ»")]
-    public List<Fruit> inFreezer;
+    //[Header("≥√¿Â∞Ì æ»")]
+    //public List<Fruit> inFreezer;
+
+    FreezeTangfuru freezeTangfuru;
 
     int index; //≥√¿Â∞Ì ¿Œµ¶Ω∫
+
+    private void Awake()
+    {
+        freezeTangfuru = FindAnyObjectByType<FreezeTangfuru>();
+
+    }
 
     private void Start()
     {
@@ -22,7 +32,6 @@ public class Freezer : MonoBehaviour
             if (freezerNum.name == "FullFreezer(" + i + ")")
             {
                 index = i;
-                Debug.Log(index);
             }
         }
         
@@ -33,5 +42,16 @@ public class Freezer : MonoBehaviour
         freezertangfuruNum.text = GameManager.instance.tangfuruNumList[index].ToString();
     }
 
+    public void ClickFreezer_GoToSalse()
+    {
+        
 
+
+        if (GameManager.instance.tangfuruNumList[index] > 0)
+        {
+
+            freezeTangfuru.tangfuruNumInFreezerNow[index] -= 1;
+
+        }
+    }
 }

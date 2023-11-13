@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class FreezerGroup : MonoBehaviour
 {
-    TangfuruGoToFreezer tangfuruGoToFreezer;
+    //TangfuruGoToFreezer tangfuruGoToFreezer;
     Player player;
-    PotInventory potInventory;
+    //PotInventory potInventory;
 
     public List<Freezer> freezers;
 
     void Start()
     {
-        tangfuruGoToFreezer = FindAnyObjectByType<TangfuruGoToFreezer>();
+        //tangfuruGoToFreezer = FindAnyObjectByType<TangfuruGoToFreezer>();
         player = GameObject.Find(name: "Akuru(Player)").GetComponent<Player>();
-        potInventory = FindAnyObjectByType<PotInventory>();
+        //potInventory = FindAnyObjectByType<PotInventory>();
     }
 
     void Update()
@@ -24,10 +24,10 @@ public class FreezerGroup : MonoBehaviour
 
     public void PlusTangfuruInFreezer(int f_Index, int t_Index) // 탕후루 정보 충돌한 냉장고에 저장하기 / (냉장고번호, 탕후루번호)
     {
-        Debug.Log(f_Index);
-        Debug.Log(player.fruits[t_Index]); //Pineapple (Fruit)
+        //Debug.Log(f_Index);
+        //Debug.Log(player.fruits[t_Index]); //Pineapple (Fruit)
 
-        freezers[f_Index].inFreezer.Add(player.fruits[t_Index]);
+        //freezers[f_Index].inFreezer.Add(player.fruits[t_Index]);
 
         
     }

@@ -73,24 +73,7 @@ public class PopupMessage : MonoBehaviour
         
     }
 
-    public void ClickFreezer_GoToSalse()
-    {
-        GameObject clickbutton = EventSystem.current.currentSelectedGameObject;
-
-        for (int i = 0; i < 5; i++)
-        {
-            if (clickbutton.name == "GoToSalesButton (" + i + ")")
-            {
-                if (GameManager.instance.tangfuruNumList[i] > 0)
-                {
-                    GameManager.instance.tangfuruNumList[i] -= 1;
-                }
-                
-            }
-        }
-
-
-    }
+    
 
     IEnumerator FadeCoroutine()
     {
