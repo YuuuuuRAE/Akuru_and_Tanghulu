@@ -16,7 +16,7 @@ public class Contena : MonoBehaviour
     public Image[] Images; // 해금할 과일 이미지에 대한 배열
     public Text[] Texts; // 과일 갯수에 대한 Text 배열
 
-
+    public GameObject[] FirstTrim_Butt;
 
     void Update()
     {
@@ -46,7 +46,7 @@ public class Contena : MonoBehaviour
             }
         }
 
-
+        TrimButton();
         UpdateCount();
 
     }
@@ -58,5 +58,47 @@ public class Contena : MonoBehaviour
             Texts[i].text = GameManager.instance.fruitNumList[i].ToString();
         }
     }
+
+    void TrimButton()
+    {
+        if (GameManager.instance.isSelectFT == true)
+        {
+            for (int i = 0; i < GameManager.instance.fruit_FirstMaking.Count; i++)
+            {
+                FirstTrim_Butt[i].GetComponent<Button>().interactable
+                    = GameManager.instance.fruit_FirstMaking[i];
+            }
+        }
+
+    }
+
+    public void SelectFrisrtTrim(int firstCheckIndex)
+    {
+        if (GameManager.instance.isSelectFT == false)
+        {
+            GameManager.instance.isSelectFT = true;
+            for (int i = 0; i < GameManager.instance.fruit_FirstMaking.Count; i++)
+            {
+                if (i == firstCheckIndex)
+                {
+                    GameManager.instance.fruit_FirstMaking[i] = true;
+                }
+                else GameManager.instance.fruit_FirstMaking[i] = false;
+            }
+        }
+        else
+        {
+            GameManager.instance.isSelectFT = false;
+
+            for (int i = 0; i < GameManager.instance.fruit_FirstMaking.Count; i++)
+            {
+                GameManager.instance.fruit_FirstMaking[i] = false;
+                FirstTrim_Butt[i].GetComponent<Button>().interactable = true;
+            }
+        }
+
+
+    }
+
 
 }

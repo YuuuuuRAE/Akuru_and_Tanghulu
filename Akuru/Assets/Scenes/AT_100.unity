@@ -1072,6 +1072,7 @@ RectTransform:
   - {fileID: 2192328703375735432}
   - {fileID: 8234072704613441740}
   - {fileID: 3291805691322777413}
+  - {fileID: 9090047619242631990}
   - {fileID: 8911001904775719044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3070,7 +3071,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1548893173821709357}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: SelectFrisrtTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: CancelFirstTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &2097151993263297906
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4006,7 +4031,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1163554617136117041}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: SelectFrisrtTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: CancelFirstTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2752200480172635072
 GameObject:
   m_ObjectHideFlags: 0
@@ -4808,7 +4857,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3196658109513081059}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: SelectFrisrtTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: CancelFirstTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3082044226422042003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5625,7 +5698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &3546813873275013348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5699,7 +5772,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5796891097690589273}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: SelectFrisrtTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: CancelFirstTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3613238384546703573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6105,7 +6202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &3796571247562250145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6564,6 +6661,12 @@ MonoBehaviour:
   - {fileID: 2312703651016202022}
   - {fileID: 5808665329341682359}
   - {fileID: 6564001546517032215}
+  FirstTrim_Butt:
+  - {fileID: 4919394532104602859}
+  - {fileID: 4604917984034693930}
+  - {fileID: 2785499946091190628}
+  - {fileID: 2733871894502024421}
+  - {fileID: 4516874925651429223}
 --- !u!114 &4112748865898564853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11869,7 +11972,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3546813873275013348}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: SelectFrisrtTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4081523531523397664}
+        m_TargetAssemblyTypeName: Contena, Assembly-CSharp
+        m_MethodName: CancelFirstTrim
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7898018991973031577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13514,7 +13641,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9090047619242631990}
   - {fileID: 452697003392804439}
   - {fileID: 7932466283844679409}
   - {fileID: 4952630184067039441}
@@ -13851,12 +13977,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7694829116347215701}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8911001904775719044}
+  m_Father: {fileID: 683479766729379765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
