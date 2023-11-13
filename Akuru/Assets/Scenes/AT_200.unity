@@ -352,7 +352,15 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
+      propertyPath: standsNumList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
       propertyPath: tangfuruNumList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
+      propertyPath: fruit_FirstMaking.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
@@ -1264,6 +1272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 267613985356379345}
   freezertangfuruNum: {fileID: 7234308932413406455}
+  index: 4
 --- !u!114 &450997863112491638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4320,7 +4329,6 @@ MonoBehaviour:
   - {fileID: 9172113719501306900}
   - {fileID: 5304707181446897945}
   - {fileID: 6130020992402507560}
-  tangfuruNumInFreezerNow: 0000000000000000000000000000000000000000
 --- !u!114 &1775132578526207612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5390,6 +5398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 2438853669028325473}
   freezertangfuruNum: {fileID: 1695418245629051468}
+  index: 0
 --- !u!114 &2186248134773619257
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15037,6 +15046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 7503498045290777431}
   freezertangfuruNum: {fileID: 2801282985561477229}
+  index: 2
 --- !u!222 &6426508981741703645
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16118,6 +16128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 7050108290960312274}
   freezertangfuruNum: {fileID: 4241689322500649443}
+  index: 3
 --- !u!1 &6936986685512624696
 GameObject:
   m_ObjectHideFlags: 0
@@ -18783,6 +18794,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   freezerNum: {fileID: 7365703571566672197}
   freezertangfuruNum: {fileID: 7052336987112591468}
+  index: 1
 --- !u!224 &8107467066053702957
 RectTransform:
   m_ObjectHideFlags: 0
