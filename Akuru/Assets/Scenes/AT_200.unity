@@ -360,6 +360,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
+      propertyPath: fruit_FirstMaking.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7796212848946848879, guid: 211fad4ef210ecd4aab4255069dbd138, type: 3}
       propertyPath: tangfuruAllNum_Rcp.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -4325,7 +4329,6 @@ MonoBehaviour:
   - {fileID: 9172113719501306900}
   - {fileID: 5304707181446897945}
   - {fileID: 6130020992402507560}
-  tangfuruNumInFreezerNow: 0000000000000000000000000000000000000000
 --- !u!114 &1775132578526207612
 MonoBehaviour:
   m_ObjectHideFlags: 0
