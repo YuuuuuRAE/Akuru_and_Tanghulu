@@ -3838,8 +3838,8 @@ MonoBehaviour:
   - {fileID: 5192627925452743125, guid: 569b892db45af4543b1dcce664c9c564, type: 3}
   - {fileID: 8921578362088013243, guid: 7c8eba8ea2d928742a9b63593c5c3aff, type: 3}
   poolSize: 10
-  spawnRateMin: 20
-  spawnRateMax: 30
+  spawnRateMin: 5
+  spawnRateMax: 10
 --- !u!1 &966445549
 GameObject:
   m_ObjectHideFlags: 0

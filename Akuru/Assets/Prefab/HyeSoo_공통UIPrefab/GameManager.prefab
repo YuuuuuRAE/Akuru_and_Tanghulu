@@ -44,17 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 417cabd7d37326245a91dd351d170135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  iSFirstStart: 0
+  tangfuruNowNum_Rcp: 
+  tangfuruAllNum_Rcp: 
   fruitNumList: 0000000000000000000000000000000000000000
   tangfuruNumList: 0000000000000000000000000000000000000000
-  playerLevel: {fileID: 0}
-  ruby: {fileID: 0}
-  coin: {fileID: 0}
-  currentLevel: 0
-  nextLevelUpExp: 0
-  currentExp: 0
+  standsNumList: 0000000000000000000000000000000000000000
+  openStandNum: 0
+  MaxFruitType: 0
+  isUnlock: 0
+  CurrentLevel: 1
+  MaxXp: 0
+  CurrentXp: 0
+  IncrementXp: 0
   currentRuby: 0
   currentCoin: 0
   isdoubleSpeed: 0
-  playerLevelPopUp_Level: {fileID: 0}
-  playerLevelPopUp_Slider: {fileID: 0}
-  playerLevelPopUp_SliderText: {fileID: 0}
+  SceneName: 
+  BGMname: 
+  isBGM: 0
+  isSound: 0
+  isVibe: 0

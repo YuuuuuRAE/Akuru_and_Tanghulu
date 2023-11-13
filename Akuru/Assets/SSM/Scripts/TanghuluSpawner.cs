@@ -30,7 +30,7 @@ public class TanghuluSpawner : MonoBehaviour
             for (int tanghuluNum = 0; tanghuluNum < 5; tanghuluNum++)
             {
                 // 만약 해당 탕후루의 개수가 3이상이면
-                if (GameManager.instance.standsNumList[tanghuluNum] >= 3)
+                if (GameManager.instance.tangfuruNumList[tanghuluNum] >= 3)
                 {
                     // 각 진열장 중에 진열된 탕후루가 0개인 곳을 찾음
                     if (standIndex[standNum] == 0)
@@ -51,9 +51,9 @@ public class TanghuluSpawner : MonoBehaviour
             for (int i = 0; i < GameManager.instance.tangfuruNumList.Length; i++)
             {
                 // 진열해야하는 탕후루 받아오기
-                GameManager.instance.standsNumList[i] += GameManager.instance.tangfuruNumList[i];
-                // 굳히소에 있는 탕후루 개수 초기화
-                GameManager.instance.tangfuruNumList[i] = 0;
+                GameManager.instance.tangfuruNumList[i] += GameManager.instance.standsNumList[i];
+                // 진열대에 있는 탕후루 개수 초기화
+                GameManager.instance.standsNumList[i] = 0;
             }
         }
         else
@@ -67,5 +67,7 @@ public class TanghuluSpawner : MonoBehaviour
         // 탕후루를 3개씩 생성하고 진열장에 추가
         StandsController.stands[standNum].SpawnTanghuluGameObjects(tanghulus[tanghuluNum], 3);
         standIndex[standNum] += 1;
+        GameManager.instance.tangfuruNumList[tanghuluNum] -= 3;
+        GameManager.instance.standsNumList[tanghuluNum] += 3;
     }
 }
