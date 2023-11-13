@@ -1,51 +1,71 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TanghuluSpawner : MonoBehaviour
 {
-    // 탕후루 진열장에 스폰
     // 탕후루 종류
     public GameObject[] tanghulus;
-    // 탕후루가 스폰 될 진열장
-    public Transform[] stand;
-    // 진열장이 잠겨있는지 체크
-    public GameObject[] purchase;
-    // 진열장의 넘버
-    public int standNum;
 
-    int activeStandCount = 0;
+    // 현재 진열장에 몇 개가 있는지 체크
+    public int[] standIndex;
 
-    HashSet<Vector3> spawnedLocations = new HashSet<Vector3>();
+    public StandsController StandsController;
 
-    void Update() // 이 부분은 사실상 임시(혜수님 파트랑 연계해야함)
+    public void Start()
     {
-        if (Input.GetButtonDown("Jump"))
+        StandsController = FindObjectOfType<StandsController>();
+
+        AddLists();
+
+        PurchaseStand();
+    }
+
+    public void PurchaseStand()
+    {
+        // 열려 있는 진열장의 개수만큼 반복
+        for (int standNum = 0; standNum < GameManager.instance.openStandNum + 1; standNum++)
         {
-            foreach (GameObject obj in purchase)
+            // 모든 탕후루 종류에 대해 반복
+            for (int tanghuluNum = 0; tanghuluNum < 5; tanghuluNum++)
             {
-                if (obj.activeSelf)
+                // 만약 해당 탕후루의 개수가 3이상이면
+                if (GameManager.instance.standsNumList[tanghuluNum] >= 3)
                 {
-                    activeStandCount++;
-                }
-            }
-
-            standNum = stand.Length - activeStandCount;
-            activeStandCount = 0;
-
-            for (int i = 0; i < standNum; i++)
-            {
-                Vector3 spawnPosition = stand[i].position;
-
-                // 이미 생성된 위치인지 확인
-                if (!spawnedLocations.Contains(spawnPosition))
-                {
-                    int tanghuluType = Random.Range(0, tanghulus.Length);
-                    GameObject tanghulu = Instantiate(tanghulus[tanghuluType], spawnPosition, Quaternion.identity);
-
-                    // 생성된 위치를 기록
-                    spawnedLocations.Add(spawnPosition);
+                    // 각 진열장 중에 진열된 탕후루가 0개인 곳을 찾음
+                    if (standIndex[standNum] == 0)
+                    {
+                        // 탕후루를 생성하고 진열장에 추가
+                        InstantiateTanghulu(standNum, tanghuluNum);
+                    }
                 }
             }
         }
+    }
+
+    public void AddLists()
+    {
+        // 만약 두 리스트의 길이가 같을경우 실행 (버그 체크)
+        if (GameManager.instance.tangfuruNumList.Count == GameManager.instance.standsNumList.Length)
+        {
+            for (int i = 0; i < GameManager.instance.tangfuruNumList.Count; i++)
+            {
+                // 진열해야하는 탕후루 받아오기
+                GameManager.instance.standsNumList[i] += GameManager.instance.tangfuruNumList[i];
+                // 굳히소에 있는 탕후루 개수 초기화
+                GameManager.instance.tangfuruNumList[i] = 0;
+            }
+        }
+        else
+        {
+            Debug.Log("두 리스트의 길이가 다릅니다. 더하는 작업을 수행할 수 없습니다.");
+        }
+    }
+
+    private void InstantiateTanghulu(int standNum, int tanghuluNum)
+    {
+        // 탕후루를 3개씩 생성하고 진열장에 추가
+        StandsController.stands[standNum].SpawnTanghuluGameObjects(tanghulus[tanghuluNum], 3);
+        standIndex[standNum] += 1;
     }
 }

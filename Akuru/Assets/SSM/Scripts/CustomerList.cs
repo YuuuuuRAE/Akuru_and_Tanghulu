@@ -19,16 +19,7 @@ public class CustomerList : MonoBehaviour
     public Text currentDrop;
     public Text nextDrop;
 
-    // 선물 드롭 확률 배열 (테스트)
-    public float[][] dropValues = {
-        new float[] { 50.0f, 60.0f, 70.0f, 80.0f },
-        new float[] { 60.0f, 70.0f, 80.0f, 90.0f },
-        new float[] { 70.0f, 80.0f, 90.0f, 100.0f },
-        new float[] { 85.0f, 90.0f, 95.0f, 100.0f },
-        new float[] { 97.0f, 98.0f, 99.0f, 100.0f }
-    };
-
-    /*
+    
     // 선물 드롭 확률 배열
     public float[][] dropValues = {
         new float[] { 1.0f, 2.0f, 4.0f, 6.0f },
@@ -37,7 +28,7 @@ public class CustomerList : MonoBehaviour
         new float[] { 1.0f, 3.0f, 5.0f, 9.0f },
         new float[] { 1.0f, 3.0f, 5.0f, 10.0f }
     };
-    */
+    
     public void Start()
     {
         counter = GameObject.Find("Counter");

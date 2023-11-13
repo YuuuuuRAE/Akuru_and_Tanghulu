@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1923692468174658429}
   - component: {fileID: 5133977899956434291}
   - component: {fileID: 1376754840910066547}
+  - component: {fileID: 7806894179006480468}
   m_Layer: 0
   m_Name: Customer (1)
   m_TagString: Customer
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -76,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4126d153b84b5a04babb61f3eedce4e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2d7ba4126036b00478dd71dd800f5975, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.8, y: 2.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -102,10 +103,11 @@ MonoBehaviour:
   speed: 1
   customerRB: {fileID: 0}
   sprites:
-  - {fileID: 21300000, guid: 4126d153b84b5a04babb61f3eedce4e3, type: 3}
-  - {fileID: 21300000, guid: 5dff3cc55a4b5244aa17e7ad75718c29, type: 3}
-  - {fileID: 21300000, guid: 0324858b327453547abe96f0c52df21c, type: 3}
-  - {fileID: 21300000, guid: 0c38679f6a578e04798f44233f2ebc6b, type: 3}
+  - {fileID: 21300000, guid: 2d7ba4126036b00478dd71dd800f5975, type: 3}
+  - {fileID: 21300000, guid: 42ec3be560429cf4cb3874de86289904, type: 3}
+  - {fileID: 21300000, guid: ab8e13659a360a74daf4a53efbbc1d5c, type: 3}
+  - {fileID: 21300000, guid: 94fdf9918935ff843b103b0de1e6a4a0, type: 3}
+  animator: {fileID: 0}
 --- !u!50 &5133977899956434291
 Rigidbody2D:
   serializedVersion: 4
@@ -165,16 +167,37 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.6}
+  m_Offset: {x: 0, y: 0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8, y: 8}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 2.8, y: 2.8}
+    newSize: {x: 2.8, y: 2.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6, y: 4}
+  m_Size: {x: 2.4, y: 1.6}
   m_EdgeRadius: 0
+--- !u!95 &7806894179006480468
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881204719223727058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 674fd10074648804caeb64f205051a50, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

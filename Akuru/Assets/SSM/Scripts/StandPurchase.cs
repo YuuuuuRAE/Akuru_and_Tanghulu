@@ -10,6 +10,15 @@ public class StandPurchase : MonoBehaviour
     public GameObject[] purchase;
     public int purchaseNum;
 
+    // 씬 오픈시 진열장 오픈
+    public void Start()
+    {
+        for (int i = 0; i < GameManager.instance.openStandNum; i++)
+        {
+            purchase[i].SetActive(false);
+        }
+    }
+
     // 진열장 구매 UI 오픈
     public void PurchaseOpen(int buttonIndex)
     {
@@ -35,6 +44,7 @@ public class StandPurchase : MonoBehaviour
             purchaseStand.SetActive(false);
             purchase[purchaseNum].SetActive(false);
             Debug.Log((purchaseNum + 2) + "번 진열장 해금");
+            GameManager.instance.openStandNum++;
         }
         else
         {
