@@ -5073,7 +5073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tanghuluLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   tanghuluObjects: []
   customer: {fileID: 0}
   isCustomer: 0

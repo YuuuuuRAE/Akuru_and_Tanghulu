@@ -56,8 +56,7 @@ public class Counter : MonoBehaviour
 
         // 손님 계산 관련
         if (isCustomer)
-        {
-            // Customer 오브젝트의 이름에서 인덱스 추출
+        { // Customer 오브젝트의 이름에서 인덱스 추출
             string customerName = customer.name;
             int customerIndex = int.Parse(customerName.Substring(customerName.IndexOf('(') + 1, 1));
 
@@ -83,10 +82,10 @@ public class Counter : MonoBehaviour
                     isCustomer = false;
                 }
                 // 판매수 1씩 증가
-                //salesCount[customerIndex - 1] += 1;
+                salesCount[customerIndex - 1] += 1;
 
-                // 판매수 100씩 증가 (테스트)
-                salesCount[customerIndex - 1] += 100;
+                // 판매된 탕후루의 개수만큼 감소
+                GameManager.instance.standsNumList[tanghuluComponent.index]--;
 
                 // 계산이 끝난 후 루비 드랍
                 isRuby = true;
@@ -128,6 +127,7 @@ public class Counter : MonoBehaviour
                     // 랜덤 Tanghulu 오브젝트 비활성화
                     randomTanghuluComponent.gameObject.SetActive(false);
                     isCustomer = false;
+                    GameManager.instance.standsNumList[randomTanghuluComponent.index]--;
                 }
                 Debug.Log("진열장에 원하는 탕후루가 없습니다. 랜덤한 탕후루를 가져왔습니다.");
             }
@@ -140,7 +140,7 @@ public class Counter : MonoBehaviour
             // 진행 바의 최대값 설정
             progress.maxValue = payDelay;
         }
-
+    
 
         // 계산 시간 동기화
         if (payDelay > 0)
