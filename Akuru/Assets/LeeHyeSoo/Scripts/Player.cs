@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public PotInventory potInventory; // 냄비
 
     [Header("랜덤과일 인덱스 번호")]
-    public int i;
+    public int index;
 
     UnlockFreezer unlockFreezer;
     public bool isAkuruWorking;
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
         akuruMakingTime = 0;
         isMaking = false;
         isAkuruWorking = false;
-        i = 0;
+        index = 0;
 
     }
 
@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         else if(isMaking && !potInventory.isPotFull)
         {
 
-            if (GameManager.instance.fruitNumList[i] > 0) // 선택된 과일의 수량이 있으면
+            if (GameManager.instance.fruitNumList[index] > 0) // 선택된 과일의 수량이 있으면
             {
                 AkuruMakingTangfuru();
             }
@@ -73,32 +73,49 @@ public class Player : MonoBehaviour
     //랜덤 과일 인덱스 선택
     void RandomSelectTangfuru() 
     {
-        //냉장고 해금도로 탕후루 랜덤 범위 조절
         int fruitNum = 0;
-        for (int i = 0; i < fruits.Count; i++)
+        int nullFirstFruit = 0;
+        for (int i = 0 ; i < GameManager.instance.fruit_FirstMaking.Count ; i++)//만저손질 버튼 검사
         {
-            if (unlockFreezer.lockFreezer[i] == false)
+            if(GameManager.instance.fruit_FirstMaking[i] == true)
             {
-                fruitNum = i + 1;
-                break;
+                index = i;
             }
-            else if (unlockFreezer.lockFreezer[3] == true)
-            {
-                fruitNum = 3 + 1;
-                break;
-            }
+            else { nullFirstFruit++; } //먼저손질이 선택되지 않음
+
+            
         }
 
+        //냉장고 해금도로 탕후루 랜덤 범위 조절
+        if (nullFirstFruit >= 5)//먼저 손질이 선택되지 않았다면
+        {
+            for (int i = 0; i < fruits.Count; i++)
+            {
+                if (unlockFreezer.lockFreezer[i] == false)
+                {
+                    fruitNum = i + 1;
+                    break;
+                }
+                else if (unlockFreezer.lockFreezer[3] == true)
+                {
+                    fruitNum = 3 + 1;
+                    break;
+                }
+            }
 
-        //랜덤한 과일선택
-        if (fruitNum == 0)
-        {
-            i = 0;
+            //랜덤한 과일선택
+            if (fruitNum == 0)
+            {
+                index = 0;
+            }
+            else
+            {
+                index = Random.Range(0, fruitNum);
+            }
         }
-        else
-        {
-            i = Random.Range(0, fruitNum);
-        }
+        
+
+        
 
 
     }
@@ -107,14 +124,14 @@ public class Player : MonoBehaviour
         isAkuruWorking = true;
         akuruMakingTime += Time.deltaTime;
         //timeText.text = Mathf.FloorToInt(akuruMakingTime).ToString() + " S";
-        akuruSlider.maxValue = fruits[i].making_time;
+        akuruSlider.maxValue = fruits[index].making_time;
         akuruSlider.value = akuruMakingTime;
         anim.SetBool("isMakingTfr", true);
 
-        if (akuruMakingTime >= fruits[i].making_time)
+        if (akuruMakingTime >= fruits[index].making_time)
         {
             GoToPot();
-            GameManager.instance.fruitNumList[i] -= 1;
+            GameManager.instance.fruitNumList[index] -= 1;
             akuruMakingTime = 0;
             isMaking = false;
             isAkuruWorking = false;
@@ -126,7 +143,7 @@ public class Player : MonoBehaviour
     {
         if (!potInventory.isPotFull) //냄비인벤토리가 차지 않았다면
         {
-            potInventory.AddFruit(fruits[i]);
+            potInventory.AddFruit(fruits[index]);
             //만들어 둔 냄비인벤토리에 과일을 넣어 준다 
         }
         

@@ -143,8 +143,8 @@ public class TangfuruGoToFreezer : MonoBehaviour
                                     if (image.sprite.name == player.fruits[k].tangfuruImage.name && player.fruits[k].fruitNum == i) //이미지 이름과 과일이름이 같으면 && 냉장고 인덱스와 과일 인덱스가 같으면
                                     {
                                         freezeTangfuru.FullFreezer(i); //해당 굳히소 찼음으로 전환
-                                        freezeTangfuru.tangfuruNumInFreezerNow[i]++;
-
+                                        //freezeTangfuru.tangfuruNumInFreezerNow[i]++;
+                                        GameManager.instance.tangfuruNumList[i] += 1;
 
                                         //player.fruits[k].rqQuantityNow++;
                                         GameManager.instance.tangfuruNowNum_Rcp[k] += 1;
