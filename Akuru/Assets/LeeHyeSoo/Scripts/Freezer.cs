@@ -11,13 +11,9 @@ public class Freezer : MonoBehaviour
 
     public Text freezertangfuruNum;
     
-
-    //[Header("≥√¿Â∞Ì æ»")]
-    //public List<Fruit> inFreezer;
-
     FreezeTangfuru freezeTangfuru;
 
-    int index; //≥√¿Â∞Ì ¿Œµ¶Ω∫
+    public int index; //≥√¿Â∞Ì ¿Œµ¶Ω∫
 
     private void Awake()
     {
@@ -27,13 +23,7 @@ public class Freezer : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < 5; i++)
-        {
-            if (freezerNum.name == "FullFreezer(" + i + ")")
-            {
-                index = i;
-            }
-        }
+        
         
     }
 
@@ -45,13 +35,10 @@ public class Freezer : MonoBehaviour
     public void ClickFreezer_GoToSalse()
     {
         
-
-
         if (GameManager.instance.tangfuruNumList[index] > 0)
         {
 
-            freezeTangfuru.tangfuruNumInFreezerNow[index] -= 1;
-
+            GameManager.instance.tangfuruNumList[index] -= 1;
         }
     }
 }
