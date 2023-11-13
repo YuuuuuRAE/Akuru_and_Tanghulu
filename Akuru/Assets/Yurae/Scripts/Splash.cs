@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Splash : MonoBehaviour
 {
+    public GameObject SplashImage;
     // Start is called before the first frame update
     void Start()
     {

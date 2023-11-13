@@ -46,9 +46,9 @@ public class TanghuluSpawner : MonoBehaviour
     public void AddLists()
     {
         // 만약 두 리스트의 길이가 같을경우 실행 (버그 체크)
-        if (GameManager.instance.tangfuruNumList.Count == GameManager.instance.standsNumList.Length)
+        if (GameManager.instance.tangfuruNumList.Length == GameManager.instance.standsNumList.Length)
         {
-            for (int i = 0; i < GameManager.instance.tangfuruNumList.Count; i++)
+            for (int i = 0; i < GameManager.instance.tangfuruNumList.Length; i++)
             {
                 // 진열해야하는 탕후루 받아오기
                 GameManager.instance.standsNumList[i] += GameManager.instance.tangfuruNumList[i];
