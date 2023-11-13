@@ -30,7 +30,7 @@ public class Counter : MonoBehaviour
     public float[] salesCount;
 
     // 가속시간
-    public float acceleration = 1.5f;
+    public float acceleration = 3f;
 
     // 루비 드롭관련
     public GameObject rubyPrefab;
@@ -56,8 +56,7 @@ public class Counter : MonoBehaviour
 
         // 손님 계산 관련
         if (isCustomer)
-        {
-            // Customer 오브젝트의 이름에서 인덱스 추출
+        { // Customer 오브젝트의 이름에서 인덱스 추출
             string customerName = customer.name;
             int customerIndex = int.Parse(customerName.Substring(customerName.IndexOf('(') + 1, 1));
 
@@ -83,10 +82,10 @@ public class Counter : MonoBehaviour
                     isCustomer = false;
                 }
                 // 판매수 1씩 증가
-                //salesCount[customerIndex - 1] += 1;
+                salesCount[customerIndex - 1] += 1;
 
-                // 판매수 100씩 증가 (테스트)
-                salesCount[customerIndex - 1] += 100;
+                // 판매된 탕후루의 개수만큼 감소
+                GameManager.instance.standsNumList[tanghuluComponent.index]--;
 
                 // 계산이 끝난 후 루비 드랍
                 isRuby = true;
@@ -108,7 +107,7 @@ public class Counter : MonoBehaviour
                 {
                     likability = 3;
                 }
-
+                // 루비 드롭률 셋팅
                 dropTable = GameObject.Find("Customer List Manager");
                 dropRate = dropTable.GetComponent<CustomerList>().dropValues[customerIndex - 1][likability];
                 Debug.Log("아쿠루가 원하는 탕후루를 가져왔습니다.");
@@ -128,6 +127,7 @@ public class Counter : MonoBehaviour
                     // 랜덤 Tanghulu 오브젝트 비활성화
                     randomTanghuluComponent.gameObject.SetActive(false);
                     isCustomer = false;
+                    GameManager.instance.standsNumList[randomTanghuluComponent.index]--;
                 }
                 Debug.Log("진열장에 원하는 탕후루가 없습니다. 랜덤한 탕후루를 가져왔습니다.");
             }
@@ -140,13 +140,14 @@ public class Counter : MonoBehaviour
             // 진행 바의 최대값 설정
             progress.maxValue = payDelay;
         }
-
+    
 
         // 계산 시간 동기화
         if (payDelay > 0)
         {
             payDelay -= Time.deltaTime;
             progress.value = payDelay;
+            progress.gameObject.SetActive(true);
         }
 
         //계산이 끝날 시
@@ -171,7 +172,7 @@ public class Counter : MonoBehaviour
                 }
                 isRuby = false;
             }
-
+            progress.gameObject.SetActive(false);
             Debug.Log("코인 추가 : " + price + "코인");
         }
     }

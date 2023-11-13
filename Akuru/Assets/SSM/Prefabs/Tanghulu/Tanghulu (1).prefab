@@ -98,4 +98,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 200
-  payDelay: 3
+  payDelay: 21
