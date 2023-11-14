@@ -101,7 +101,7 @@ public class CustomerList : MonoBehaviour
             case 1:
                 customerName.text = "청포뿌";
 
-                if (GameManager.instance.CurrentLevel >= 2)
+                if (GameManager.instance.lockFreezer[0] == true)
                 {
                     customerInst.text = "청포도 탕후루를 좋아하는 아쿠루.\n재미있는 몸짓으로 주변을 환하게 밝힌다.";
                     customerImg.GetComponent<Image>().sprite = customersSprite[1];
@@ -115,7 +115,7 @@ public class CustomerList : MonoBehaviour
                 break;
             case 2:
                 customerName.text = "귤랑";
-                if (GameManager.instance.CurrentLevel >= 3)
+                if (GameManager.instance.lockFreezer[1] == true)
                 {
                     customerInst.text = "귤 탕후루를 좋아하는 아쿠루.\n호기심이 많아 이것저것 건드리다 자주 다친다.";
                     customerImg.GetComponent<Image>().sprite = customersSprite[3];
@@ -129,7 +129,7 @@ public class CustomerList : MonoBehaviour
                 break;
             case 3:
                 customerName.text = "파인토";
-                if (GameManager.instance.CurrentLevel >= 4)
+                if (GameManager.instance.lockFreezer[2] == true)
                 {
                     customerInst.text = "파인애플 탕후루를 좋아하는 아쿠루.\n여기저기 돌아다니는 것을 좋아한다.";
                     customerImg.GetComponent<Image>().sprite = customersSprite[5];
@@ -143,7 +143,7 @@ public class CustomerList : MonoBehaviour
                 break;
             case 4:
                 customerName.text = "블루포";
-                if (GameManager.instance.CurrentLevel >= 5)
+                if (GameManager.instance.lockFreezer[3] == true)
                 {
                     customerInst.text = "블루베리 탕후루를 좋아하는 아쿠루.\n폴짝 폴짝 뛰어다니기를 좋아한다.";
                     customerImg.GetComponent<Image>().sprite = customersSprite[7];

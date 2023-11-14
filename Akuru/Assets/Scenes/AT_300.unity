@@ -3492,7 +3492,8 @@ MonoBehaviour:
   - {fileID: 8921578362088013243, guid: 7c8eba8ea2d928742a9b63593c5c3aff, type: 3}
   poolSize: 10
   spawnRateMin: 5
-  spawnRateMax: 10
+  spawnRateMax: 5
+  customerRange: 0
 --- !u!1 &966445549
 GameObject:
   m_ObjectHideFlags: 0
@@ -4528,7 +4529,7 @@ Transform:
   m_GameObject: {fileID: 1357865529}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.58, z: 0}
+  m_LocalPosition: {x: 0, y: -0.37, z: 0}
   m_LocalScale: {x: 6, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -154,6 +154,7 @@ public class Counter : MonoBehaviour
         if (payDelay < 0)
         {
             customer.GetComponent<Customer>().customerRB.velocity = new Vector3(1, 0, 0);
+            anim.SetBool("Success", false);
             progress.value = 0;
             payDelay = 0;
             GameManager.instance.currentCoin += price;
