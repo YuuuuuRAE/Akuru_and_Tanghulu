@@ -10,62 +10,40 @@ public class TanghuluSpawner : MonoBehaviour
     // 현재 진열장에 몇 개가 있는지 체크
     public int[] standIndex;
 
+    public int standCount;
+    public int remainder;
+
     public StandsController StandsController;
 
     public void Start()
     {
         StandsController = FindObjectOfType<StandsController>();
 
-        AddLists();
+        standCount = 1;
 
-        PurchaseStand();
+        InstantiateTanghulu();
     }
 
-    public void PurchaseStand()
+    public void InstantiateTanghulu()
     {
-        // 열려 있는 진열장의 개수만큼 반복
-        for (int standNum = 0; standNum < GameManager.instance.openStandNum + 1; standNum++)
+        int standNum = 0;
+
+        for (int tanghuluNum = 0; tanghuluNum < 5; tanghuluNum++)
         {
-            // 모든 탕후루 종류에 대해 반복
-            for (int tanghuluNum = 0; tanghuluNum < 5; tanghuluNum++)
+            int tanghuluCount = GameManager.instance.standsNumList[tanghuluNum];
+
+            for (int i = 0; i < tanghuluCount; i++)
             {
-                // 만약 해당 탕후루의 개수가 3이상이면
-                if (GameManager.instance.standsNumList[tanghuluNum] >= 3)
+                remainder = standCount % 3;
+
+                StandsController.stands[standNum].SpawnTanghuluGameObjects(tanghulus[tanghuluNum], remainder);
+                standCount++;
+
+                if (remainder == 0)
                 {
-                    // 각 진열장 중에 진열된 탕후루가 0개인 곳을 찾음
-                    if (standIndex[standNum] == 0)
-                    {
-                        // 탕후루를 생성하고 진열장에 추가
-                        InstantiateTanghulu(standNum, tanghuluNum);
-                    }
+                    standNum += 1;
                 }
             }
         }
-    }
-
-    public void AddLists()
-    {
-        // 만약 두 리스트의 길이가 같을경우 실행 (버그 체크)
-        if (GameManager.instance.tangfuruNumList.Length == GameManager.instance.standsNumList.Length)
-        {
-            for (int i = 0; i < GameManager.instance.tangfuruNumList.Length; i++)
-            {
-                // 진열해야하는 탕후루 받아오기
-                GameManager.instance.standsNumList[i] += GameManager.instance.tangfuruNumList[i];
-                // 굳히소에 있는 탕후루 개수 초기화
-                GameManager.instance.tangfuruNumList[i] = 0;
-            }
-        }
-        else
-        {
-            Debug.Log("두 리스트의 길이가 다릅니다. 더하는 작업을 수행할 수 없습니다.");
-        }
-    }
-
-    private void InstantiateTanghulu(int standNum, int tanghuluNum)
-    {
-        // 탕후루를 3개씩 생성하고 진열장에 추가
-        StandsController.stands[standNum].SpawnTanghuluGameObjects(tanghulus[tanghuluNum], 3);
-        standIndex[standNum] += 1;
     }
 }
