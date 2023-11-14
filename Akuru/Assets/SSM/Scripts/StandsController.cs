@@ -10,9 +10,4 @@ public class StandsController : MonoBehaviour
     {
         stands = GetComponentsInChildren<Stand>();
     }
-
-    void Update()
-    {
-        
-    }
 }

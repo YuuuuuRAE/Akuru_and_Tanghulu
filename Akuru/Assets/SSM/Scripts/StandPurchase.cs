@@ -26,7 +26,7 @@ public class StandPurchase : MonoBehaviour
         {
             purchaseNum = buttonIndex;
             purchaseStand.SetActive(true);
-            Debug.Log((purchaseNum + 2) + "번 진열장 선택");
+            Debug.Log((purchaseNum + 3) + "번 진열장 선택");
         }
         else
         {
@@ -43,7 +43,7 @@ public class StandPurchase : MonoBehaviour
             Debug.Log("남은 코인 : " + GameManager.instance.currentCoin);
             purchaseStand.SetActive(false);
             purchase[purchaseNum].SetActive(false);
-            Debug.Log((purchaseNum + 2) + "번 진열장 해금");
+            Debug.Log((purchaseNum + 3) + "번 진열장 해금");
             GameManager.instance.openStandNum++;
         }
         else

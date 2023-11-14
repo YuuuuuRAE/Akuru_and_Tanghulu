@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public int[] tangfuruNumList; // 탕후루 갯수 / 제작소에서 만든 탕후루 이곳에 쌓이도록
     public int[] standsNumList; // 진열해야하는 탕후루 종류별 개수
     public int openStandNum; // 해금된 진열장 갯수
+    public bool isFullStand; // 진열대가 가득 차있는지 체크
 
  
 
@@ -99,6 +100,21 @@ public class GameManager : MonoBehaviour
            MaxXp += IncrementXp;
         }
 
+        int sum = 0;
+
+        for (int i = 0; i < standsNumList.Length; i++)
+        {
+            sum += standsNumList[i];
+        }
+
+        if (sum >= (3 * (openStandNum + 2)))
+        {
+            isFullStand = true;
+        }
+        else
+        {
+            isFullStand = false;
+        }
     }
 
 
