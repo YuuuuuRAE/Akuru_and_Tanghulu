@@ -51,8 +51,10 @@ MonoBehaviour:
   tangfuruAllNum_Rcp: 0000000000000000000000000000000000000000
   fruitNumList: 0000000000000000000000000000000000000000
   tangfuruNumList: 0000000000000000000000000000000000000000
-  standsNumList: 
+  standsNumList: 0000000000000000000000000000000000000000
   openStandNum: 0
+  isFullStand: 0
+  lockFreezer: 00000000
   MaxFruitType: 1
   isUnlock: 0
   CurrentLevel: 1
