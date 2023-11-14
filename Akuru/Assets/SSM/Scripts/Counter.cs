@@ -116,7 +116,6 @@ public class Counter : MonoBehaviour
                 // 루비 드롭률 셋팅
                 dropTable = GameObject.Find("Customer List Manager");
                 dropRate = dropTable.GetComponent<CustomerList>().dropValues[customerIndex - 1][likability];
-                Debug.Log("아쿠루가 원하는 탕후루를 가져왔습니다.");
             }
             else if (tanghuluObjects.Count > 0)
             {
@@ -135,13 +134,8 @@ public class Counter : MonoBehaviour
                     isCustomer = false;
                     GameManager.instance.standsNumList[randomTanghuluComponent.index]--;
                 }
-                Debug.Log("진열장에 원하는 탕후루가 없습니다. 랜덤한 탕후루를 가져왔습니다.");
             }
-            else
-            {
-                // 진열장에 아무것도 없는 경우
-                Debug.Log("진열장에 아무것도 없습니다.");
-            }
+
 
             // 진행 바의 최대값 설정
             progress.maxValue = payDelay;
@@ -179,7 +173,6 @@ public class Counter : MonoBehaviour
                 isRuby = false;
             }
             progress.gameObject.SetActive(false);
-            Debug.Log("코인 추가 : " + price + "코인");
         }
     }
 
@@ -199,12 +192,6 @@ public class Counter : MonoBehaviour
         if (payDelay > 0)
         {
             payDelay -= acceleration;
-
-            Debug.Log("계산시간 " + acceleration + "초 감소");
-        }
-        else
-        {
-            Debug.Log("계산 중이 아닙니다.");
         }
     }
 

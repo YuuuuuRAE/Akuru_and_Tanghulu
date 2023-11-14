@@ -45,7 +45,6 @@ public class Ruby : MonoBehaviour
     public void OnMouseDown()
     {
         GameManager.instance.currentRuby += 100;
-        Debug.Log("루비 추가 : " + 100 + "루비");
         Destroy(gameObject);
 
         // 수입 텍스트 출력

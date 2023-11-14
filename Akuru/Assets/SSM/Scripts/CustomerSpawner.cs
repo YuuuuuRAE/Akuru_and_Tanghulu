@@ -54,7 +54,7 @@ public class CustomerSpawner : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            int customerType = Random.Range(0, customerPrefab.Length); // 랜덤한 손님 타입 선택
+            int customerType = Random.Range(0, GameManager.instance.CurrentLevel); // 랜덤한 손님 타입 선택
             GameObject customer = Instantiate(customerPrefab[customerType], transform.position, transform.rotation);
             customer.SetActive(false); // 초기에는 비활성화 상태로 설정
             customerPool.Add(customer);
