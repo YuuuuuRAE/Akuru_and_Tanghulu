@@ -91,12 +91,12 @@ public class Player : MonoBehaviour
         {
             for (int i = 0; i < fruits.Count; i++)
             {
-                if (unlockFreezer.lockFreezer[i] == false)
+                if (GameManager.instance.lockFreezer[i] == false)
                 {
                     fruitNum = i + 1;
                     break;
                 }
-                else if (unlockFreezer.lockFreezer[3] == true)
+                else if (GameManager.instance.lockFreezer[3] == true)
                 {
                     fruitNum = 3 + 1;
                     break;

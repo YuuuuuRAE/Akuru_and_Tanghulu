@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class UnlockFreezer : MonoBehaviour
 {
     int lockFreezerNum = 4; //잠겨있는 굳히소 개수
-    public List<bool> lockFreezer;
+    //public List<bool> lockFreezer;
     GameObject clickButton;
     public GameObject FreezerUnlockPopUp;
 
@@ -29,32 +29,33 @@ public class UnlockFreezer : MonoBehaviour
         playAudio = FindAnyObjectByType<PlayAudio>();
 
         FreezerUnlockPopUp.SetActive(false);
+        SetUnlockFreezer();
     }
 
-    void FreezerPopUpText() //코인소모 추가((수정하기))
+    void FreezerPopUpText() 
     {
 
         for (int i = 0; i < lockFreezerNum; i++)
         {
-            if (lockFreezer[0] == false)
+            if (GameManager.instance.lockFreezer[0] == false)
             {
                 payCoin = 100;
                 freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
-            else if(lockFreezer[1] == false)
+            else if(GameManager.instance.lockFreezer[1] == false)
             {
                 payCoin = 500;
                 freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
-            else if (lockFreezer[2] == false)
+            else if (GameManager.instance.lockFreezer[2] == false)
             {
                 payCoin = 1000;
                 freezerPopUpText.text = payCoin.ToString() + "   ";
                 break;
             }
-            else if (lockFreezer[3] == false)
+            else if (GameManager.instance.lockFreezer[3] == false)
             {
                 payCoin = 3000;
                 freezerPopUpText.text = payCoin.ToString() + "   ";
@@ -76,7 +77,7 @@ public class UnlockFreezer : MonoBehaviour
         {
             if (clickButton.name == "UnlockButton (" + i + ")")
             {
-                if (i == 0 || lockFreezer[i - 1] == true)
+                if (i == 0 || GameManager.instance.lockFreezer[i - 1] == true)
                 {
                     FreezerPopUpText();
                     FreezerUnlockPopUp.SetActive(true);
@@ -94,12 +95,12 @@ public class UnlockFreezer : MonoBehaviour
         {
             if (clickButton.name == "UnlockButton (" + i + ")")
             {
-                if (i == 0 || lockFreezer[i - 1] == true)
+                if (i == 0 || GameManager.instance.lockFreezer[i - 1] == true)
                 {
                     if(GameManager.instance.currentCoin >= payCoin)
                     {
                         clickButton.gameObject.SetActive(false);
-                        lockFreezer[i] = true;
+                        GameManager.instance.lockFreezer[i] = true;
 
                         GameManager.instance.currentCoin -= payCoin;
                         playAudio.PlayConfirm();
@@ -107,6 +108,21 @@ public class UnlockFreezer : MonoBehaviour
                         FreezerUnlockPopUp.SetActive(false);
                     }
                     
+                }
+                
+            }
+        }
+    }
+
+    void SetUnlockFreezer()
+    {
+        for(int i = 0;i < lockFreezerNum;i++)
+        {
+            if(GameManager.instance.lockFreezer[i] == true)
+            {
+                if(GameObject.Find(name: "UnlockButton (" + i + ")").activeSelf == true)
+                {
+                    GameObject.Find(name: "UnlockButton (" + i + ")").SetActive(false);
                 }
                 
             }

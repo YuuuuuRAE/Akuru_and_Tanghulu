@@ -29,7 +29,9 @@ public class GameManager : MonoBehaviour
     public int openStandNum; // 해금된 진열장 갯수
     public bool isFullStand; // 진열대가 가득 차있는지 체크
 
- 
+    [Header("냉장고 해금")]
+    public List<bool> lockFreezer;
+
 
     [Header("생산소 관련")]
     public int MaxFruitType; //최대 과일 타입

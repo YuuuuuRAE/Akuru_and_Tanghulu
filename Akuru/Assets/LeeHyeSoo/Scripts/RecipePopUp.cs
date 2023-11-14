@@ -34,7 +34,7 @@ public class RecipePopUp : MonoBehaviour
     {
         for(int i = 0; i < tangfuruRcpListButton.Count; i++)
         {
-            if (unlockFreezer.lockFreezer[i] == true)
+            if (GameManager.instance.lockFreezer[i] == true)
             {
                 tangfuruRcpListButton[i].enabled = true;
                 tangfuruRcpListImg[i].sprite = player.fruits[i + 1].tangfuruRcpImage;
