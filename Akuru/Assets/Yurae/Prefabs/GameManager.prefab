@@ -45,10 +45,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iSFirstStart: 0
+  fruit_FirstMaking: 0000000000
+  isSelectFT: 0
   tangfuruNowNum_Rcp: 0000000000000000000000000000000000000000
   tangfuruAllNum_Rcp: 0000000000000000000000000000000000000000
   fruitNumList: 0000000000000000000000000000000000000000
   tangfuruNumList: 0000000000000000000000000000000000000000
+  standsNumList: 
+  openStandNum: 0
   MaxFruitType: 1
   isUnlock: 0
   CurrentLevel: 1
