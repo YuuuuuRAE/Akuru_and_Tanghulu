@@ -44,14 +44,6 @@ public class PopupMessage : MonoBehaviour
 
     private void Update()
     {
-        //터치했을 때 판매대로 하나씩 넘어감
-        //판매대가 가득찼으면 터치했을때 뜨도록 onclick 작성
-
-        // if(GameManager.instance.(판매대 가득참) == true)
-        if (Input.GetKeyDown(KeyCode.Space)) //판매대가 가득찼을때 
-        {
-            IsFreezerFull();
-        }
 
         if (fullMessage.activeSelf == true) //판매대가 가득찼을때 메세지는 3초뒤에 사라짐
         {
@@ -81,7 +73,7 @@ public class PopupMessage : MonoBehaviour
         
         while (fadeCount > 0)
         {
-            fadeCount -= 0.01f;
+            fadeCount -= 0.05f;
             yield return new WaitForSeconds(0.01f); // 0.01초마다 실행 
             fullMessageImg.color = new Color(1, 1, 1, fadeCount);
             fullMessageButton.color = new Color(1, 1, 1, fadeCount);
@@ -90,9 +82,10 @@ public class PopupMessage : MonoBehaviour
 
     public void IsFreezerFull() //판매대가 가득차면
     {
+        fullMessage.SetActive(true);
         fullMessageImg.color = new Color(1, 1, 1, 1);
         fullMessageButton.color = new Color(1, 1, 1, 1);
-        fullMessage.SetActive(true);
+        
 
     }
     

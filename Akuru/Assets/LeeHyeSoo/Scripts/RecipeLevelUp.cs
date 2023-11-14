@@ -59,7 +59,6 @@ public class RecipeLevelUp : MonoBehaviour
     public void ClickWhatRecipe()
     {
         clickObject = EventSystem.current.currentSelectedGameObject;
-        Debug.Log(clickObject);
         for (int i = 0; i < fruits.Count; i++)
         {
             if (clickObject.name == "Button (" + i + ")")
