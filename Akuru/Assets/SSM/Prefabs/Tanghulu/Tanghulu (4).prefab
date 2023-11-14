@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959b66b3d1ede5843877de094a1e5bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 500
+  price: 20
   payDelay: 30
+  fruit: {fileID: 11400000, guid: c0f4bf41a8da5b5468806cf1ac184ee5, type: 2}
   index: 3

@@ -9,17 +9,18 @@ public class CustomerList : MonoBehaviour
     public GameObject counter;
 
     // 손님 리스트
-    public GameObject[] customers;
+    public GameObject customerImg;
     private int currentCustomersNum;
     public Text customerName;
     public Text customerInst;
+    public Sprite[] customersSprite;
 
     // 호감도 관련
     public float likability;
     public Text currentDrop;
     public Text nextDrop;
 
-    
+
     // 선물 드롭 확률 배열
     public float[][] dropValues = {
         new float[] { 1.0f, 2.0f, 4.0f, 6.0f },
@@ -28,10 +29,11 @@ public class CustomerList : MonoBehaviour
         new float[] { 1.0f, 3.0f, 5.0f, 9.0f },
         new float[] { 1.0f, 3.0f, 5.0f, 10.0f }
     };
-    
+
     public void Start()
     {
         counter = GameObject.Find("Counter");
+
     }
 
     // 손님 리스트 UI 관련
@@ -56,7 +58,7 @@ public class CustomerList : MonoBehaviour
 
         if (currentCustomersNum < 0)
         {
-            currentCustomersNum = customers.Length - 1;
+            currentCustomersNum = 4;
         }
 
         if (counter != null)
@@ -72,7 +74,7 @@ public class CustomerList : MonoBehaviour
     {
         currentCustomersNum++;
 
-        if (currentCustomersNum >= customers.Length)
+        if (currentCustomersNum >= 5)
         {
             currentCustomersNum = 0;
         }
@@ -88,43 +90,69 @@ public class CustomerList : MonoBehaviour
     // 손님 리스트 정보 전환
     public void ListChange()
     {
-        for (int i = 0; i < customers.Length; i++)
-        {
-            if (i == currentCustomersNum)
-            {
-                customers[i].SetActive(true);
-            }
-            else
-            {
-                customers[i].SetActive(false);
-            }
-        }
-
         switch (currentCustomersNum)
         {
             case 0:
                 customerName.text = "딸기콩";
                 customerInst.text = "딸기 탕후루를 좋아하는 아쿠루\n사랑스러운 미소를 지으며 달콤함을 느끼는 중";
+                customerImg.GetComponent<Image>().sprite = customersSprite[0];
                 SetDropValues(0);
                 break;
             case 1:
                 customerName.text = "청포뿌";
-                customerInst.text = "청포도 탕후루를 좋아하는 아쿠루.\n재미있는 몸짓으로 주변을 환하게 밝힌다.";
+
+                if (GameManager.instance.lockFreezer[0] == true)
+                {
+                    customerInst.text = "청포도 탕후루를 좋아하는 아쿠루.\n재미있는 몸짓으로 주변을 환하게 밝힌다.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[1];
+                }
+                else
+                {
+                    customerInst.text = "청포도 탕후루를 진열하면 찾아오는 아쿠루.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[2];
+                }
                 SetDropValues(1);
                 break;
             case 2:
                 customerName.text = "귤랑";
-                customerInst.text = "귤 탕후루를 좋아하는 아쿠루.\n호기심이 많아 이것저것 건드리다 자주 다친다.";
+                if (GameManager.instance.lockFreezer[1] == true)
+                {
+                    customerInst.text = "귤 탕후루를 좋아하는 아쿠루.\n호기심이 많아 이것저것 건드리다 자주 다친다.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[3];
+                }
+                else
+                {
+                    customerInst.text = "귤 탕후루를 진열하면 찾아오는 아쿠루.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[4];
+                }
                 SetDropValues(2);
                 break;
             case 3:
                 customerName.text = "파인토";
-                customerInst.text = "파인애플 탕후루를 좋아하는 아쿠루.\n여기저기 돌아다니는 것을 좋아한다.";
+                if (GameManager.instance.lockFreezer[2] == true)
+                {
+                    customerInst.text = "파인애플 탕후루를 좋아하는 아쿠루.\n여기저기 돌아다니는 것을 좋아한다.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[5];
+                }
+                else
+                {
+                    customerInst.text = "파인애플 탕후루를 진열하면 찾아오는 아쿠루.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[6];
+                }
                 SetDropValues(3);
                 break;
             case 4:
                 customerName.text = "블루포";
-                customerInst.text = "블루베리 탕후루를 좋아하는 아쿠루.\n폴짝 폴짝 뛰어다니기를 좋아한다.";
+                if (GameManager.instance.lockFreezer[3] == true)
+                {
+                    customerInst.text = "블루베리 탕후루를 좋아하는 아쿠루.\n폴짝 폴짝 뛰어다니기를 좋아한다.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[7];
+                }
+                else
+                {
+                    customerInst.text = "블루베리 탕후루를 진열하면 찾아오는 아쿠루.";
+                    customerImg.GetComponent<Image>().sprite = customersSprite[8];
+                }
                 SetDropValues(4);
                 break;
             default:

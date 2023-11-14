@@ -11,6 +11,8 @@ public class CustomerSpawner : MonoBehaviour
     public float spawnRateMin;
     public float spawnRateMax;
 
+    public int customerRange;
+
     private List<GameObject> customerPool;
     private float spawnRate;
     private float timeAfterSpawn;
@@ -21,29 +23,44 @@ public class CustomerSpawner : MonoBehaviour
         timeAfterSpawn = 0f;
         spawnRate = Random.Range(spawnRateMin, spawnRateMax);
 
+        for (int i = 0; i < GameManager.instance.lockFreezer.Count; i++)
+        {
+            if (GameManager.instance.lockFreezer[i])
+            {
+                customerRange++;
+            }
+        }
+
         // 오브젝트 풀 초기화
         InitializeObjectPool();
     }
 
     void Update()
     {
-        timeAfterSpawn += Time.deltaTime;
+        // 현재 활성화된 손님의 수를 확인
+        int activeCustomerCount = GetActiveCustomerCount();
 
-        if (timeAfterSpawn >= spawnRate)
+        // 활성화된 손님이 4개 이하일 때만 생성 로직 수행
+        if (activeCustomerCount <= 3)
         {
-            timeAfterSpawn = 0f;
+            timeAfterSpawn += Time.deltaTime;
 
-            // 오브젝트 풀에서 다음 순서의 손님 가져오기
-            GameObject customer = GetNextCustomer();
-            if (customer != null)
+            if (timeAfterSpawn >= spawnRate)
             {
-                // 활성화 상태로 만들고 위치, 회전 설정
-                customer.SetActive(true);
-                customer.transform.position = transform.position;
-                customer.transform.rotation = transform.rotation;
-            }
+                timeAfterSpawn = 0f;
 
-            spawnRate = Random.Range(spawnRateMin, spawnRateMax);
+                // 오브젝트 풀에서 다음 순서의 손님 가져오기
+                GameObject customer = GetNextCustomer();
+                if (customer != null)
+                {
+                    // 활성화 상태로 만들고 위치, 회전 설정
+                    customer.SetActive(true);
+                    customer.transform.position = transform.position;
+                    customer.transform.rotation = transform.rotation;
+                }
+
+                spawnRate = Random.Range(spawnRateMin, spawnRateMax);
+            }
         }
     }
 
@@ -54,7 +71,7 @@ public class CustomerSpawner : MonoBehaviour
 
         for (int i = 0; i < poolSize; i++)
         {
-            int customerType = Random.Range(0, customerPrefab.Length); // 랜덤한 손님 타입 선택
+            int customerType = Random.Range(0, customerRange + 1); // 랜덤한 손님 타입 선택
             GameObject customer = Instantiate(customerPrefab[customerType], transform.position, transform.rotation);
             customer.SetActive(false); // 초기에는 비활성화 상태로 설정
             customerPool.Add(customer);
@@ -73,5 +90,21 @@ public class CustomerSpawner : MonoBehaviour
         currentCustomerIndex = (currentCustomerIndex + 1) % customerPool.Count; // 다음 순서 계산
 
         return customer;
+    }
+
+    // 현재 활성화된 손님의 수를 반환하는 함수
+    int GetActiveCustomerCount()
+    {
+        int count = 0;
+
+        foreach (var customer in customerPool)
+        {
+            if (customer.activeSelf)
+            {
+                count++;
+            }
+        }
+
+        return count;
     }
 }

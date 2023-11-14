@@ -6,7 +6,6 @@ public class Customer : MonoBehaviour
 {
     public float speed;
     public Rigidbody2D customerRB;
-    private Vector2 savedVelocity;
 
     public Animator animator;
 
@@ -38,7 +37,7 @@ public class Customer : MonoBehaviour
     }
 
     // 손님 이동 관련
-    public void OnTriggerStay2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Counter")
         {
@@ -62,7 +61,7 @@ public class Customer : MonoBehaviour
     {
         if (other.tag == "Customer" && !isCounterEnter)
         {
-            Invoke("RestoreVelocity", 2f);
+            Invoke("RestoreVelocity", 0.3f);
         }
     }
 
@@ -75,7 +74,8 @@ public class Customer : MonoBehaviour
     private void CustomerOut()
     {
         customerRB.velocity = new Vector3(speed, 0, 0);
-        Invoke("Exit", 1.5f);
+        animator.SetBool("Success", false);
+        Invoke("Exit", 2f);
     }
 
     private void Exit()
