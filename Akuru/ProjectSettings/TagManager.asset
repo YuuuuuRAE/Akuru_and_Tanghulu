@@ -12,6 +12,7 @@ TagManager:
   - Tangfuru
   - Fruit
   - Freezer
+  - Exit
   layers:
   - Default
   - TransparentFX

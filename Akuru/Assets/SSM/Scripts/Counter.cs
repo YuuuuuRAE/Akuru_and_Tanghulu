@@ -11,6 +11,7 @@ public class Counter : MonoBehaviour
 
     // 카운터에 닿은 손님
     public GameObject customer;
+    public Animator anim;
 
     // 손님이 카운터에 닿았을 경우
     public bool isCustomer;
@@ -63,6 +64,8 @@ public class Counter : MonoBehaviour
             // Customer와 매칭되는 Tanghulu 오브젝트 이름 구성
             string tanghuluName = "Tanghulu (" + customerIndex + ")(Clone)";
 
+            anim = customer.GetComponent<Animator>();
+
             // Tanghulu 오브젝트 찾기
             GameObject tanghulu = tanghuluObjects.Find(obj => obj.name == tanghuluName);
 
@@ -86,6 +89,9 @@ public class Counter : MonoBehaviour
 
                 // 판매된 탕후루의 개수만큼 감소
                 GameManager.instance.standsNumList[tanghuluComponent.index]--;
+
+                
+                anim.SetBool("Success", true);
 
                 // 계산이 끝난 후 루비 드랍
                 isRuby = true;
@@ -153,7 +159,7 @@ public class Counter : MonoBehaviour
         //계산이 끝날 시
         if (payDelay < 0)
         {
-            customer.SetActive(false);
+            customer.GetComponent<Customer>().customerRB.velocity = new Vector3(1, 0, 0);
             progress.value = 0;
             payDelay = 0;
             GameManager.instance.currentCoin += price;
