@@ -61,7 +61,7 @@ public class Customer : MonoBehaviour
     {
         if (other.tag == "Customer" && !isCounterEnter)
         {
-            Invoke("RestoreVelocity", 0.3f);
+            Invoke("RestoreVelocity", 0.1f);
         }
     }
 
