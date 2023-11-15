@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   iSFirstStart: 0
+  AlertLevel: 1
   fruit_FirstMaking: 0000000000
   isSelectFT: 0
   tangfuruNowNum_Rcp: 0000000000000000000000000000000000000000

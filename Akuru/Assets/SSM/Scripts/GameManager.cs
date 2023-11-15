@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     [Header("게임 첫 시작 여부")]
     public bool iSFirstStart;
 
+    [Header("알럿")]
+    public int AlertLevel;
+
     [Header("콘테나 먼저손질")] // true 일 경우 우선 손질 된다 /두개이상 true가 되지 않게 할 것
     public List<bool> fruit_FirstMaking;
     public bool isSelectFT; // 먼저 손질 버튼이 클릭되어 있나?

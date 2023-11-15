@@ -7,8 +7,6 @@ public class Alert : MonoBehaviour
 {
     [SerializeField]
     private Text alertText; //알럿 텍스트
-    [SerializeField]
-    private int currentLV; // 현재 레벨 게임 매니저의 레벨과 비교하여 알럿을 띄우고 텍스트를 변환하기 위함
 
     [SerializeField]
     private float AlertTime; //알럿을 띄울 시간
@@ -21,7 +19,7 @@ public class Alert : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.instance.CurrentLevel > currentLV)
+        if (GameManager.instance.CurrentLevel > GameManager.instance.AlertLevel)
         {
             alertUI.SetActive(true);
             if(GameManager.instance.CurrentLevel <= 5)
@@ -36,7 +34,7 @@ public class Alert : MonoBehaviour
             if(currentTime >= AlertTime)
             {
                 alertUI.SetActive(false);
-                currentLV = GameManager.instance.CurrentLevel;
+                GameManager.instance.AlertLevel = GameManager.instance.CurrentLevel;
                 currentTime = 0;
             }
         }
