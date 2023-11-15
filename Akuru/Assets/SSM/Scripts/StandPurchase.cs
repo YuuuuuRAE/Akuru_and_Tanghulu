@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StandPurchase : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class StandPurchase : MonoBehaviour
 
     // 진열장 추가 창
     public GameObject[] purchase;
+    public Button[] purahseBtns;
     public int purchaseNum;
 
     // 씬 오픈시 진열장 오픈
@@ -17,6 +19,7 @@ public class StandPurchase : MonoBehaviour
         {
             purchase[i].SetActive(false);
         }
+        purahseBtns[GameManager.instance.openStandNum].gameObject.SetActive(true);
     }
 
     // 진열장 구매 UI 오픈
@@ -38,6 +41,8 @@ public class StandPurchase : MonoBehaviour
             purchaseStand.SetActive(false);
             purchase[purchaseNum].SetActive(false);
             GameManager.instance.openStandNum++;
+            if (GameManager.instance.openStandNum <= 5)
+            purahseBtns[GameManager.instance.openStandNum].gameObject.SetActive(true);
         }
     }
 

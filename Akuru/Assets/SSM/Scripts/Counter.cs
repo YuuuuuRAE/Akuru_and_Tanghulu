@@ -16,9 +16,10 @@ public class Counter : MonoBehaviour
     // 손님이 카운터에 닿았을 경우
     public bool isCustomer;
 
-    // 계산시간 관련
+    // 계산 관련
     public float payDelay;
     public Slider progress;
+    public Cashier cashier;
 
     // 탕후루 별 금액 변수
     public float price;
@@ -26,6 +27,11 @@ public class Counter : MonoBehaviour
     // 수입 텍스트
     public GameObject incomeText;
     public Transform calculatorPos;
+
+    public AudioSource audioSource; // AudioSource 변수 추가
+    public AudioClip coinClip; // coin 오디오 클립 추가
+    public AudioClip positiveClip;
+    public AudioClip nomalClip;
 
     // 각 아쿠루 별 원하는 탕후루를 구매한 횟수(호감도)
     public float[] salesCount;
@@ -39,6 +45,11 @@ public class Counter : MonoBehaviour
     public float dropRate;
     public GameObject dropTable;
     public int likability;
+
+    public void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
+    }
 
     public void Update()
     {
@@ -86,12 +97,13 @@ public class Counter : MonoBehaviour
                 }
                 // 판매수 1씩 증가
                 salesCount[customerIndex - 1] += 1;
+                cashier.tanghuluIndex = customerIndex - 1;
 
                 // 판매된 탕후루의 개수만큼 감소
                 GameManager.instance.standsNumList[tanghuluComponent.index]--;
 
-                
                 anim.SetBool("Success", true);
+                PlayPositiveSound();
 
                 // 계산이 끝난 후 루비 드랍
                 isRuby = true;
@@ -133,10 +145,11 @@ public class Counter : MonoBehaviour
                     randomTanghuluComponent.gameObject.SetActive(false);
                     isCustomer = false;
                     GameManager.instance.standsNumList[randomTanghuluComponent.index]--;
+                    cashier.tanghuluIndex = randomTanghuluComponent.index;
+
+                    PlayNomalSound();
                 }
             }
-
-
             // 진행 바의 최대값 설정
             progress.maxValue = payDelay;
         }
@@ -163,6 +176,9 @@ public class Counter : MonoBehaviour
             GameObject income = Instantiate(incomeText);
             income.transform.position = calculatorPos.position;
             income.GetComponent<Income>().income = price;
+
+            // coin 오디오 재생
+            PlayCoinSound();
 
             // 계산이 끝난 후 드랍률에 따라 루비 드롭
             if (isRuby)
@@ -206,5 +222,24 @@ public class Counter : MonoBehaviour
         {
             itemMovement.enabled = true;
         }
+    }
+
+    // 오디오 재생 메서드 추가
+    void PlayCoinSound()
+    {
+        audioSource.clip = coinClip;
+        audioSource.Play();
+    }
+
+    void PlayPositiveSound()
+    {
+        audioSource.clip = positiveClip;
+        audioSource.Play();
+    }
+
+    void PlayNomalSound()
+    {
+        audioSource.clip = nomalClip; // coin 오디오 클립 할당
+        audioSource.Play();
     }
 }

@@ -16,7 +16,7 @@ public class Ruby : MonoBehaviour
     {
         // 아이템 생성 시 모체 주위의 랜덤한 위치를 계산
         Vector3 offset = new Vector3(
-            Random.Range(-dropRange, 0.4f), // 랜덤한 x 좌표 범위
+            Random.Range(-dropRange, dropRange), // 랜덤한 x 좌표 범위
             Random.Range(-dropRange, 0.4f), // 랜덤한 y 좌표 범위
             0
         );

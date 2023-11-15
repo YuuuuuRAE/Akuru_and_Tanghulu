@@ -6,10 +6,15 @@ public class Cashier : MonoBehaviour
 {
     Animator animator;
     public GameObject progressBar;
+    public GameObject saleTanghulu;
+    public Sprite[] sprites;
+    public SpriteRenderer spriteRenderer;
+    public int tanghuluIndex;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        spriteRenderer = saleTanghulu.GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -17,10 +22,13 @@ public class Cashier : MonoBehaviour
         if (progressBar.activeSelf)
         {
             animator.SetBool("Sell", true);
+            saleTanghulu.SetActive(true);
+            spriteRenderer.sprite = sprites[tanghuluIndex];
         }
         else
         {
             animator.SetBool("Sell", false);
+            saleTanghulu.SetActive(false);
         }
     }
 }
