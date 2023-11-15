@@ -32,12 +32,12 @@ public class RecipePopUp : MonoBehaviour
     }
     void UplockRcp()
     {
-        for(int i = 0; i < tangfuruRcpListButton.Count; i++)
+        for(int i = 2; i < 5 + 1; i++)
         {
-            if (GameManager.instance.lockFreezer[i] == true)
+            if (GameManager.instance.CurrentLevel == i) //레벨이 1이면
             {
-                tangfuruRcpListButton[i].enabled = true;
-                tangfuruRcpListImg[i].sprite = player.fruits[i + 1].tangfuruRcpImage;
+                tangfuruRcpListButton[i - 2].enabled = true;
+                tangfuruRcpListImg[i - 2].sprite = player.fruits[i -1].tangfuruRcpImage;
             }
         }
 
