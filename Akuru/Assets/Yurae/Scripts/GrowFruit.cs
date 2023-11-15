@@ -31,6 +31,7 @@ public class GrowFruit : MonoBehaviour
 
     public ProductionPlant productionPlant;
 
+    public GameObject Spark; //다 자랐을 때 나타날 스파크
     //스프라이트의 경우 후에 변하는데 걸리는 시간 변경들을 고려해 각 단계를 나눠놓음
 
     public bool isGrowing = false;
@@ -95,6 +96,7 @@ public class GrowFruit : MonoBehaviour
                 if (index == 3)
                 {
                     index = 0;
+                    Spark.SetActive(true);
                     CurrentImage.GetComponent<Button>().interactable = true; //누를 수 있게 변경
                     isGrowing = false;
                 }
@@ -117,6 +119,8 @@ public class GrowFruit : MonoBehaviour
         {
             isGathering = true;
             CurrentImage.GetComponent<Button>().interactable = false;
+
+            Spark.SetActive(false);
 
             Color color = CurrentImage.color;
             color.a = 0;
