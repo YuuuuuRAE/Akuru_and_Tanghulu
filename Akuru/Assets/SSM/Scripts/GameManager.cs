@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+[SerializeField]
 public class GameManager : MonoBehaviour
 {
     [Header("게임 첫 시작 여부")]
@@ -42,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     [Header("레벨")]
     //현재 레벨
-    public int CurrentLevel = 1;
+    public int CurrentLevel;
     public float MaxXp; // 최대 경험치
     public float CurrentXp; //현재 경험치
     public float IncrementXp; //경험치 증가량
@@ -67,7 +68,6 @@ public class GameManager : MonoBehaviour
     public bool isSound; //효과음 관련
     public bool isVibe; //진동 관련
 
-
     // Singleton Pattern
     public static GameManager instance;
     private void Awake()
@@ -84,14 +84,45 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Start()
+
+    private void Start()
     {
+        DataManager.Instance.LoadGameData();
+    }
 
-
+    private void OnApplicationQuit()
+    {
+        DataManager.Instance.SaveGameData();
     }
 
     void Update()
     {
+        DataManager.Instance.data.iSFirstStart = iSFirstStart;
+        DataManager.Instance.data.AlertLevel = AlertLevel;
+        DataManager.Instance.data.openStandNum = openStandNum;
+        DataManager.Instance.data.isFullStand = isFullStand;
+        DataManager.Instance.data.MaxFruitType = MaxFruitType;
+        DataManager.Instance.data.isUnlock = isUnlock;
+        DataManager.Instance.data.CurrentLevel = CurrentLevel;
+        DataManager.Instance.data.MaxXp = MaxXp;
+        DataManager.Instance.data.CurrentXp = CurrentXp;
+        DataManager.Instance.data.IncrementXp = IncrementXp;
+        DataManager.Instance.data.currentRuby = currentRuby;
+        DataManager.Instance.data.currentCoin = currentCoin;
+        DataManager.Instance.data.SceneName = SceneName;
+        DataManager.Instance.data.BGMname = BGMname;
+        DataManager.Instance.data.isBGM = isBGM;
+        DataManager.Instance.data.isSound = isSound;
+        DataManager.Instance.data.isVibe = isVibe;
+
+        DataManager.Instance.data.fruit_FirstMaking = fruit_FirstMaking;
+        DataManager.Instance.data.isSelectFT = isSelectFT;
+        DataManager.Instance.data.fruitNumList = fruitNumList;
+        DataManager.Instance.data.tangfuruNumList = tangfuruNumList;
+        DataManager.Instance.data.standsNumList = standsNumList;
+        DataManager.Instance.data.tangfuruNowNum_Rcp = tangfuruNowNum_Rcp;
+        DataManager.Instance.data.tangfuruAllNum_Rcp = tangfuruAllNum_Rcp;
+        DataManager.Instance.data.lockFreezer = lockFreezer;
 
         if (CurrentXp >= MaxXp)
         {
@@ -121,6 +152,8 @@ public class GameManager : MonoBehaviour
         {
             isFullStand = false;
         }
+
+        
     }
 
 
