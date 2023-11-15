@@ -10630,6 +10630,7 @@ GameObject:
   - component: {fileID: 3055900110256290775}
   - component: {fileID: 6971653032467312987}
   - component: {fileID: 4006981527846305058}
+  - component: {fileID: 7195769596626569214}
   m_Layer: 5
   m_Name: Accel_AD
   m_TagString: Untagged
@@ -10637,6 +10638,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7195769596626569214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7195769596626569213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18697b644ab471445a2b4acbcdbe125b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7264885957379368749
 MonoBehaviour:
   m_ObjectHideFlags: 0

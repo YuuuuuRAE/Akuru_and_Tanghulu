@@ -37,6 +37,10 @@ public class FreezeTangfuru : MonoBehaviour
             {
                 emptyFreezers[i].color = new Color(1, 1, 1, 1);
             }
+            else
+            {
+                emptyFreezers[i].color = new Color(1, 1, 1, 0);
+            }
             
         }
     }
