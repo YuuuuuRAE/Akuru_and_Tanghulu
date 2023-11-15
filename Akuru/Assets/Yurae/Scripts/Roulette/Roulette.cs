@@ -38,6 +38,9 @@ public class Roulette : MonoBehaviour
     public AudioClip RoulleteSound;
     public AudioClip CollectSound;
 
+    public GameObject SpinButton;
+    public GameObject WaitButton;
+
     private void Awake()
     {
         pieceAngle = 360 / roulettePieceData.Length;
@@ -162,7 +165,7 @@ public class Roulette : MonoBehaviour
         float current = 0;
         float percent = 0;
 
-        if (GameManager.instance.isSound == true)
+        if (GameManager.instance.isSound)
         {
             audioSource.clip = RoulleteSound;
             audioSource.Play();
@@ -180,8 +183,14 @@ public class Roulette : MonoBehaviour
         }
 
         isSpinning = false;
-        audioSource.clip = CollectSound;
-        audioSource.Play();
+        if (GameManager.instance.isSound)
+        {
+            audioSource.clip = CollectSound;
+            audioSource.Play();
+        }
+        SpinButton.SetActive(true);
+        WaitButton.SetActive(false);
+
 
         if (action != null) action.Invoke(roulettePieceData[selectedIndex]);
     }
