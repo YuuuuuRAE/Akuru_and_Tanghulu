@@ -1,0 +1,68 @@
+{
+    "iSFirstStart": false,
+    "AlertLevel": 5,
+    "openStandNum": 0,
+    "isFullStand": false,
+    "MaxFruitType": 1,
+    "isUnlock": true,
+    "CurrentLevel": 5,
+    "MaxXp": 3.0,
+    "CurrentXp": 0.0,
+    "IncrementXp": 3.0,
+    "currentRuby": 0.0,
+    "currentCoin": 0.0,
+    "SceneName": "AT_100",
+    "BGMname": "mainBGM",
+    "isBGM": true,
+    "isSound": true,
+    "isVibe": true,
+    "fruit_FirstMaking": [
+        false,
+        false,
+        false,
+        false,
+        false
+    ],
+    "isSelectFT": false,
+    "fruitNumList": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "tangfuruNumList": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "standsNumList": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "tangfuruNowNum_Rcp": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "tangfuruAllNum_Rcp": [
+        0,
+        0,
+        0,
+        0,
+        0
+    ],
+    "lockFreezer": [
+        false,
+        false,
+        false,
+        false
+    ]
+}
