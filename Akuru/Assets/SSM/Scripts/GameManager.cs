@@ -68,6 +68,9 @@ public class GameManager : MonoBehaviour
     public bool isSound; //효과음 관련
     public bool isVibe; //진동 관련
 
+
+    public int clickCount; 
+
     // Singleton Pattern
     public static GameManager instance;
     private void Awake()
@@ -84,19 +87,27 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    //게임 시작시 데이터 로드
     private void Start()
     {
+        clickCount = 0;
         DataManager.Instance.LoadGameData();
     }
 
+    //종료시 데이터 저장
     private void OnApplicationQuit()
     {
         DataManager.Instance.SaveGameData();
     }
 
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause) DataManager.Instance.SaveGameData();
+    }
+
     void Update()
     {
+        //세이브 시스템
         DataManager.Instance.data.iSFirstStart = iSFirstStart;
         DataManager.Instance.data.AlertLevel = AlertLevel;
         DataManager.Instance.data.openStandNum = openStandNum;
@@ -124,6 +135,22 @@ public class GameManager : MonoBehaviour
         DataManager.Instance.data.tangfuruAllNum_Rcp = tangfuruAllNum_Rcp;
         DataManager.Instance.data.lockFreezer = lockFreezer;
 
+        //뒤로가기 두번 클릭시 종료
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            clickCount++;
+            if (!IsInvoking("DoubleClick"))
+            {
+                Invoke("DoubleClick", 1.0f); //1초 뒤 다시 카운트를 0으로 초기화
+            }
+            else if (clickCount >= 2)
+            {
+                CancelInvoke("DoubleClick");
+                Application.Quit();
+            }
+        }
+
+        //레벨
         if (CurrentXp >= MaxXp)
         {
             CurrentXp = CurrentXp - MaxXp; //초과 경험치는 현재 경험치 량에서 필요 겅험치 량을 뺀 양
@@ -153,10 +180,14 @@ public class GameManager : MonoBehaviour
             isFullStand = false;
         }
 
-        
+
+
     }
 
-
+    void DoubleClick()
+    {
+        clickCount = 0;
+    }
 
 
 

@@ -1228,7 +1228,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 559207095357963528}
-  - component: {fileID: 5372826459290142224}
   - component: {fileID: 7920340649636857152}
   - component: {fileID: 2155156535433237323}
   - component: {fileID: 6303453410304858051}
@@ -32971,19 +32970,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5372826459290142224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 775060863515688828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51437f9ec0b776e468c8cdd874a26052, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PopUp_Object: {fileID: 7052323102269017839}
 --- !u!1 &5401348060824077960
 GameObject:
   m_ObjectHideFlags: 0
@@ -38460,7 +38446,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alertText: {fileID: 464614726679462783}
-  currentLV: 1
   AlertTime: 3
   alertUI: {fileID: 8601854884319824336}
   UIHeight: 112
