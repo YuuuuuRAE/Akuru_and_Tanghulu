@@ -34,7 +34,7 @@ public class RecipePopUp : MonoBehaviour
     {
         for(int i = 2; i < 5 + 1; i++)
         {
-            if (GameManager.instance.CurrentLevel == i) //레벨이 1이면
+            if (GameManager.instance.CurrentLevel >= i) //레벨이 1이면
             {
                 tangfuruRcpListButton[i - 2].enabled = true;
                 tangfuruRcpListImg[i - 2].sprite = player.fruits[i -1].tangfuruRcpImage;
